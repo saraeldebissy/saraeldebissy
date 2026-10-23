@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.png" width="100%" alt="Sara Khalil — Product Designer, Intelligent Experiences" />
+  <img src="assets/banner.png" width="100%" alt="Sara Khalil — Forward-Deployed Designer & Design Engineer" />
 </p>
 
 ## ▓▓▓ whoami
@@ -55,7 +55,7 @@
 
 ```text
 $ whoami
-sara khalil — product designer, intelligent experiences
+sara khalil — forward-deployed designer & design engineer
 leading design for search & discovery @ landmark digital
 
 $ cat philosophy.txt
@@ -71,21 +71,11 @@ $ cat about.txt
 # product strategy through systems, interaction design,
 # prototyping, and execution.
 #
-# I craft products that do more than respond — using context,
-# data, personalization, automation, and AI to help people
-# make better decisions, with less effort, toward better
-# outcomes.
-```
-
-## ▓▓▓ currently building
-
-<p align="center">
-  <img src="assets/hero-cartoon.png" width="100%" alt="I design intelligent products that people love and businesses grow with — cartoonized portfolio hero" />
-</p>
-
-```text
-# the portfolio homepage — intelligent product design,
-# shipped with code, not just mockups.
+# I don't hand off a file and walk away. I embed with the
+# problem — close to the people who have it: stakeholders
+# and real users. I bridge disciplines at the idea stage —
+# design × engineering × product — then I design it,
+# build it, and ship it myself.
 ```
 
 ## ▓▓▓ how I work
@@ -162,8 +152,8 @@ $ cat about.txt
 # say hello.
 ```
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0d1117?style=flat-square&logo=linkedin&logoColor=39ff87&labelColor=0d1117)](https://www.linkedin.com/in/sara-eldebissy/)
-[![X](https://img.shields.io/badge/Twitter-0d1117?style=flat-square&logo=x&logoColor=39ff87&labelColor=0d1117)](https://x.com/SaraEldebissy)
-[![Figma](https://img.shields.io/badge/Figma-0d1117?style=flat-square&logo=figma&logoColor=39ff87&labelColor=0d1117)](https://www.figma.com/@saraeldebissy)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-1a1530?style=flat-square&logo=linkedin&logoColor=ff8c5a&labelColor=1a1530)](https://www.linkedin.com/in/sara-eldebissy/)
+[![X](https://img.shields.io/badge/Twitter-1a1530?style=flat-square&logo=x&logoColor=ff8c5a&labelColor=1a1530)](https://x.com/SaraEldebissy)
+[![Figma](https://img.shields.io/badge/Figma-1a1530?style=flat-square&logo=figma&logoColor=ff8c5a&labelColor=1a1530)](https://www.figma.com/@saraeldebissy)
 
-<sub>━━━  designed & vibe-coded by sara · intelligent experiences  ━━━</sub>
+<sub>━━━  designed & vibe-coded by sara · forward-deployed  ━━━</sub>
