@@ -1,132 +1,114 @@
+<!--
+GitHub profile README • October 2026
+Banner intentionally preserved until the approved animated workspace SVG is available.
+Final asset target: assets/sara-workspace-smooth-animated.svg
+Animations: gentle sun / skyline light shifts / sleeping cat / stable robot face;
+no glitches, morphing, quality reduction, or whole-scene movement.
+-->
+
 <p align="center">
   <img src="assets/banner.png" width="100%" alt="Sara Khalil — Forward-Deployed Designer & Design Engineer" />
 </p>
 
-## ▓▓▓ whoami
+<h1 align="center">Hi, I'm Sara_</h1>
 
 <p align="center">
+  <strong>Forward-Deployed Designer &amp; Design Engineer</strong><br />
+  <sub>Design × Research × Engineering × AI · Dubai, UAE</sub>
+</p>
 
-```text
-@@@@@@@@@@@@@@@@@@@@@@@@ @@@                       @@@@ @@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@                                  @@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@                                              @@@@@@@@@@@@
-@@@@@@@@@@@@@@@   @                                                     @@@@@@@@
-@@@@@@@@                                                                  @@@@@@
- @@@                             +-:.... ..-+                                   
-                              =:. .=  @@@  -. :=                                
-                            -....+#%#**##%@@@+..:=                              
-                          =:....-=::.......:-+=::::                             
-                         =.:::::-..      ...::----::                            
-                         ::::::-::..  .  ...::-----:=                           
-                        =:::----::..  .....:--===-==-                           
-                        --------=+*++=::::=%@@##**=+=+                          
-                        ------+*+**%%*=:.-*#%@@@%#*==+                          
-                        -----=**@@@%#*+-.-**#%@%%*++++                          
-                        -=---=+#%##*+=-=:.=====-:-=+++                          
-                        -----+-:::::::--:.:-=-:::-=*                            
-                        =-=--+=-:..:-====:-*#*+=-=+#                            
-                         =-=-++=--:==-+*####*++***##                            
-                         +=--+++==**==++++*##%@%*+**                            
-                          +===+++=+*@%*=-:--=*@*==*                             
-                           +==*+==--=**++==**#*+=+#                             
-                          =-++=*+==---=++++++++++# =+                           
-                          +-::=+ *+=------:----*%  =+                           
-                           =-::-=* #*+=--:---=#@   =:-                          
-                         +=+=-::--=+  %%###%%@@  +-::-                          
-                        =::-===-:::-=+*  @@@@    -..-+                          
-                       +:...:--=+=-::::-=+++++=-:.:=                            
-              +==--::...--:...:::-+++=-::::::::--+   +-=                        
-         +:..       . ...:--:.....::-=+             ===++                       
-        :.  ...............::---:....:::--==+   ++==+  +::::-=+                 
-      =:...  .................:--=---::::::--====+    -.........::=+            
-     -:...........................:-=+++++        +=::.:............:=          
-    -:.:..............................::------::::::::::............::-         
-   -:.::..::.............. ..................:::::::::.............::::=        
-  -::::..:::............. .............:::::::::::::..............:::::-+       
- =:::::..::...............................:::.:..................::::::-=       
-=::::::.:-:..:.................................................:::--:::-+       
-:::::::.:--::-::...........................................::.::::-=-::-++      
-:::::-::.--.--::...........................................::::::--=-:::+       
-:::::-:::==:==::...........................................:::::---=-:::+       
-::::---::=+:++-:..........................................:::::--=-+-:::+       
-```
-
+<p align="center">
+  <a href="https://sara-khalil.pages.dev/">Portfolio</a> ·
+  <a href="https://www.linkedin.com/in/sara-eldebissy/">LinkedIn</a> ·
+  <a href="https://x.com/SaraEldebissy">X</a> ·
+  <a href="https://www.figma.com/@saraeldebissy">Figma</a>
 </p>
 
 ```text
-$ whoami
-sara khalil — forward-deployed designer & design engineer
-leading design for search & discovery @ landmark digital
-
-$ cat philosophy.txt
-# "technology should adapt to people,
-#  not the other way around."
-#
-# that idea shapes how I think about products, systems,
-# and the role of design in an increasingly intelligent world.
-
-$ cat about.txt
-# 9 years designing and shipping complex products across
-# e-commerce, fintech, and SaaS — from early discovery and
-# product strategy through systems, interaction design,
-# prototyping, and execution.
-#
-# I don't hand off a file and walk away. I embed with the
-# problem — close to the people who have it: stakeholders
-# and real users. I bridge disciplines at the idea stage —
-# design × engineering × product — then I design it,
-# build it, and ship it myself.
+> products, systems, and tools
+> design, research, and automation
+> AI for real work
+> from idea to shipped
 ```
 
-## ▓▓▓ how I work
+## ▓▓▓ whoami
+
+I'm a product designer who gets close to the problem — and stays through the build. Over 9 years across e-commerce, fintech, and SaaS, I've worked from discovery and strategy through systems, interaction design, prototyping, and shipping.
+
+> Technology should adapt to people — not the other way around.
+
+I don't just hand off screens. I bring design, product, engineering, and research into the same loop, then make something real.
+
+<details>
+<summary><b>▸ How I work</b> — idea → design → build → ship → measure</summary>
 
 ```text
-   IDEA ──▶ DESIGN ──▶ BUILD ──▶ SHIP ──▶ MEASURE
-    │                                          │
-    └────────────  stakeholders + users  ──────┘
-      // embedded the whole way — discovery, buy-in,
-      // and the real environment, not a Figma wall.
+ IDEA ──▶ DESIGN ──▶ BUILD ──▶ SHIP ──▶ MEASURE
+  ▲                                         │
+  └──────── people + evidence + learning ───┘
 ```
 
-## ▓▓▓ what I bring
+- **Outcomes, not pixels.** Tie decisions to user and business results.
+- **Build the things that build the thing.** Tools, workflows, systems, and automations.
+- **Close the loop.** Test ideas in the real environment; learn from what ships.
 
-```text
-▹ outcomes, not pixels — design tied to measurable results
-▹ I build the things that build the thing — tools, workflows,
-  systems, automations, prompts, frameworks
-▹ I build what I design — ideas turned into working, shipped products
-▹ I close the loop — ship, measure, learn, feed it back in
-▹ range — zoom out to the product system, zoom into the interaction
-```
+</details>
+
+## ▓▓▓ tools I've built
+
+<sub>Real experiments, useful utilities, and ways of making design work better. Public projects are linked below.</sub>
+
+| Build | What it does | Explore |
+| :--- | :--- | :--- |
+| **UX Research Skills** | Agent-ready workflows for UX research in Claude Code and Claude.ai. | [Code ↗](https://github.com/saraeldebissy/ux-research-skills) |
+| **Vibe Generator** | An interactive prototype and deployed experiment. | [Live ↗](https://vibe-generator-v2.vercel.app) · [Code ↗](https://github.com/saraeldebissy/Vibe-generator-v2) |
+| **Mobbin MCP** | An unofficial MCP server for exploring design screens, apps, and flows. | [Code ↗](https://github.com/saraeldebissy/mobbin-mcp) |
+| **Git Advisor** | A Git copilot translating plain-English intent into safer Git actions. | [Code ↗](https://github.com/saraeldebissy/git-advisor) |
+
+<details>
+<summary><b>＋ More tools &amp; experiments</b></summary>
+
+| Build | What it does | Explore |
+| :--- | :--- | :--- |
+| **Design Skills** | Agentic skills and commands for design workflows. | [Code ↗](https://github.com/saraeldebissy/design-skills) |
+| **Skill Atlas** | An interactive map of product-design competencies and team strengths. | [Live ↗](https://skill-atlas-gray.vercel.app) · [Code ↗](https://github.com/saraeldebissy/skill-atlas) |
+| **Build Bouncer** | An agent skill that pressure-tests an idea before the build. | [Code ↗](https://github.com/saraeldebissy/build-bouncer) |
+| **Focus Timer** | A minimal single-file Pomodoro timer. | [Code ↗](https://github.com/saraeldebissy/focus-timer) |
+| **Time to Stand Up** | A Windows XP-inspired break reminder. | [Code ↗](https://github.com/saraeldebissy/time-to-stand-up) |
+| **Terminal Wrapped** | A playful tap-through recap for terminal-heavy work. | [Code ↗](https://github.com/saraeldebissy/terminal-wrapped-designer) |
+
+[View all public repositories →](https://github.com/saraeldebissy?tab=repositories)
+
+</details>
+
+## ▓▓▓ GitHub activity
+
+<p align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=saraeldebissy&amp;show_icons=true&amp;hide_border=true&amp;bg_color=1a1530&amp;title_color=ff8c5a&amp;icon_color=ff8c5a&amp;text_color=e6e0f0" alt="GitHub stats" />
+  <img height="165" src="https://streak-stats.demolab.com?user=saraeldebissy&amp;hide_border=true&amp;background=1A1530&amp;ring=FF8C5A&amp;fire=FF8C5A&amp;currStreakLabel=FF8C5A&amp;sideLabels=E6E0F0&amp;dates=B9B0CB&amp;currStreakNum=E6E0F0&amp;sideNums=E6E0F0" alt="GitHub contribution streak" />
+</p>
+
+<sub>Stats are pulled from GitHub by third-party renderers; counts may exclude private work.</sub>
 
 ## ▓▓▓ stack
 
-**design**
-&nbsp;
-![Figma](https://img.shields.io/badge/Figma-1a1530?style=flat-square&logo=figma&logoColor=ff8c5a&labelColor=1a1530)
-![Framer](https://img.shields.io/badge/Framer-1a1530?style=flat-square&logo=framer&logoColor=ff8c5a&labelColor=1a1530)
-![Design Systems](https://img.shields.io/badge/Design_Systems-1a1530?style=flat-square&labelColor=1a1530&color=6b5b95)
-![CRO](https://img.shields.io/badge/CRO-1a1530?style=flat-square&labelColor=1a1530&color=6b5b95)
-![Research](https://img.shields.io/badge/Research-1a1530?style=flat-square&labelColor=1a1530&color=6b5b95)
+<details>
+<summary><b>＋ Open my toolkit</b> — design, build, AI &amp; automation</summary>
 
-**build**
-&nbsp;
-![React](https://img.shields.io/badge/React-1a1530?style=flat-square&logo=react&logoColor=ff8c5a&labelColor=1a1530)
-![Next.js](https://img.shields.io/badge/Next.js-1a1530?style=flat-square&logo=nextdotjs&logoColor=ff8c5a&labelColor=1a1530)
-![TypeScript](https://img.shields.io/badge/TypeScript-1a1530?style=flat-square&logo=typescript&logoColor=ff8c5a&labelColor=1a1530)
-![Expo](https://img.shields.io/badge/Expo-1a1530?style=flat-square&logo=expo&logoColor=ff8c5a&labelColor=1a1530)
-![Supabase](https://img.shields.io/badge/Supabase-1a1530?style=flat-square&logo=supabase&logoColor=ff8c5a&labelColor=1a1530)
-![Vercel](https://img.shields.io/badge/Vercel-1a1530?style=flat-square&logo=vercel&logoColor=ff8c5a&labelColor=1a1530)
+**Design & research:** Figma · Framer · Design Systems · UX Research · Experimentation
 
-**ai**
-&nbsp;
-![Claude Code](https://img.shields.io/badge/Claude_Code-1a1530?style=flat-square&logo=anthropic&logoColor=ff8c5a&labelColor=1a1530)
-![Codex](https://img.shields.io/badge/Codex-1a1530?style=flat-square&labelColor=1a1530&color=6b5b95)
-![v0](https://img.shields.io/badge/v0-1a1530?style=flat-square&labelColor=1a1530&color=6b5b95)
-![n8n](https://img.shields.io/badge/n8n-1a1530?style=flat-square&logo=n8n&logoColor=ff8c5a&labelColor=1a1530)
-![Make](https://img.shields.io/badge/Make-1a1530?style=flat-square&labelColor=1a1530&color=6b5b95)
+**Build:** React · Next.js · TypeScript · Expo · Supabase · Vercel
+
+**AI & automation:** Claude Code · Codex · v0 · n8n · Make · MCP
+
+**Infrastructure & workflow:** Git · GitHub Actions · Python · Cloudflare
+
+</details>
 
 ## ▓▓▓ built with my agent team
+
+<details>
+<summary><b>＋ Meet the team</b></summary>
 
 ```text
 ▹ RATCHET   "I built the whole thing."
@@ -136,24 +118,18 @@ $ cat about.txt
 ▹ HAZEL     "Every word, in her voice."
 ```
 
-## ▓▓▓ stats
+</details>
+
+## ▓▓▓ notes from the loop
+
+**ADPList Top 10 Mentor** — Design Operations, July–September 2026.
+
+I'm interested in the future of designing *with* systems, not just for screens. If you're building at the intersection of products, AI, and human behavior, I'd love to hear what you're working on.
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=saraeldebissy&show_icons=true&hide_border=true&bg_color=1a1530&title_color=ff8c5a&icon_color=ff8c5a&text_color=e6e0f0&count_private=true" alt="Sara's GitHub stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=saraeldebissy&layout=compact&hide_border=true&bg_color=1a1530&title_color=ff8c5a&text_color=e6e0f0" alt="Most used languages" />
+  <a href="https://sara-khalil.pages.dev/">Portfolio</a> ·
+  <a href="https://www.linkedin.com/in/sara-eldebissy/">Let's connect</a> ·
+  <a href="https://www.figma.com/@saraeldebissy">Figma</a>
 </p>
 
-## ▓▓▓ find me
-
-```text
-# open to meaningful conversations about design, AI, and the
-# future of digital experiences. if you're exploring where
-# products go next, I'd love to hear what you're working on.
-# say hello.
-```
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-1a1530?style=flat-square&logo=linkedin&logoColor=ff8c5a&labelColor=1a1530)](https://www.linkedin.com/in/sara-eldebissy/)
-[![X](https://img.shields.io/badge/Twitter-1a1530?style=flat-square&logo=x&logoColor=ff8c5a&labelColor=1a1530)](https://x.com/SaraEldebissy)
-[![Figma](https://img.shields.io/badge/Figma-1a1530?style=flat-square&logo=figma&logoColor=ff8c5a&labelColor=1a1530)](https://www.figma.com/@saraeldebissy)
-
-<sub>━━━  designed & vibe-coded by sara · forward-deployed  ━━━</sub>
+<sub>━━━ designed &amp; built by Sara · design → build → ship → learn ━━━</sub>
