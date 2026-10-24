@@ -7,8 +7,8 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=saraeldebissy&amp;show_icons=true&amp;hide_border=true&amp;bg_color=16131f&amp;title_color=8b7cf6&amp;icon_color=ff8c5a&amp;text_color=e8e4f5" alt="GitHub stats" height="155">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=saraeldebissy&amp;layout=compact&amp;hide_border=true&amp;bg_color=16131f&amp;title_color=8b7cf6&amp;text_color=e8e4f5" alt="Most used languages" height="155">
+  <img src="https://github-readme-stats.vercel.app/api?username=saraeldebissy&amp;show_icons=true&amp;hide_border=true&amp;bg_color=0b0b14&amp;title_color=ff7a2f&amp;icon_color=a06bff&amp;text_color=e9e6f5" alt="GitHub stats" height="155">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=saraeldebissy&amp;layout=compact&amp;hide_border=true&amp;bg_color=0b0b14&amp;title_color=ff7a2f&amp;text_color=e9e6f5" alt="Most used languages" height="155">
 </p>
 
 <p align="center">
@@ -16,10 +16,10 @@
 </p>
 
 <p align="center">
-<a href="https://www.linkedin.com/in/sara-eldebissy/"><img src="https://img.shields.io/badge/LinkedIn-16131f?style=for-the-badge&logo=linkedin&logoColor=8b7cf6" alt="LinkedIn"></a>
-<a href="https://x.com/SaraEldebissy"><img src="https://img.shields.io/badge/X-16131f?style=for-the-badge&logo=x&logoColor=e8e4f5" alt="X"></a>
-<a href="https://www.figma.com/@saraeldebissy"><img src="https://img.shields.io/badge/Figma-16131f?style=for-the-badge&logo=figma&logoColor=ff8c5a" alt="Figma"></a>
-<a href="https://sara-khalil.pages.dev/"><img src="https://img.shields.io/badge/Portfolio-16131f?style=for-the-badge&logo=vercel&logoColor=8b7cf6" alt="Portfolio"></a>
+<a href="https://www.linkedin.com/in/sara-eldebissy/"><img src="https://img.shields.io/badge/LINKEDIN-0b0b14?style=for-the-badge&logo=linkedin&logoColor=ff7a2f&labelColor=0b0b14" alt="LinkedIn"></a>
+<a href="https://x.com/SaraEldebissy"><img src="https://img.shields.io/badge/X-0b0b14?style=for-the-badge&logo=x&logoColor=a06bff&labelColor=0b0b14" alt="X"></a>
+<a href="https://www.figma.com/@saraeldebissy"><img src="https://img.shields.io/badge/FIGMA-0b0b14?style=for-the-badge&logo=figma&logoColor=ff7a2f&labelColor=0b0b14" alt="Figma"></a>
+<a href="https://sara-khalil.pages.dev/"><img src="https://img.shields.io/badge/PORTFOLIO-0b0b14?style=for-the-badge&logo=vercel&logoColor=a06bff&labelColor=0b0b14" alt="Portfolio"></a>
 </p>
 
 <p align="center">
