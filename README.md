@@ -8,7 +8,7 @@
 
 **I design it, build it, and ship it myself.**
 
-[Portfolio](https://sara-khalil.pages.dev/) · [LinkedIn](https://www.linkedin.com/in/sara-eldebissy/) · [Substack](https://designinthelooop.substack.com/) · [Figma](https://www.figma.com/@saraeldebissy)
+[Portfolio](https://sara-khalil.pages.dev/) · [LinkedIn](https://www.linkedin.com/in/sara-eldebissy/) · [Figma](https://www.figma.com/@saraeldebissy)
 
 </div>
 
