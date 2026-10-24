@@ -1,18 +1,18 @@
 <p align="center">
-  <img src="assets/workspace-hero.svg" alt="Hi, I am Sara — a designer and builder in a colourful Dubai workspace" width="100%">
+  <img src="assets/approved-workspace-banner.jpg" alt="Sara working at her laptop with a sleeping cat and cloud robot in a warm purple Dubai sunset workspace" width="100%">
 </p>
 
 <div align="center">
 
-### Design × Research × Engineering × AI
+## Hi, I am Sara_\n\n**Forward-Deployed Designer & Design Engineer**\n\n*Design × Research × Engineering × AI*
 
-**I design it, build it, and ship it myself.**
+I design it, build it, and ship it myself.
 
 [Portfolio](https://sara-khalil.pages.dev/) · [LinkedIn](https://www.linkedin.com/in/sara-eldebissy/) · [Figma](https://www.figma.com/@saraeldebissy)
 
 </div>
 
-### ▸ `>_` whoami
+### ▸ `>_` whoami   `// designer × engineer × builder`
 
 ```text
 $ whoami
@@ -26,13 +26,13 @@ close to people, research, product and engineering.
 I work from early discovery to the shipped experience.
 ```
 
-### ▸ `>_` how I work
+### ▸ `>_` how I work   `// from idea to impact`
 
 <p align="center">
   <img src="assets/workflow.svg" alt="Idea → Design → Build → Ship → Measure; feedback from stakeholders and users loops back into the process" width="100%">
 </p>
 
-### ▸ `>_` tools I've built
+### ▸ `>_` tools I've built   `// selected projects & experiments`
 
 *Selected projects, experiments, and internal tools — some are prototypes and not publicly available.*
 
@@ -57,7 +57,7 @@ I work from early discovery to the shipped experience.
 
 </details>
 
-### ▸ `>_` stack
+### ▸ `>_` stack   `// my toolkit`
 
 <p align="left">
   <img height="29" alt="Figma" src="https://img.shields.io/badge/Figma-1E1932?style=flat-square&amp;logo=figma&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
@@ -78,7 +78,7 @@ I work from early discovery to the shipped experience.
   <img height="29" alt="Make" src="https://img.shields.io/badge/Make-695790?style=flat-square&amp;labelColor=695790">
 </p>
 
-### ▸ `>_` built with my agent team
+### ▸ `>_` built with my agent team   `// a little chaotic, mostly helpful`
 
 ```text
   RATCHET   "I built the whole thing."
@@ -88,7 +88,7 @@ I work from early discovery to the shipped experience.
   HAZEL     "Every word, in her voice."
 ```
 
-### ▸ `>_` stats
+### ▸ `>_` stats   `// small commits, big momentum`
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=saraeldebissy&amp;show_icons=true&amp;hide_border=true&amp;bg_color=ffffff&amp;title_color=6f50a9&amp;icon_color=ff85a7&amp;text_color=27243a" alt="GitHub stats" height="155">
@@ -102,7 +102,7 @@ I work from early discovery to the shipped experience.
 
 <sub>Live statistics depend on external GitHub stats services and may not include private work.</sub>
 
-### ▸ `>_` find me
+### ▸ `>_` find me   `// let's connect`
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-1667B2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sara-eldebissy/)
 [![X](https://img.shields.io/badge/X-211F40?style=for-the-badge&logo=x&logoColor=white)](https://x.com/SaraEldebissy)
