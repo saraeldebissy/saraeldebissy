@@ -153,14 +153,20 @@ const fade = (delay, dur = 0.45) =>
 // ═══════════════════════════ 2. NAMEPLATE ═══════════════════════════
 // Sits flush under the art with no gap, so the scene and the name read as one
 // object. The name types in; everything else fades once typing lands.
+//
+// Title is stated exactly once, here, as the eyebrow tag: "forward-deployed
+// designer". No other variant (product designer, design engineer, CX) runs
+// anywhere on the page — the old subtitle line duplicated this as "senior
+// product designer & design engineer", which both contradicted the eyebrow
+// and ate the vertical space this section needed.
 {
-  const h = 182;
+  const h = 230;
   const top = y;
   push(`<rect x="0" y="${top}" width="${W}" height="${h}" fill="${C.void}"/>`);
   push(`<rect x="0" y="${top}" width="${W}" height="2" fill="url(#rule)"/>`);
 
   const x = PAD;
-  push(`<text x="${x}" y="${top + 38}" font-family="${MONO}" font-size="12.5" font-weight="700"
+  push(`<text x="${x}" y="${top + 46}" font-family="${MONO}" font-size="12.5" font-weight="700"
         fill="${C.purple}" letter-spacing="4.5" opacity="0">${fade(0.3)}◆ FORWARD-DEPLOYED DESIGNER</text>`);
 
   // Name types character by character.
@@ -184,7 +190,7 @@ const fade = (delay, dur = 0.45) =>
       return `<tspan${fill} opacity="0">${glyph}<animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="${(0.5 + i * 0.075).toFixed(2)}s" fill="freeze"/></tspan>`;
     })
     .join('');
-  push(`<text x="${x}" y="${top + 104}" font-family="${MONO}" font-size="${NAME_PX}" font-weight="800"
+  push(`<text x="${x}" y="${top + 116}" font-family="${MONO}" font-size="${NAME_PX}" font-weight="800"
         fill="${C.ink}" letter-spacing="${NAME_TRACK}">${tspans}</text>`);
 
   // Cursor walks along with the text as each glyph lands, then blinks a few
@@ -195,7 +201,7 @@ const fade = (delay, dur = 0.45) =>
   const walk = NAME.split('')
     .map((_, i) => `<animate attributeName="x" to="${(x + (i + 1) * step).toFixed(1)}" dur="0.01s" begin="${(0.5 + i * 0.075).toFixed(2)}s" fill="freeze"/>`)
     .join('');
-  push(`<rect x="${x}" y="${top + 62}" width="20" height="50" fill="${C.orange}" opacity="0">
+  push(`<rect x="${x}" y="${top + 74}" width="20" height="50" fill="${C.orange}" opacity="0">
     ${walk}
     <animate attributeName="opacity" values="0;1" dur="0.01s" begin="0.5s" fill="freeze"/>
     <animate attributeName="opacity" values="1;1;0;0;1" dur="0.95s" begin="${typedFor.toFixed(2)}s" repeatCount="3"/>
@@ -203,28 +209,30 @@ const fade = (delay, dur = 0.45) =>
   </rect>`);
 
   push(`<g opacity="0">${fade(typedFor + 0.2, 0.55)}
-    <text x="${x}" y="${top + 140}" font-family="${MONO}" font-size="19" font-weight="700"
-          fill="${C.ink}" letter-spacing="2">SENIOR PRODUCT DESIGNER &amp; DESIGN ENGINEER</text>
-    <text x="${x}" y="${top + 166}" font-family="${MONO}" font-size="16.5" fill="${C.dim}">I design it, build it, and ship it myself. No handoff.</text>
+    <text x="${x}" y="${top + 156}" font-family="${MONO}" font-size="17.5" fill="${C.dim}">I design it, build it, and ship it myself. No handoff.</text>
   </g>`);
 
   // Right-side readout. Width is derived from the widest key/value pair so
-  // the longest row can never overflow the box.
+  // the longest row can never overflow the box. HANDOFF sits back in here
+  // alongside the other status fields rather than as a standalone line.
   const readout = [
     ['BASED', 'DUBAI / UAE', C.ink],
     ['DOMAINS', 'RETAIL · FIN · SAAS', C.ink],
     ['MODE', 'EMBEDDED', C.purpleHi],
+    ['HANDOFF', 'DISABLED', C.orange],
     ['STATUS', 'SHIPPING', C.orange],
   ];
   const rowW = Math.max(
     ...readout.map(([k, v]) => k.length * adv(13, 1.2) + 24 + v.length * adv(13, 0.8))
   );
   const rw = Math.ceil(rowW + 36);
+  const readoutH = readout.length * 27 + 36;
   const rx = W - PAD - rw;
+  const ry0 = top + (h - readoutH) / 2;
   push(`<g opacity="0">${fade(typedFor + 0.35, 0.55)}
-    <rect x="${rx}" y="${top + 30}" width="${rw}" height="124" fill="${C.panel}" stroke="${C.line}"/>`);
+    <rect x="${rx}" y="${ry0}" width="${rw}" height="${readoutH}" fill="${C.panel}" stroke="${C.line}"/>`);
   readout.forEach(([k, v, col], i) => {
-    const ry = top + 58 + i * 27;
+    const ry = ry0 + 36 + i * 27;
     push(`<text x="${rx + 18}" y="${ry}" font-family="${MONO}" font-size="13" fill="${C.dim}"
           letter-spacing="1.2">${k}</text>
       <text x="${rx + rw - 18}" y="${ry}" font-family="${MONO}" font-size="13" font-weight="700"

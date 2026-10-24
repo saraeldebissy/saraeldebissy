@@ -10,7 +10,9 @@ Recruiters, hiring managers, fellow designers/engineers, and collaborators who l
 
 ## Product Purpose
 
-A personal GitHub profile README that functions as a living portfolio cover page. It exists to make Sara's identity as a "forward-deployed designer & design engineer" (someone who designs, builds, and ships, not just hands off files) immediately legible, memorable, and distinct from every other designer's profile. Success is a visitor clicking through to a real project within the first 10 seconds.
+A personal GitHub profile README that functions as a living portfolio cover page. It exists to make Sara's identity as a "forward-deployed designer" (someone who designs, builds, and ships, not just hands off files) immediately legible, memorable, and distinct from every other designer's profile. Success is a visitor clicking through to a real project within the first 10 seconds.
+
+The title is stated exactly once, as the eyebrow tag above the name: "forward-deployed designer". No other variant appears anywhere on the page — not "product designer", not "design engineer", not "CX". One title, repeated nowhere, so there's nothing to contradict it.
 
 ## Brand Personality
 
@@ -24,7 +26,7 @@ Equally reject the failure mode that replaced it: dark-mode markdown. Uniform fu
 
 ## Design Principles
 
-- Show, don't tell: the interface itself should prove "design engineer," not just claim it in text.
+- Show, don't tell: the interface itself should prove "forward-deployed," not just claim it in text.
 - Terminal-native: the whole page behaves like a retro CRT terminal session, not a dashboard wearing dark mode.
 - Earned texture: scanlines, glow, and vignette exist because they reinforce the CRT metaphor, not as decoration.
 - Content stays real: every project, link, and quote reflects what's actually true and live, never a placeholder. Numbers that look live must be live — a hardcoded streak is a claim the page cannot keep.

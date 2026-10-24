@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/profile.svg" alt="Sara Khalil — senior product designer and design engineer based in Dubai. Pixel-art workspace scene, selected builds, stack, and live GitHub telemetry." width="100%">
+  <img src="assets/profile.svg" alt="Sara Khalil — forward-deployed designer based in Dubai. Pixel-art workspace scene, selected builds, stack, and live GitHub telemetry." width="100%">
 </p>
 
 <p align="center">
