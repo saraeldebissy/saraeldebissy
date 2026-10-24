@@ -4,7 +4,11 @@
 
 <div align="center">
 
-## Hi, I am Sara_\n\n**Forward-Deployed Designer & Design Engineer**\n\n*Design × Research × Engineering × AI*
+## Hi, I am Sara
+
+**Forward-Deployed Designer & Design Engineer**
+
+*Design × Research × Engineering × AI*
 
 I design it, build it, and ship it myself.
 
@@ -12,37 +16,11 @@ I design it, build it, and ship it myself.
 
 </div>
 
-### ▸ `>_` whoami   `// designer × engineer × builder`
-
-```text
-$ whoami
-sara khalil — senior product designer & design engineer
-dubai, uae · working where design, AI and real-world impact meet
-
-$ cat about.txt
-I design across e-commerce, fintech, and SaaS.
-I don't hand off a file and walk away. I embed with the problem —
-close to people, research, product and engineering.
-I work from early discovery to the shipped experience.
-```
-
-### ▸ `>_` how I work   `// from idea to impact`
-
 <p align="center">
-  <img src="assets/workflow.svg" alt="Idea → Design → Build → Ship → Measure; feedback from stakeholders and users loops back into the process" width="100%">
+  <img src="assets/dash_top.png" width="100%" alt="whoami, tools I've built, and stack">
 </p>
 
-### ▸ `>_` tools I've built   `// selected projects & experiments`
-
 *Selected projects, experiments, and internal tools — some are prototypes and not publicly available.*
-
-| Project | What it does | Explore |
-| :--- | :--- | :--- |
-| **Research Repo** | A searchable home for studies, insights and evidence. | Internal prototype |
-| **NPS Insight Agent** | Groups comments into themes and issues; tracks trends week over week. | Internal prototype |
-| **Bug Testing Platform** | Collects bugs, screenshots, and product feedback in one place. | In progress |
-| **UX Research Skills** | Reusable Claude skills for responsible UX research. | [Repo ↗](https://github.com/saraeldebissy/ux-research-skills) |
-| **Vibe Generator** | Experimental tool for generating and exploring ideas. | [Live ↗](https://vibe-generator-v2.vercel.app) · [Repo ↗](https://github.com/saraeldebissy/Vibe-generator-v2) |
 
 <details>
 <summary><b>＋ More things I've built</b></summary>
@@ -57,36 +35,15 @@ I work from early discovery to the shipped experience.
 
 </details>
 
-### ▸ `>_` stack   `// my toolkit`
+### ▸ `>_` how I work   `// from idea to impact`
 
-<p align="left">
-  <img height="29" alt="Figma" src="https://img.shields.io/badge/Figma-1E1932?style=flat-square&amp;logo=figma&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
-  <img height="29" alt="Framer" src="https://img.shields.io/badge/Framer-1E1932?style=flat-square&amp;logo=framer&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
-  <img height="29" alt="Design Systems" src="https://img.shields.io/badge/Design%20Systems-695790?style=flat-square&amp;labelColor=695790">
-  <img height="29" alt="CRO" src="https://img.shields.io/badge/CRO-695790?style=flat-square&amp;labelColor=695790">
-  <img height="29" alt="Research" src="https://img.shields.io/badge/Research-695790?style=flat-square&amp;labelColor=695790">
-  <img height="29" alt="React" src="https://img.shields.io/badge/React-1E1932?style=flat-square&amp;logo=react&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
-  <img height="29" alt="Next.js" src="https://img.shields.io/badge/Next.js-1E1932?style=flat-square&amp;logo=nextdotjs&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
-  <img height="29" alt="TypeScript" src="https://img.shields.io/badge/TypeScript-1E1932?style=flat-square&amp;logo=typescript&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
-  <img height="29" alt="Expo" src="https://img.shields.io/badge/Expo-1E1932?style=flat-square&amp;logo=expo&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
-  <img height="29" alt="Supabase" src="https://img.shields.io/badge/Supabase-1E1932?style=flat-square&amp;logo=supabase&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
-  <img height="29" alt="Vercel" src="https://img.shields.io/badge/Vercel-1E1932?style=flat-square&amp;logo=vercel&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
-  <img height="29" alt="Claude Code" src="https://img.shields.io/badge/Claude%20Code-1E1932?style=flat-square&amp;logo=anthropic&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
-  <img height="29" alt="Codex" src="https://img.shields.io/badge/Codex-695790?style=flat-square&amp;labelColor=695790">
-  <img height="29" alt="v0" src="https://img.shields.io/badge/v0-695790?style=flat-square&amp;labelColor=695790">
-  <img height="29" alt="n8n" src="https://img.shields.io/badge/n8n-1E1932?style=flat-square&amp;logo=n8n&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
-  <img height="29" alt="Make" src="https://img.shields.io/badge/Make-695790?style=flat-square&amp;labelColor=695790">
+<p align="center">
+  <img src="assets/workflow.svg" alt="Idea → Design → Build → Ship → Measure; feedback from stakeholders and users loops back into the process" width="100%">
 </p>
 
-### ▸ `>_` built with my agent team   `// a little chaotic, mostly helpful`
-
-```text
-  RATCHET   "I built the whole thing."
-  GUSTAVE   "The direction was mine."
-  SIX       "I told her it wasn't good enough."
-  ALOY      "I mapped every pattern first."
-  HAZEL     "Every word, in her voice."
-```
+<p align="center">
+  <img src="assets/dash_agents.png" width="100%" alt="built with my agent team">
+</p>
 
 ### ▸ `>_` stats   `// small commits, big momentum`
 
