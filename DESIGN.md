@@ -2,38 +2,53 @@
 
 ## Theme
 
-Dark CRT terminal. Scene: a developer/designer glancing at a profile link at night, phone or laptop, dim ambient light, expecting something that looks hand-built rather than templated.
+Cyberpunk HUD on true black. Not "dark mode" — a machine readout. The page should look like instrumentation someone is operating, not a document someone is reading.
 
 ## Color Strategy
 
-Committed. One saturated violet carries structure and headers; coral is the secondary glow/accent used sparingly for emphasis and live-status indicators.
+Committed, two-role. **Orange is signal**: live status, active streaks, the surname, anything the eye should land on first. **Purple is structure**: secondary indices, archive panels, supporting labels. Nothing else gets a color. Restraint here is what keeps it from reading as generic neon.
 
-## Palette (OKLCH)
+## Palette
 
-- `--bg-void`: oklch(14% 0.015 290) — near-black, violet-tinted base
-- `--bg-panel`: oklch(18% 0.02 290) — slightly lifted panel background
-- `--border`: oklch(28% 0.03 290) — hairline panel borders
-- `--ink`: oklch(92% 0.015 290) — primary text, warm off-white
-- `--muted`: oklch(60% 0.02 290) — secondary text, comments
-- `--violet`: oklch(68% 0.16 290) — primary accent, headers, prompts
-- `--coral`: oklch(72% 0.14 40) — secondary accent, glow, live/status
-- `--green-ok`: oklch(75% 0.14 150) — success/live indicators only
+- `--void`: `#050509` — true black page ground
+- `--panel`: `#0b0b14` — panel fill, barely lifted off the void
+- `--panel2`: `#101020` — secondary/archive panel fill
+- `--line`: `#23233a` — hairline borders, row dividers
+- `--line2`: `#2e2e4a` — emphasized borders (tags, pipeline steps)
+- `--orange`: `#ff7a2f` — primary signal
+- `--orange-hi`: `#ffa45c` — lit pipeline step text
+- `--purple`: `#a06bff` — structure, secondary indices
+- `--purple-hi`: `#c9a3ff` — agent names, record values
+- `--ink`: `#e9e6f5` — primary text
+- `--dim`: `#7a7490` — comments, labels, descriptions
 
 ## Typography
 
-Monospace throughout: `"SF Mono", ui-monospace, Menlo, Consolas, monospace`. Scale: 13px body, 15px section titles, 30px display (cover ASCII). Weight contrast (400 body / 700 titles) carries hierarchy, not just size.
+Monospace throughout: `"SF Mono", ui-monospace, Menlo, Consolas, monospace`. Scale: 62px hero name, 21px section titles (uppercase, 1.5px tracking), 17-19px body, 13px labels (uppercase, wide tracking). Labels are always uppercase and letterspaced; body never is.
 
-## Texture
+## Structure
 
-Scanline overlay (repeating horizontal lines, low opacity, multiply blend) + radial vignette darkening toward edges. Baked into the rendered PNG, not live CSS, since GitHub READMEs strip animations and most CSS.
+- **Chamfered panels**: corners cut via `clip-path` polygon, 14px inset. Never rounded — rounded reads as consumer software.
+- **Corner brackets**: 13px L-shaped marks in orange or purple, positioned at panel corners. Applied selectively (two corners for most panels, four for the hero and telemetry) so they stay an accent rather than a frame.
+- **Numbered indices**: every section carries a two-digit chip (`01`-`09`), orange for primary sections, purple for secondary. These make the page read as a system with order.
+- **Rules and rulers**: 1px lines flex-filling the space between title and right-hand comment; tick rulers (repeating 1px marks) as divider texture.
 
 ## Components
 
-- **Terminal panel**: dark panel, 1px violet-tinted border, no shadow (flat against void background, since shadows read as light-mode affordance).
-- **Section header**: `>_` chevron in violet + title in ink + right-aligned `// comment` in muted.
-- **Pills/tags**: no pill shapes. Replaced with bracketed labels `[live]` `[repo]` in monospace, colored by state (coral=live, violet=repo, muted=internal).
-- **Badges (stack)**: flat bracketed tokens, not rounded chips, to stay terminal-native rather than dashboard-native.
+- **Status chips**: bordered rectangles, not pills. `LIVE` in orange with inset glow, `REPO` in purple, `INTERNAL`/`WIP` in muted grey.
+- **Readout rows**: key in dim uppercase on the left, value right-aligned and bold. Used in the hero telemetry and the signal panel.
+- **Pipeline steps**: chamfered boxes, numbered, with the final two (SHIP, MEASURE) lit orange to show where the work actually lands.
+- **Waveform**: 21 bars, square-rooted scale, dim purple for history and orange for the active streak tail.
+- **Marquee strips**: solid orange (top) and purple (bottom) bands with repeating letterspaced text, bleeding full width.
+
+## Texture
+
+Scanline overlay at very low opacity (`rgba(255,255,255,.014)`, 3px period) across the whole composite. Barcode strip in the hero at 28% opacity. Both baked into the rendered PNG, since GitHub strips CSS from markdown.
+
+## Data
+
+The telemetry panel is generated, not authored. `.github/workflows/telemetry.yml` fetches the real contributions calendar daily and re-renders from `.github/render/template.html`. Never hardcode streak numbers into the template — they go stale and misrepresent.
 
 ## Motion
 
-None required (static image export). If ever rendered as live HTML, cursor-blink only, no other animation.
+None. The artifact is a static PNG by necessity.
