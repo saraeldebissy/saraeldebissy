@@ -13,10 +13,11 @@ import { readFile, writeFile } from 'node:fs/promises';
 const here = (p) => new URL(p, import.meta.url);
 const stats = JSON.parse(await readFile(here('./stats.json'), 'utf8'));
 const sceneB64 = (await readFile(here('../../assets/scene.jpg'))).toString('base64');
+const agentsB64 = (await readFile(here('../../assets/agents.png'))).toString('base64');
 
 const W = 1200;
 const PAD = 34;
-const ART_H = 384; // scene.jpg is 1200×384
+const ART_H = 401; // scene.jpg is 1200×401
 const pad2 = (n) => String(n).padStart(2, '0');
 const esc = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -71,51 +72,54 @@ const fade = (delay, dur = 0.45) =>
 // ═══════════════════════════ 1. THE SCENE ═══════════════════════════
 // The artwork is the first impression, so it opens the page at full bleed
 // with nothing on top of it but light. Every overlay below is anchored to a
-// real light source in the image and uses a colour sampled from that spot.
+// real light source in the image and uses a colour sampled from that spot —
+// this is the back-view Dubai skyline banner (Burj Khalifa, desk, books).
 {
-  // "meet" not "slice": the viewport matches the art's own 3.126:1 ratio, so
-  // nothing is cropped, and if the source is ever swapped for a different
-  // crop it will letterbox rather than silently cut the character's head off.
+  // "meet" not "slice": the viewport matches the art's own ratio, so nothing
+  // is cropped, and if the source is ever swapped for a different crop it
+  // will letterbox rather than silently cut the character's head off.
   push(`<image x="0" y="0" width="${W}" height="${ART_H}"
         preserveAspectRatio="xMidYMid meet"
         href="data:image/jpeg;base64,${sceneB64}"/>`);
 
-  // The CRT on the left already shows a ">_" prompt. Measured: glyphs occupy
-  // x 129-196, y 175-234. A block cursor sits just past the underscore.
-  push(`<rect x="205" y="214" width="15" height="9" fill="#f6e4d2" opacity="0.9">
-    <animate attributeName="opacity" values="0.9;0.9;0;0" dur="1.1s" repeatCount="indefinite"/>
+  // The setting sun over the skyline, measured at x 870-964, y 140-212.
+  // Pulsing its core and ringing it with a slow-breathing halo sells motion
+  // without touching the skyline itself.
+  push(`<ellipse cx="917" cy="176" rx="40" ry="38" fill="#ffd9a0" opacity="0.1">
+    <animate attributeName="opacity" values="0.06;0.22;0.06" dur="5s" repeatCount="indefinite"/>
+  </ellipse>`);
+
+  // The laptop screen she's working on, measured x 540-679, y 220-309.
+  // A soft cool breathing glow, like an editor UI redrawing.
+  push(`<rect x="548" y="226" width="124" height="78" fill="#dcb8ff" opacity="0.08">
+    <animate attributeName="opacity" values="0.05;0.16;0.05" dur="3.4s" repeatCount="indefinite"/>
   </rect>`);
 
-  // Screen phosphor breathing. Clipped to the screen interior so the glow
-  // never spills onto the bezel.
-  push(`<rect x="100" y="152" width="136" height="112" fill="#6f58d8" opacity="0.06">
-    <animate attributeName="opacity" values="0.04;0.13;0.04" dur="4.2s" repeatCount="indefinite"/>
+  // The little robot's face, measured x 690-749, y 250-299. Blinking eyes.
+  push(`<rect x="696" y="260" width="48" height="30" fill="#ffffff" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.35;0" dur="3.2s" repeatCount="indefinite"/>
   </rect>`);
 
-  // Lit windows in the skyline. Coordinates and the warm tone come from
-  // sampling the brightest warm pixels in the city band.
-  const windows = [
-    [935, 122, 7, 5, 3.1, 0.0], [728, 137, 6, 5, 4.4, 1.2],
-    [809, 140, 7, 6, 3.7, 0.6], [683, 146, 6, 5, 5.1, 2.1],
-    [869, 164, 7, 5, 4.0, 1.7], [647, 176, 6, 6, 3.4, 0.9],
-    [905, 152, 6, 5, 4.8, 2.6], [771, 165, 6, 5, 3.9, 1.5],
-  ];
-  windows.forEach(([x, yy, w, h, dur, delay]) => {
-    push(`<rect x="${x}" y="${yy}" width="${w}" height="${h}" fill="#ffe9b0" opacity="0.5">
-      <animate attributeName="opacity" values="0.15;0.75;0.3;0.6;0.15" dur="${dur}s"
-               begin="${delay}s" repeatCount="indefinite"/></rect>`);
-  });
+  // The Nintendo Switch screen on the desk, measured x 1100-1156, y 265-329.
+  push(`<rect x="1104" y="270" width="48" height="56" fill="#8fd6ff" opacity="0.08">
+    <animate attributeName="opacity" values="0.05;0.18;0.05" dur="2.6s" repeatCount="indefinite"/>
+  </rect>`);
 
-  // Sparkles in the sunset. The art already has a few; these extend the idea.
+  // The glowing orb lamp beside the desk, measured x 1140-1151, y 291-330.
+  // Sampled colour: warm yellow (#fee976).
+  push(`<ellipse cx="1146" cy="312" rx="14" ry="16" fill="#fee976" opacity="0.14">
+    <animate attributeName="opacity" values="0.1;0.3;0.1" dur="1.9s" repeatCount="indefinite"/>
+  </ellipse>`);
+
+  // Sparkle motes drifting over the skyline, extending the art's own glow.
   const star = (x, yy, r, dur, delay) =>
     `<path d="M${x},${yy - r} L${x + r * 0.3},${yy - r * 0.3} L${x + r},${yy}
        L${x + r * 0.3},${yy + r * 0.3} L${x},${yy + r} L${x - r * 0.3},${yy + r * 0.3}
        L${x - r},${yy} L${x - r * 0.3},${yy - r * 0.3} Z" fill="#fff3d6" opacity="0">
-       <animate attributeName="opacity" values="0;0.95;0" dur="${dur}s" begin="${delay}s"
+       <animate attributeName="opacity" values="0;0.9;0" dur="${dur}s" begin="${delay}s"
                 repeatCount="indefinite"/></path>`;
-  push(star(762, 62, 7, 3.6, 0.4) + star(986, 84, 5, 4.4, 1.9) +
-       star(676, 48, 5, 5.0, 3.1) + star(884, 58, 6, 4.0, 2.4) +
-       star(1046, 112, 4, 3.3, 1.1));
+  push(star(1020, 70, 6, 3.6, 0.4) + star(1100, 110, 5, 4.4, 1.9) +
+       star(820, 90, 5, 5.0, 3.1) + star(960, 50, 6, 4.0, 2.4));
 
   // Vignette keeps the eye centred on the character and softens the edges
   // where the art meets the panels below.
@@ -445,12 +449,67 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
   y = top + h + 34;
 }
 
-// ═══════════════════════════ 6. FOOTER ═══════════════════════════
+// ═══════════════════════════ 6. AGENT ROSTER ═══════════════════════════
+// The agent squad that actually builds this page, named and in character.
+{
+  header('04', 'AGENT ROSTER', '// a little chaotic, mostly helpful', C.purple, 4.1);
+  const agents = [
+    ['RATCHET', 'I built the whole thing.', 'execution'],
+    ['GUSTAVE', 'The direction was mine.', 'direction'],
+    ['SIX', "I told her it wasn't good enough.", 'judgment'],
+    ['ALOY', 'I mapped every pattern first.', 'intel'],
+    ['HAZEL', 'Every word, in her voice.', 'voice'],
+  ];
+
+  // Image panel sized to its own aspect ratio (900×698) rather than forced
+  // into a fixed box, so the mascot squad never stretches or crops oddly.
+  const AGENTS_IMG_W = 900, AGENTS_IMG_H = 698;
+  const imgW = 320;
+  const imgH = Math.round((imgW * AGENTS_IMG_H) / AGENTS_IMG_W);
+  const rowH = 42;
+  const listH = 36 + agents.length * rowH;
+  const h = Math.max(listH, imgH + 24);
+  const leftW = W - PAD * 2 - 16 - imgW;
+  const top = y;
+
+  push(`<g opacity="0">${fade(4.2, 0.5)}
+    <path d="${chamfer(PAD, top, leftW, h)}" fill="${C.panel}" stroke="${C.line}"/>
+    ${bracket(PAD + 5, top + 5, 'tl', C.purple)}${bracket(PAD + leftW - 5, top + h - 5, 'br', C.purple)}`);
+  agents.forEach(([name, quote, role], i) => {
+    const ry = top + 46 + i * rowH;
+    push(`<g opacity="0">${fade((4.5 + i * 0.12).toFixed(2), 0.3)}
+      <text x="${PAD + 24}" y="${ry}" font-family="${MONO}" font-size="13" fill="${C.faint}">${pad2(i + 1)}</text>
+      <text x="${PAD + 62}" y="${ry}" font-family="${MONO}" font-size="17" font-weight="800"
+            fill="${C.purpleHi}" letter-spacing="1.6">${esc(name)}</text>
+      <text x="${PAD + 204}" y="${ry}" font-family="${MONO}" font-size="15" fill="${C.dim}"
+            font-style="italic">"${esc(quote)}"</text></g>`);
+  });
+  push(`</g>`);
+
+  // Image sits flush in its own panel to the right, vertically centred
+  // against the taller of the two columns.
+  const ix = PAD + leftW + 16;
+  const iw = W - PAD - ix;
+  const scale = iw / imgW;
+  const drawH = Math.round(imgH * scale);
+  const iy = top + Math.round((h - drawH) / 2);
+  push(`<g opacity="0">${fade(4.3, 0.6)}
+    <path d="${chamfer(ix, top, iw, h, 12)}" fill="${C.panel2}" stroke="${C.line}"/>
+    ${bracket(ix + iw - 5, top + 5, 'tr', C.purple)}${bracket(ix + 5, top + h - 5, 'bl', C.purple)}
+    <image x="${ix}" y="${iy}" width="${iw}" height="${drawH}"
+           preserveAspectRatio="xMidYMid meet"
+           href="data:image/png;base64,${agentsB64}"/>
+  </g>`);
+
+  y = top + h + 36;
+}
+
+// ═══════════════════════════ 7. FOOTER ═══════════════════════════
 {
   const h = 64;
   const top = y;
   push(`<rect x="0" y="${top}" width="${W}" height="2" fill="url(#rule)"/>`);
-  push(`<g opacity="0">${fade(4.4, 0.5)}
+  push(`<g opacity="0">${fade(5.4, 0.5)}
     <text x="${PAD}" y="${top + 40}" font-family="${MONO}" font-size="15" fill="${C.dim}"
           letter-spacing="1.4">Say hi ▸ I like talking about design that ships.</text>
     <text x="${W - PAD}" y="${top + 40}" font-family="${MONO}" font-size="12.5" fill="${C.faint}"
