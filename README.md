@@ -59,17 +59,24 @@ I work from early discovery to the shipped experience.
 
 ### ▸ `>_` stack
 
-**design**
-
-![Figma](https://img.shields.io/badge/Figma-F7DBF5?style=flat-square&logo=figma&logoColor=242044) ![Framer](https://img.shields.io/badge/Framer-E8DDFF?style=flat-square&logo=framer&logoColor=242044) ![Design Systems](https://img.shields.io/badge/Design%20Systems-DFC8FC?style=flat-square&logoColor=242044) ![Research](https://img.shields.io/badge/Research-FFD7C8?style=flat-square&logoColor=242044) ![CRO](https://img.shields.io/badge/CRO-F8DBEE?style=flat-square&logoColor=242044)
-
-**build**
-
-![React](https://img.shields.io/badge/React-211F40?style=flat-square&logo=react&logoColor=80CFE8) ![Next.js](https://img.shields.io/badge/Next.js-211F40?style=flat-square&logo=nextdotjs&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-211F40?style=flat-square&logo=typescript&logoColor=8AA5FF) ![Expo](https://img.shields.io/badge/Expo-211F40?style=flat-square&logo=expo&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-211F40?style=flat-square&logo=supabase&logoColor=80E0B3) ![Vercel](https://img.shields.io/badge/Vercel-211F40?style=flat-square&logo=vercel&logoColor=white)
-
-**ai & automation**
-
-![Claude Code](https://img.shields.io/badge/Claude%20Code-F6DDD6?style=flat-square&logo=anthropic&logoColor=302242) ![Codex](https://img.shields.io/badge/Codex-C8F0E7?style=flat-square&logo=openai&logoColor=302242) ![ChatGPT](https://img.shields.io/badge/ChatGPT-F3E4FF?style=flat-square&logo=openai&logoColor=302242) ![n8n](https://img.shields.io/badge/n8n-D7E8FF?style=flat-square&logo=n8n&logoColor=302242) ![Make](https://img.shields.io/badge/Make-DFCFFF?style=flat-square&logoColor=302242) ![MCP](https://img.shields.io/badge/MCP-E4DAFD?style=flat-square&logoColor=302242)
+<p align="left">
+  <img height="29" alt="Figma" src="https://img.shields.io/badge/Figma-1E1932?style=flat-square&amp;logo=figma&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
+  <img height="29" alt="Framer" src="https://img.shields.io/badge/Framer-1E1932?style=flat-square&amp;logo=framer&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
+  <img height="29" alt="Design Systems" src="https://img.shields.io/badge/Design%20Systems-695790?style=flat-square&amp;labelColor=695790">
+  <img height="29" alt="CRO" src="https://img.shields.io/badge/CRO-695790?style=flat-square&amp;labelColor=695790">
+  <img height="29" alt="Research" src="https://img.shields.io/badge/Research-695790?style=flat-square&amp;labelColor=695790">
+  <img height="29" alt="React" src="https://img.shields.io/badge/React-1E1932?style=flat-square&amp;logo=react&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
+  <img height="29" alt="Next.js" src="https://img.shields.io/badge/Next.js-1E1932?style=flat-square&amp;logo=nextdotjs&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
+  <img height="29" alt="TypeScript" src="https://img.shields.io/badge/TypeScript-1E1932?style=flat-square&amp;logo=typescript&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
+  <img height="29" alt="Expo" src="https://img.shields.io/badge/Expo-1E1932?style=flat-square&amp;logo=expo&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
+  <img height="29" alt="Supabase" src="https://img.shields.io/badge/Supabase-1E1932?style=flat-square&amp;logo=supabase&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
+  <img height="29" alt="Vercel" src="https://img.shields.io/badge/Vercel-1E1932?style=flat-square&amp;logo=vercel&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
+  <img height="29" alt="Claude Code" src="https://img.shields.io/badge/Claude%20Code-1E1932?style=flat-square&amp;logo=anthropic&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
+  <img height="29" alt="Codex" src="https://img.shields.io/badge/Codex-695790?style=flat-square&amp;labelColor=695790">
+  <img height="29" alt="v0" src="https://img.shields.io/badge/v0-695790?style=flat-square&amp;labelColor=695790">
+  <img height="29" alt="n8n" src="https://img.shields.io/badge/n8n-1E1932?style=flat-square&amp;logo=n8n&amp;logoColor=FF8C5A&amp;labelColor=1E1932">
+  <img height="29" alt="Make" src="https://img.shields.io/badge/Make-695790?style=flat-square&amp;labelColor=695790">
+</p>
 
 ### ▸ `>_` built with my agent team
 
