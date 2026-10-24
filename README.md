@@ -109,4 +109,4 @@ I work from early discovery to the shipped experience.
 [![Figma](https://img.shields.io/badge/Figma-F5BFE9?style=for-the-badge&logo=figma&logoColor=221C39)](https://www.figma.com/@saraeldebissy)
 [![Portfolio](https://img.shields.io/badge/Portfolio-C6B0FF?style=for-the-badge&logo=vercel&logoColor=221C39)](https://sara-khalil.pages.dev/)
 
-<sub>━━━ building what's next, together · designed and built by Sara ━━━</sub>
+<sub>━━━ designed & built by Sara · co-created with ChatGPT ━━━</sub>
