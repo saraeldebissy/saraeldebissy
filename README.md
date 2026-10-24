@@ -42,20 +42,19 @@ I design it, build it, and ship it myself.
 </p>
 
 <p align="center">
+  <img src="assets/dash_streak.png" width="100%" alt="github streak: current and longest">
+</p>
+
+<p align="center">
   <img src="assets/dash_agents.png" width="100%" alt="built with my agent team">
 </p>
 
 ### ▸ `>_` stats   `// small commits, big momentum`
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=saraeldebissy&amp;show_icons=true&amp;hide_border=true&amp;bg_color=ffffff&amp;title_color=6f50a9&amp;icon_color=ff85a7&amp;text_color=27243a" alt="GitHub stats" height="155">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=saraeldebissy&amp;layout=compact&amp;hide_border=true&amp;bg_color=ffffff&amp;title_color=6f50a9&amp;text_color=27243a" alt="Most used languages" height="155">
+  <img src="https://github-readme-stats.vercel.app/api?username=saraeldebissy&amp;show_icons=true&amp;hide_border=true&amp;bg_color=16131f&amp;title_color=8b7cf6&amp;icon_color=ff8c5a&amp;text_color=e8e4f5" alt="GitHub stats" height="155">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=saraeldebissy&amp;layout=compact&amp;hide_border=true&amp;bg_color=16131f&amp;title_color=8b7cf6&amp;text_color=e8e4f5" alt="Most used languages" height="155">
 </p>
-
-<details>
-<summary><b>＋ Contribution streak</b></summary>
-<p align="center"><img src="https://streak-stats.demolab.com?user=saraeldebissy&amp;hide_border=true&amp;background=FFFFFF&amp;ring=E28BDD&amp;fire=FF9A74&amp;currStreakLabel=7657B0" alt="Contribution streak"></p>
-</details>
 
 <sub>Live statistics depend on external GitHub stats services and may not include private work.</sub>
 
