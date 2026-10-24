@@ -20,25 +20,20 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Install Playwright
-        run: |
-          npm install playwright@1.58.2
-          npx playwright install --with-deps chromium
-
       - name: Fetch contribution data
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USER: ${{ github.repository_owner }}
         run: node .github/render/fetch-stats.mjs
 
-      - name: Render panel
-        run: node .github/render/render.mjs
+      - name: Build SVG
+        run: node .github/render/build-svg.mjs
 
       - name: Commit if changed
         run: |
           git config user.name  'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add assets/dash_mega.png .github/render/stats.json
+          git add assets/profile.svg .github/render/stats.json
           if git diff --staged --quiet; then
             echo 'Numbers unchanged, nothing to commit.'
           else

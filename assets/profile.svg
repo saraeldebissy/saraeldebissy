@@ -1,0 +1,1352 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="2781" viewBox="0 0 1200 2781" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace">
+<defs>
+  <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="3" fill="none"/>
+    <rect y="3" width="4" height="1" fill="#ffffff" opacity="0.028"/>
+  </pattern>
+  <linearGradient id="sweep" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#ff7a2f" stop-opacity="0"/>
+    <stop offset="50%" stop-color="#ff7a2f" stop-opacity="0.05"/>
+    <stop offset="100%" stop-color="#ff7a2f" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<rect width="1200" height="2781" fill="#050509"/>
+<g>
+    <rect x="0" y="0" width="1200" height="38" fill="#ff7a2f"/>
+    <clipPath id="mq0"><rect x="0" y="0" width="1200" height="38"/></clipPath>
+    <g clip-path="url(#mq0)">
+      <g>
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="-1445.3999999999999,0"
+                          dur="22s" repeatCount="indefinite"/>
+        <text x="0" y="25" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16"
+                font-weight="800" fill="#0a0608" letter-spacing="5" xml:space="preserve">  FORWARD-DEPLOYED DESIGNER   ◆   DESIGN ENGINEER   ◆   DUBAI, UAE   ◆   SHIPS WHAT SHE DESIGNS   ◆</text><text x="1445.3999999999999" y="25" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16"
+                font-weight="800" fill="#0a0608" letter-spacing="5" xml:space="preserve">  FORWARD-DEPLOYED DESIGNER   ◆   DESIGN ENGINEER   ◆   DUBAI, UAE   ◆   SHIPS WHAT SHE DESIGNS   ◆</text><text x="2890.7999999999997" y="25" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16"
+                font-weight="800" fill="#0a0608" letter-spacing="5" xml:space="preserve">  FORWARD-DEPLOYED DESIGNER   ◆   DESIGN ENGINEER   ◆   DUBAI, UAE   ◆   SHIPS WHAT SHE DESIGNS   ◆</text><text x="4336.2" y="25" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16"
+                font-weight="800" fill="#0a0608" letter-spacing="5" xml:space="preserve">  FORWARD-DEPLOYED DESIGNER   ◆   DESIGN ENGINEER   ◆   DUBAI, UAE   ◆   SHIPS WHAT SHE DESIGNS   ◆</text>
+      </g>
+    </g>
+  </g>
+<g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.7s" fill="freeze"/>
+    <path d="M48,60 H1152 L1166,74 V282 L1152,296 H48 L34,282 V74 Z" fill="#0b0b14" stroke="#23233a" stroke-width="1"/>
+    <path d="M39,79 V65 H53" fill="none" stroke="#ff7a2f" stroke-width="2"/><path d="M1147,65 H1161 V79" fill="none" stroke="#ff7a2f" stroke-width="2"/><path d="M39,277 V291 H53" fill="none" stroke="#ff7a2f" stroke-width="2"/><path d="M1147,291 H1161 V277" fill="none" stroke="#ff7a2f" stroke-width="2"/>
+<text x="64" y="102" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" font-weight="700"
+        fill="#a06bff" letter-spacing="4">◆ IDENTITY CONFIRMED  /  SYS.0x4F2</text>
+<text x="64" y="164" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="52" font-weight="800"
+        fill="#e9e6f5" letter-spacing="1" xml:space="preserve">
+<tspan opacity="0">S<animate attributeName="opacity" from="0" to="1" dur="0.01s"
+      begin="2.9s" fill="freeze"/></tspan>
+<tspan opacity="0">A<animate attributeName="opacity" from="0" to="1" dur="0.01s"
+      begin="2.9699999999999998s" fill="freeze"/></tspan>
+<tspan opacity="0">R<animate attributeName="opacity" from="0" to="1" dur="0.01s"
+      begin="3.04s" fill="freeze"/></tspan>
+<tspan opacity="0">A<animate attributeName="opacity" from="0" to="1" dur="0.01s"
+      begin="3.11s" fill="freeze"/></tspan>
+<tspan opacity="0"> <animate attributeName="opacity" from="0" to="1" dur="0.01s"
+      begin="3.1799999999999997s" fill="freeze"/></tspan>
+<tspan fill="#ff7a2f" opacity="0">K<animate attributeName="opacity" from="0" to="1"
+      dur="0.01s" begin="3.25s" fill="freeze"/></tspan>
+<tspan fill="#ff7a2f" opacity="0">H<animate attributeName="opacity" from="0" to="1"
+      dur="0.01s" begin="3.32s" fill="freeze"/></tspan>
+<tspan fill="#ff7a2f" opacity="0">A<animate attributeName="opacity" from="0" to="1"
+      dur="0.01s" begin="3.39s" fill="freeze"/></tspan>
+<tspan fill="#ff7a2f" opacity="0">L<animate attributeName="opacity" from="0" to="1"
+      dur="0.01s" begin="3.46s" fill="freeze"/></tspan>
+<tspan fill="#ff7a2f" opacity="0">I<animate attributeName="opacity" from="0" to="1"
+      dur="0.01s" begin="3.5300000000000002s" fill="freeze"/></tspan>
+<tspan fill="#ff7a2f" opacity="0">L<animate attributeName="opacity" from="0" to="1"
+      dur="0.01s" begin="3.6s" fill="freeze"/></tspan>
+</text>
+<rect x="423.29999999999995" y="128" width="18" height="42" fill="#ff7a2f" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.01s" begin="2.9s" fill="freeze"/>
+    <animate attributeName="opacity" values="1;1;0;0;1" dur="0.9s"
+             begin="2.9s" repeatCount="4"/>
+    <animate attributeName="opacity" from="1" to="0" dur="0.01s" begin="6.800000000000001s" fill="freeze"/>
+  </rect>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="3.8s" fill="freeze"/>
+    <text x="64" y="206" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="19" font-weight="700"
+          fill="#e9e6f5" letter-spacing="2.5">SENIOR PRODUCT DESIGNER &amp; DESIGN ENGINEER</text>
+    <text x="64" y="234" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="17" fill="#7a7490">I design it, build it, and ship it myself.</text>
+    <text x="64" y="260" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="17" font-weight="700"
+          fill="#c9a3ff">Design × Research × Engineering × AI</text>
+  </g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="3.2s" fill="freeze"/>
+    <rect x="836" y="82" width="300" height="192" fill="#07070e" stroke="#23233a" stroke-width="1"/>
+<text x="852" y="110" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13.5" fill="#7a7490"
+          letter-spacing="0.8">STATUS</text>
+<rect x="1055.4" y="101" width="9" height="9" fill="#ff7a2f">
+        <animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite"/></rect>
+<text x="1120" y="110" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13.5" font-weight="700"
+          fill="#ff7a2f" text-anchor="end" letter-spacing="0.8">ONLINE</text>
+<text x="852" y="135" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13.5" fill="#7a7490"
+          letter-spacing="0.8">LOCATION</text>
+<text x="1120" y="135" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13.5" font-weight="700"
+          fill="#e9e6f5" text-anchor="end" letter-spacing="0.8">DUBAI / UAE</text>
+<text x="852" y="160" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13.5" fill="#7a7490"
+          letter-spacing="0.8">DISCIPLINE</text>
+<text x="1120" y="160" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13.5" font-weight="700"
+          fill="#c9a3ff" text-anchor="end" letter-spacing="0.8">DESIGN × ENG</text>
+<text x="852" y="185" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13.5" fill="#7a7490"
+          letter-spacing="0.8">DOMAINS</text>
+<text x="1120" y="185" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13.5" font-weight="700"
+          fill="#e9e6f5" text-anchor="end" letter-spacing="0.8">RETAIL · FIN · SAAS</text>
+<text x="852" y="210" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13.5" fill="#7a7490"
+          letter-spacing="0.8">MODE</text>
+<text x="1120" y="210" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13.5" font-weight="700"
+          fill="#c9a3ff" text-anchor="end" letter-spacing="0.8">EMBEDDED</text>
+<text x="852" y="235" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13.5" fill="#7a7490"
+          letter-spacing="0.8">HANDOFF</text>
+<text x="1120" y="235" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13.5" font-weight="700"
+          fill="#ff7a2f" text-anchor="end" letter-spacing="0.8">DISABLED</text>
+<text x="852" y="270" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12.5" fill="#5d5775"
+        letter-spacing="1.5">UPLINK STABLE ▸ 0x2F·A41·9930</text>
+</g>
+</g>
+<g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="4.1s" fill="freeze"/>
+    <rect x="34" y="314" width="52" height="56" fill="#ff7a2f"/>
+    <text x="60" y="349" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="21" font-weight="800"
+          fill="#050509" text-anchor="middle" letter-spacing="1">01</text>
+    <rect x="86" y="314" width="228" height="56" fill="#13131f"
+          stroke="#2e2e4a" stroke-width="1"/>
+    <text x="104" y="353" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="28" font-weight="800"
+          fill="#ff7a2f">&gt;_</text>
+    <text x="154" y="354" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="34" font-weight="800"
+          fill="#e9e6f5" letter-spacing="2.5">WHOAMI</text>
+    <line x1="330" y1="342" x2="897.2"
+          y2="342" stroke="#23233a" stroke-width="1"/>
+    <text x="1166" y="347" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#7a7490"
+          text-anchor="end" letter-spacing="1.5">// designer × engineer × builder</text>
+  </g>
+<g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="4.2s" fill="freeze"/>
+    <path d="M48,390 H1152 L1166,404 V717 L1152,731 H48 L34,717 V404 Z" fill="#0b0b14" stroke="#23233a" stroke-width="1"/>
+    <path d="M39,409 V395 H53" fill="none" stroke="#ff7a2f" stroke-width="2"/><path d="M1147,726 H1161 V712" fill="none" stroke="#ff7a2f" stroke-width="2"/>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="4.60s" fill="freeze"/>
+      <text x="56" y="430" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">01</text>
+      <text x="92" y="430" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="17.5" fill="#ff7a2f"
+            xml:space="preserve"><tspan font-weight="800" fill="#ff7a2f">$</tspan> whoami</text>
+    </g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="4.76s" fill="freeze"/>
+      <text x="56" y="463" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">02</text>
+      <text x="92" y="463" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="17.5" fill="#e9e6f5"
+            xml:space="preserve">sara khalil — senior product designer &amp; design engineer</text>
+    </g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="4.92s" fill="freeze"/>
+      <text x="56" y="496" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">03</text>
+      <text x="92" y="496" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="17.5" fill="#e9e6f5"
+            xml:space="preserve">dubai, uae · working where design, AI and real-world impact meet</text>
+    </g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="5.08s" fill="freeze"/>
+      <text x="56" y="529" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">04</text>
+      <text x="92" y="529" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="17.5" fill="#e9e6f5"
+            xml:space="preserve"></text>
+    </g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="5.24s" fill="freeze"/>
+      <text x="56" y="562" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">05</text>
+      <text x="92" y="562" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="17.5" fill="#ff7a2f"
+            xml:space="preserve"><tspan font-weight="800" fill="#ff7a2f">$</tspan> cat about.txt</text>
+    </g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="5.40s" fill="freeze"/>
+      <text x="56" y="595" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">06</text>
+      <text x="92" y="595" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="17.5" fill="#7a7490"
+            xml:space="preserve"><tspan font-weight="800" fill="#7a7490">#</tspan> I design across e-commerce, fintech, and SaaS.</text>
+    </g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="5.56s" fill="freeze"/>
+      <text x="56" y="628" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">07</text>
+      <text x="92" y="628" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="17.5" fill="#7a7490"
+            xml:space="preserve"><tspan font-weight="800" fill="#7a7490">#</tspan> I don't hand off a file and walk away. I embed with the problem —</text>
+    </g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="5.72s" fill="freeze"/>
+      <text x="56" y="661" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">08</text>
+      <text x="92" y="661" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="17.5" fill="#7a7490"
+            xml:space="preserve"><tspan font-weight="800" fill="#7a7490">#</tspan> close to people, research, product and engineering.</text>
+    </g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="5.88s" fill="freeze"/>
+      <text x="56" y="694" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">09</text>
+      <text x="92" y="694" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="17.5" fill="#7a7490"
+            xml:space="preserve"><tspan font-weight="800" fill="#7a7490">#</tspan> I work from early discovery to the shipped experience.</text>
+    </g>
+</g>
+<g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="6.2s" fill="freeze"/>
+    <rect x="34" y="749" width="52" height="56" fill="#ff7a2f"/>
+    <text x="60" y="784" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="21" font-weight="800"
+          fill="#050509" text-anchor="middle" letter-spacing="1">02</text>
+    <rect x="86" y="749" width="458" height="56" fill="#13131f"
+          stroke="#2e2e4a" stroke-width="1"/>
+    <text x="104" y="788" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="28" font-weight="800"
+          fill="#ff7a2f">&gt;_</text>
+    <text x="154" y="789" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="34" font-weight="800"
+          fill="#e9e6f5" letter-spacing="2.5">TOOLS I'VE BUILT</text>
+    <line x1="560" y1="777" x2="881.4"
+          y2="777" stroke="#23233a" stroke-width="1"/>
+    <text x="1166" y="782" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#7a7490"
+          text-anchor="end" letter-spacing="1.5">// selected projects &amp; experiments</text>
+  </g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="6.300000000000001s" fill="freeze"/>
+    <path d="M48,825 H720 L734,839 V1135 L720,1149 H48 L34,1135 V839 Z" fill="#0b0b14" stroke="#23233a" stroke-width="1"/>
+    <path d="M39,844 V830 H53" fill="none" stroke="#ff7a2f" stroke-width="2"/><path d="M715,1144 H729 V1130" fill="none" stroke="#ff7a2f" stroke-width="2"/>
+<text x="58" y="873" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" font-weight="800"
+          fill="#a06bff">[01]</text>
+<text x="120" y="873" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="18" font-weight="700" fill="#e9e6f5">Research Repo</text>
+<text x="120" y="895" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="15" fill="#7a7490">A searchable home for studies, insights and evidence.</text>
+<rect x="610" y="858" width="100" height="26" fill="none" stroke="#2b2b42"/>
+      <text x="660" y="876" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" font-weight="800"
+            fill="#6a647e" text-anchor="middle" letter-spacing="1.6">INTERNAL</text>
+<line x1="56" y1="903" x2="712" y2="903" stroke="#23233a"/>
+<text x="58" y="929" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" font-weight="800"
+          fill="#a06bff">[02]</text>
+<text x="120" y="929" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="18" font-weight="700" fill="#e9e6f5">NPS Insight Agent</text>
+<text x="120" y="951" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="15" fill="#7a7490">Groups comments into themes; tracks weekly trends.</text>
+<rect x="610" y="914" width="100" height="26" fill="none" stroke="#2b2b42"/>
+      <text x="660" y="932" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" font-weight="800"
+            fill="#6a647e" text-anchor="middle" letter-spacing="1.6">INTERNAL</text>
+<line x1="56" y1="959" x2="712" y2="959" stroke="#23233a"/>
+<text x="58" y="985" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" font-weight="800"
+          fill="#a06bff">[03]</text>
+<text x="120" y="985" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="18" font-weight="700" fill="#e9e6f5">Bug Testing Platform</text>
+<text x="120" y="1007" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="15" fill="#7a7490">Bugs, screenshots and product feedback in one place.</text>
+<rect x="660" y="970" width="50" height="26" fill="none" stroke="#2b2b42"/>
+      <text x="685" y="988" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" font-weight="800"
+            fill="#6a647e" text-anchor="middle" letter-spacing="1.6">WIP</text>
+<line x1="56" y1="1015" x2="712" y2="1015" stroke="#23233a"/>
+<text x="58" y="1041" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" font-weight="800"
+          fill="#a06bff">[04]</text>
+<text x="120" y="1041" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="18" font-weight="700" fill="#e9e6f5">UX Research Skills</text>
+<text x="120" y="1063" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="15" fill="#7a7490">Reusable Claude skills for responsible UX research.</text>
+<rect x="650" y="1026" width="60" height="26" fill="none" stroke="#4b3a78"/>
+      <text x="680" y="1044" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" font-weight="800"
+            fill="#c9a3ff" text-anchor="middle" letter-spacing="1.6">REPO</text>
+<line x1="56" y1="1071" x2="712" y2="1071" stroke="#23233a"/>
+<text x="58" y="1097" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" font-weight="800"
+          fill="#a06bff">[05]</text>
+<text x="120" y="1097" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="18" font-weight="700" fill="#e9e6f5">Vibe Generator</text>
+<text x="120" y="1119" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="15" fill="#7a7490">Experimental tool for generating and exploring ideas.</text>
+<rect x="650" y="1082" width="60" height="26" fill="none" stroke="#ff7a2f"/>
+      <text x="680" y="1100" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" font-weight="800"
+            fill="#ff7a2f" text-anchor="middle" letter-spacing="1.6">LIVE</text>
+<rect x="650" y="1082" width="60" height="26" fill="#ff7a2f" opacity="0.14">
+        <animate attributeName="opacity" values="0.05;0.22;0.05" dur="2.4s" repeatCount="indefinite"/></rect>
+</g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="6.6s" fill="freeze"/>
+    <path d="M766,825 H1152 L1166,839 V1135 L1152,1149 H766 L752,1135 V839 Z" fill="#101020" stroke="#23233a" stroke-width="1"/>
+    <path d="M1147,830 H1161 V844" fill="none" stroke="#a06bff" stroke-width="2"/><path d="M757,1130 V1144 H771" fill="none" stroke="#a06bff" stroke-width="2"/>
+    <text x="776" y="865" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="20" font-weight="800"
+          fill="#e9e6f5" letter-spacing="2">MORE BUILDS</text>
+<text x="776" y="909" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">06</text>
+      <text x="812" y="909" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16.5" font-weight="700" fill="#e9e6f5">Git Advisor</text>
+      <text x="1142" y="909" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" font-weight="800"
+            fill="#c9a3ff" text-anchor="end" letter-spacing="1.4">REPO</text>
+<text x="776" y="945" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">07</text>
+      <text x="812" y="945" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16.5" font-weight="700" fill="#e9e6f5">Mobbin MCP</text>
+      <text x="1142" y="945" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" font-weight="800"
+            fill="#c9a3ff" text-anchor="end" letter-spacing="1.4">REPO</text>
+<text x="776" y="981" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">08</text>
+      <text x="812" y="981" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16.5" font-weight="700" fill="#e9e6f5">Skill Atlas</text>
+      <text x="1142" y="981" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" font-weight="800"
+            fill="#ff7a2f" text-anchor="end" letter-spacing="1.4">LIVE</text>
+<text x="776" y="1017" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">09</text>
+      <text x="812" y="1017" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16.5" font-weight="700" fill="#e9e6f5">Design Skills</text>
+      <text x="1142" y="1017" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" font-weight="800"
+            fill="#c9a3ff" text-anchor="end" letter-spacing="1.4">REPO</text>
+<text x="776" y="1053" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">10</text>
+      <text x="812" y="1053" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16.5" font-weight="700" fill="#e9e6f5">Build Bouncer</text>
+      <text x="1142" y="1053" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" font-weight="800"
+            fill="#c9a3ff" text-anchor="end" letter-spacing="1.4">REPO</text>
+<text x="776" y="1121" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#5d5775"
+        letter-spacing="1.4">ARCHIVE ▸ 10 UNITS INDEXED</text></g>
+<g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="6.9s" fill="freeze"/>
+    <rect x="34" y="1167" width="52" height="56" fill="#ff7a2f"/>
+    <text x="60" y="1202" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="21" font-weight="800"
+          fill="#050509" text-anchor="middle" letter-spacing="1">03</text>
+    <rect x="86" y="1167" width="205" height="56" fill="#13131f"
+          stroke="#2e2e4a" stroke-width="1"/>
+    <text x="104" y="1206" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="28" font-weight="800"
+          fill="#ff7a2f">&gt;_</text>
+    <text x="154" y="1207" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="34" font-weight="800"
+          fill="#e9e6f5" letter-spacing="2.5">STACK</text>
+    <line x1="307" y1="1195" x2="1047.3"
+          y2="1195" stroke="#23233a" stroke-width="1"/>
+    <text x="1166" y="1200" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#7a7490"
+          text-anchor="end" letter-spacing="1.5">// my toolkit</text>
+  </g>
+<g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="7s" fill="freeze"/>
+    <path d="M48,1243 H1152 L1166,1257 V1439 L1152,1453 H48 L34,1439 V1257 Z" fill="#0b0b14" stroke="#23233a" stroke-width="1"/>
+    <path d="M39,1262 V1248 H53" fill="none" stroke="#ff7a2f" stroke-width="2"/><path d="M1147,1448 H1161 V1434" fill="none" stroke="#ff7a2f" stroke-width="2"/>
+<text x="58" y="1299" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" font-weight="800"
+          fill="#a06bff" letter-spacing="2.5">DESIGN</text>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.30s" fill="freeze"/>
+        <path d="M171,1278 H239.5 V1304 L232.5,1311 H164 V1285 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="201.75" y="1299" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">Figma</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.35s" fill="freeze"/>
+        <path d="M256.5,1278 H334.9 V1304 L327.9,1311 H249.5 V1285 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="292.2" y="1299" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">Framer</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.40s" fill="freeze"/>
+        <path d="M351.9,1278 H509.5 V1304 L502.5,1311 H344.9 V1285 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="427.2" y="1299" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">Design Systems</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.45s" fill="freeze"/>
+        <path d="M526.5,1278 H575.2 V1304 L568.2,1311 H519.5 V1285 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="547.35" y="1299" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">CRO</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.50s" fill="freeze"/>
+        <path d="M592.2,1278 H690.4000000000001 V1304 L683.4000000000001,1311 H585.2 V1285 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="637.8000000000001" y="1299" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">Research</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.55s" fill="freeze"/>
+        <path d="M707.4000000000001,1278 H785.8000000000001 V1304 L778.8000000000001,1311 H700.4000000000001 V1285 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="743.1000000000001" y="1299" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">FigJam</text></g>
+<text x="58" y="1357" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" font-weight="800"
+          fill="#a06bff" letter-spacing="2.5">BUILD</text>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.48s" fill="freeze"/>
+        <path d="M171,1336 H239.5 V1362 L232.5,1369 H164 V1343 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="201.75" y="1357" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">React</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.53s" fill="freeze"/>
+        <path d="M256.5,1336 H344.8 V1362 L337.8,1369 H249.5 V1343 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="297.15" y="1357" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">Next.js</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.58s" fill="freeze"/>
+        <path d="M361.8,1336 H479.8 V1362 L472.8,1369 H354.8 V1343 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="417.3" y="1357" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">TypeScript</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.63s" fill="freeze"/>
+        <path d="M496.8,1336 H555.4 V1362 L548.4,1369 H489.8 V1343 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="522.6" y="1357" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">Expo</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.68s" fill="freeze"/>
+        <path d="M572.4,1336 H670.6 V1362 L663.6,1369 H565.4 V1343 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="618" y="1357" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">Supabase</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.73s" fill="freeze"/>
+        <path d="M687.6,1336 H766 V1362 L759,1369 H680.6 V1343 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="723.3000000000001" y="1357" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">Vercel</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.78s" fill="freeze"/>
+        <path d="M783,1336 H881.2 V1362 L874.2,1369 H776 V1343 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="828.6" y="1357" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">Tailwind</text></g>
+<text x="58" y="1415" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" font-weight="800"
+          fill="#a06bff" letter-spacing="2.5">AI</text>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.66s" fill="freeze"/>
+        <path d="M171,1394 H298.9 V1420 L291.9,1427 H164 V1401 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="231.45" y="1415" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">Claude Code</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.71s" fill="freeze"/>
+        <path d="M315.9,1394 H384.4 V1420 L377.4,1427 H308.9 V1401 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="346.65" y="1415" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">Codex</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.76s" fill="freeze"/>
+        <path d="M401.4,1394 H440.2 V1420 L433.2,1427 H394.4 V1401 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="417.29999999999995" y="1415" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">v0</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.81s" fill="freeze"/>
+        <path d="M457.2,1394 H505.9 V1420 L498.9,1427 H450.2 V1401 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="478.05" y="1415" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">n8n</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.86s" fill="freeze"/>
+        <path d="M522.9,1394 H581.5 V1420 L574.5,1427 H515.9 V1401 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="548.6999999999999" y="1415" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">Make</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+            begin="7.91s" fill="freeze"/>
+        <path d="M598.5,1394 H647.2 V1420 L640.2,1427 H591.5 V1401 Z"
+              fill="#0e0e1b" stroke="#2e2e4a"/>
+        <text x="619.35" y="1415" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16" font-weight="600"
+              fill="#e9e6f5" text-anchor="middle">MCP</text></g>
+</g>
+<g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="8s" fill="freeze"/>
+    <rect x="34" y="1471" width="52" height="56" fill="#ff7a2f"/>
+    <text x="60" y="1506" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="21" font-weight="800"
+          fill="#050509" text-anchor="middle" letter-spacing="1">04</text>
+    <rect x="86" y="1471" width="274" height="56" fill="#13131f"
+          stroke="#2e2e4a" stroke-width="1"/>
+    <text x="104" y="1510" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="28" font-weight="800"
+          fill="#ff7a2f">&gt;_</text>
+    <text x="154" y="1511" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="34" font-weight="800"
+          fill="#e9e6f5" letter-spacing="2.5">PIPELINE</text>
+    <line x1="376" y1="1499" x2="976.2"
+          y2="1499" stroke="#23233a" stroke-width="1"/>
+    <text x="1166" y="1504" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#7a7490"
+          text-anchor="end" letter-spacing="1.5">// from idea to impact</text>
+  </g>
+<g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="8.1s" fill="freeze"/>
+    <path d="M48,1547 H1152 L1166,1561 V1683 L1152,1697 H48 L34,1683 V1561 Z" fill="#0b0b14" stroke="#23233a" stroke-width="1"/>
+    <path d="M39,1566 V1552 H53" fill="none" stroke="#ff7a2f" stroke-width="2"/><path d="M1147,1692 H1161 V1678" fill="none" stroke="#ff7a2f" stroke-width="2"/>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.35s"
+          begin="8.40s" fill="freeze"/>
+      <path d="M68,1581 H232.8 L242.8,1591 V1633 L232.8,1643 H68 L58,1633 V1591 Z" fill="#0d0d1a"
+            stroke="#2e2e4a"/>
+      <text x="150.4" y="1603" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12" fill="#7a7490"
+            text-anchor="middle" letter-spacing="1.5">01</text>
+      <text x="150.4" y="1629" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="19" font-weight="800"
+            fill="#e9e6f5" text-anchor="middle" letter-spacing="2">IDEA</text></g>
+<text x="262.8" y="1619" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="20" fill="#a06bff"
+            text-anchor="middle" opacity="0.35">▸<animate attributeName="opacity"
+            values="0.2;1;0.2" dur="1.8s" begin="0s" repeatCount="indefinite"/></text>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.35s"
+          begin="8.58s" fill="freeze"/>
+      <path d="M292.8,1581 H457.6 L467.6,1591 V1633 L457.6,1643 H292.8 L282.8,1633 V1591 Z" fill="#0d0d1a"
+            stroke="#2e2e4a"/>
+      <text x="375.20000000000005" y="1603" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12" fill="#7a7490"
+            text-anchor="middle" letter-spacing="1.5">02</text>
+      <text x="375.20000000000005" y="1629" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="19" font-weight="800"
+            fill="#e9e6f5" text-anchor="middle" letter-spacing="2">DESIGN</text></g>
+<text x="487.6" y="1619" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="20" fill="#a06bff"
+            text-anchor="middle" opacity="0.35">▸<animate attributeName="opacity"
+            values="0.2;1;0.2" dur="1.8s" begin="0.3s" repeatCount="indefinite"/></text>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.35s"
+          begin="8.76s" fill="freeze"/>
+      <path d="M517.6,1581 H682.4000000000001 L692.4000000000001,1591 V1633 L682.4000000000001,1643 H517.6 L507.6,1633 V1591 Z" fill="#0d0d1a"
+            stroke="#2e2e4a"/>
+      <text x="600" y="1603" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12" fill="#7a7490"
+            text-anchor="middle" letter-spacing="1.5">03</text>
+      <text x="600" y="1629" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="19" font-weight="800"
+            fill="#e9e6f5" text-anchor="middle" letter-spacing="2">BUILD</text></g>
+<text x="712.4000000000001" y="1619" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="20" fill="#a06bff"
+            text-anchor="middle" opacity="0.35">▸<animate attributeName="opacity"
+            values="0.2;1;0.2" dur="1.8s" begin="0.6s" repeatCount="indefinite"/></text>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.35s"
+          begin="8.94s" fill="freeze"/>
+      <path d="M742.4000000000001,1581 H907.2 L917.2,1591 V1633 L907.2,1643 H742.4000000000001 L732.4000000000001,1633 V1591 Z" fill="rgba(255,122,47,.09)"
+            stroke="#ff7a2f"/>
+      <text x="824.8000000000001" y="1603" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12" fill="#7a7490"
+            text-anchor="middle" letter-spacing="1.5">04</text>
+      <text x="824.8000000000001" y="1629" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="19" font-weight="800"
+            fill="#ffa45c" text-anchor="middle" letter-spacing="2">SHIP</text></g>
+<text x="937.2" y="1619" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="20" fill="#a06bff"
+            text-anchor="middle" opacity="0.35">▸<animate attributeName="opacity"
+            values="0.2;1;0.2" dur="1.8s" begin="0.8999999999999999s" repeatCount="indefinite"/></text>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.35s"
+          begin="9.12s" fill="freeze"/>
+      <path d="M967.2,1581 H1132 L1142,1591 V1633 L1132,1643 H967.2 L957.2,1633 V1591 Z" fill="rgba(255,122,47,.09)"
+            stroke="#ff7a2f"/>
+      <text x="1049.6000000000001" y="1603" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12" fill="#7a7490"
+            text-anchor="middle" letter-spacing="1.5">05</text>
+      <text x="1049.6000000000001" y="1629" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="19" font-weight="800"
+            fill="#ffa45c" text-anchor="middle" letter-spacing="2">MEASURE</text></g>
+<text x="58" y="1673" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14.5" fill="#a06bff"
+        letter-spacing="1.4">↺ FEEDBACK</text>
+    <text x="600" y="1673" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14.5" fill="#7a7490"
+          text-anchor="middle" letter-spacing="1.4">STAKEHOLDERS + USERS + EVIDENCE + LEARNING</text>
+</g>
+<g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="9.2s" fill="freeze"/>
+    <rect x="34" y="1715" width="52" height="56" fill="#ff7a2f"/>
+    <text x="60" y="1750" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="21" font-weight="800"
+          fill="#050509" text-anchor="middle" letter-spacing="1">05</text>
+    <rect x="86" y="1715" width="297" height="56" fill="#13131f"
+          stroke="#2e2e4a" stroke-width="1"/>
+    <text x="104" y="1754" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="28" font-weight="800"
+          fill="#ff7a2f">&gt;_</text>
+    <text x="154" y="1755" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="34" font-weight="800"
+          fill="#e9e6f5" letter-spacing="2.5">TELEMETRY</text>
+    <line x1="399" y1="1743" x2="960.4"
+          y2="1743" stroke="#23233a" stroke-width="1"/>
+    <text x="1166" y="1748" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#7a7490"
+          text-anchor="end" letter-spacing="1.5">// consistency compounds</text>
+  </g>
+<g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="9.3s" fill="freeze"/>
+    <path d="M48,1791 H1152 L1166,1805 V2067 L1152,2081 H48 L34,2067 V1805 Z" fill="#0b0b14" stroke="#23233a" stroke-width="1"/>
+    <path d="M39,1810 V1796 H53" fill="none" stroke="#ff7a2f" stroke-width="2"/><path d="M1147,1796 H1161 V1810" fill="none" stroke="#ff7a2f" stroke-width="2"/><path d="M39,2062 V2076 H53" fill="none" stroke="#ff7a2f" stroke-width="2"/><path d="M1147,2076 H1161 V2062" fill="none" stroke="#ff7a2f" stroke-width="2"/>
+<path d="M70,1823 H396.6666666666667 L408.6666666666667,1835 V1951 L396.6666666666667,1963 H70 L58,1951 V1835 Z" fill="#0d0d1a" stroke="#2e2e4a"/>
+      <text x="233.33333333333334" y="1851" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#7a7490"
+            text-anchor="middle" letter-spacing="2.5">▲ CURRENT STREAK</text>
+      <text x="233.33333333333334" y="1919" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="66" font-weight="800"
+            fill="#ff7a2f" text-anchor="middle" opacity="0">04
+        <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="9.7s" fill="freeze"/>
+      </text>
+      <text x="233.33333333333334" y="1947" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#5d5775"
+            text-anchor="middle" letter-spacing="2">CONSECUTIVE DAYS</text>
+<path d="M436.6666666666667,1823 H763.3333333333334 L775.3333333333334,1835 V1951 L763.3333333333334,1963 H436.6666666666667 L424.6666666666667,1951 V1835 Z" fill="#0d0d1a" stroke="#2e2e4a"/>
+      <text x="600" y="1851" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#7a7490"
+            text-anchor="middle" letter-spacing="2.5">◆ LONGEST STREAK</text>
+      <text x="600" y="1919" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="66" font-weight="800"
+            fill="#c9a3ff" text-anchor="middle" opacity="0">13
+        <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="9.899999999999999s" fill="freeze"/>
+      </text>
+      <text x="600" y="1947" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#5d5775"
+            text-anchor="middle" letter-spacing="2">PERSONAL RECORD</text>
+<path d="M803.3333333333334,1823 H1130 L1142,1835 V1951 L1130,1963 H803.3333333333334 L791.3333333333334,1951 V1835 Z" fill="#0d0d1a" stroke="#2e2e4a"/>
+    <text x="809.3333333333334" y="1849" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#7a7490"
+          letter-spacing="2">◇ SIGNAL</text>
+<text x="809.3333333333334" y="1879" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" fill="#7a7490">REPOS</text>
+      <text x="1124" y="1879" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" font-weight="800"
+            fill="#e9e6f5" text-anchor="end">26</text>
+<text x="809.3333333333334" y="1905" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" fill="#7a7490">STARS</text>
+      <text x="1124" y="1905" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" font-weight="800"
+            fill="#e9e6f5" text-anchor="end">3</text>
+<text x="809.3333333333334" y="1931" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" fill="#7a7490">FOLLOWERS</text>
+      <text x="1124" y="1931" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" font-weight="800"
+            fill="#e9e6f5" text-anchor="end">1</text>
+<rect x="58.00" y="2037.92" width="11.06"
+          height="25.08" fill="#262640">
+      <animate attributeName="height" from="0" to="25.08" dur="0.5s"
+               begin="9.90s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2037.92" dur="0.5s"
+               begin="9.90s" fill="freeze"/>
+    </rect>
+<rect x="70.06" y="2022.72" width="11.06"
+          height="40.28" fill="#262640">
+      <animate attributeName="height" from="0" to="40.28" dur="0.5s"
+               begin="9.91s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2022.72" dur="0.5s"
+               begin="9.91s" fill="freeze"/>
+    </rect>
+<rect x="82.11" y="2037.92" width="11.06"
+          height="25.08" fill="#262640">
+      <animate attributeName="height" from="0" to="25.08" dur="0.5s"
+               begin="9.92s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2037.92" dur="0.5s"
+               begin="9.92s" fill="freeze"/>
+    </rect>
+<rect x="94.17" y="2009.04" width="11.06"
+          height="53.96" fill="#262640">
+      <animate attributeName="height" from="0" to="53.96" dur="0.5s"
+               begin="9.94s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2009.04" dur="0.5s"
+               begin="9.94s" fill="freeze"/>
+    </rect>
+<rect x="106.22" y="2009.04" width="11.06"
+          height="53.96" fill="#262640">
+      <animate attributeName="height" from="0" to="53.96" dur="0.5s"
+               begin="9.95s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2009.04" dur="0.5s"
+               begin="9.95s" fill="freeze"/>
+    </rect>
+<rect x="118.28" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="9.96s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="9.96s" fill="freeze"/>
+    </rect>
+<rect x="130.33" y="2022.72" width="11.06"
+          height="40.28" fill="#262640">
+      <animate attributeName="height" from="0" to="40.28" dur="0.5s"
+               begin="9.97s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2022.72" dur="0.5s"
+               begin="9.97s" fill="freeze"/>
+    </rect>
+<rect x="142.39" y="2027.28" width="11.06"
+          height="35.72" fill="#262640">
+      <animate attributeName="height" from="0" to="35.72" dur="0.5s"
+               begin="9.98s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2027.28" dur="0.5s"
+               begin="9.98s" fill="freeze"/>
+    </rect>
+<rect x="154.44" y="2022.72" width="11.06"
+          height="40.28" fill="#262640">
+      <animate attributeName="height" from="0" to="40.28" dur="0.5s"
+               begin="10.00s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2022.72" dur="0.5s"
+               begin="10.00s" fill="freeze"/>
+    </rect>
+<rect x="166.50" y="2037.92" width="11.06"
+          height="25.08" fill="#262640">
+      <animate attributeName="height" from="0" to="25.08" dur="0.5s"
+               begin="10.01s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2037.92" dur="0.5s"
+               begin="10.01s" fill="freeze"/>
+    </rect>
+<rect x="178.56" y="2044.76" width="11.06"
+          height="18.24" fill="#262640">
+      <animate attributeName="height" from="0" to="18.24" dur="0.5s"
+               begin="10.02s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2044.76" dur="0.5s"
+               begin="10.02s" fill="freeze"/>
+    </rect>
+<rect x="190.61" y="2044.76" width="11.06"
+          height="18.24" fill="#262640">
+      <animate attributeName="height" from="0" to="18.24" dur="0.5s"
+               begin="10.03s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2044.76" dur="0.5s"
+               begin="10.03s" fill="freeze"/>
+    </rect>
+<rect x="202.67" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.04s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.04s" fill="freeze"/>
+    </rect>
+<rect x="214.72" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.06s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.06s" fill="freeze"/>
+    </rect>
+<rect x="226.78" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.07s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.07s" fill="freeze"/>
+    </rect>
+<rect x="238.83" y="2044.76" width="11.06"
+          height="18.24" fill="#262640">
+      <animate attributeName="height" from="0" to="18.24" dur="0.5s"
+               begin="10.08s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2044.76" dur="0.5s"
+               begin="10.08s" fill="freeze"/>
+    </rect>
+<rect x="250.89" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.09s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.09s" fill="freeze"/>
+    </rect>
+<rect x="262.94" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.10s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.10s" fill="freeze"/>
+    </rect>
+<rect x="275.00" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.12s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.12s" fill="freeze"/>
+    </rect>
+<rect x="287.06" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.13s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.13s" fill="freeze"/>
+    </rect>
+<rect x="299.11" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.14s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.14s" fill="freeze"/>
+    </rect>
+<rect x="311.17" y="1996.12" width="11.06"
+          height="66.88" fill="#262640">
+      <animate attributeName="height" from="0" to="66.88" dur="0.5s"
+               begin="10.15s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="1996.12" dur="0.5s"
+               begin="10.15s" fill="freeze"/>
+    </rect>
+<rect x="323.22" y="2018.92" width="11.06"
+          height="44.08" fill="#262640">
+      <animate attributeName="height" from="0" to="44.08" dur="0.5s"
+               begin="10.16s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2018.92" dur="0.5s"
+               begin="10.16s" fill="freeze"/>
+    </rect>
+<rect x="335.28" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.18s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.18s" fill="freeze"/>
+    </rect>
+<rect x="347.33" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.19s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.19s" fill="freeze"/>
+    </rect>
+<rect x="359.39" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.20s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.20s" fill="freeze"/>
+    </rect>
+<rect x="371.44" y="1998.40" width="11.06"
+          height="64.60" fill="#262640">
+      <animate attributeName="height" from="0" to="64.60" dur="0.5s"
+               begin="10.21s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="1998.40" dur="0.5s"
+               begin="10.21s" fill="freeze"/>
+    </rect>
+<rect x="383.50" y="2037.92" width="11.06"
+          height="25.08" fill="#262640">
+      <animate attributeName="height" from="0" to="25.08" dur="0.5s"
+               begin="10.22s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2037.92" dur="0.5s"
+               begin="10.22s" fill="freeze"/>
+    </rect>
+<rect x="395.56" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.24s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.24s" fill="freeze"/>
+    </rect>
+<rect x="407.61" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.25s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.25s" fill="freeze"/>
+    </rect>
+<rect x="419.67" y="2012.08" width="11.06"
+          height="50.92" fill="#262640">
+      <animate attributeName="height" from="0" to="50.92" dur="0.5s"
+               begin="10.26s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2012.08" dur="0.5s"
+               begin="10.26s" fill="freeze"/>
+    </rect>
+<rect x="431.72" y="2044.76" width="11.06"
+          height="18.24" fill="#262640">
+      <animate attributeName="height" from="0" to="18.24" dur="0.5s"
+               begin="10.27s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2044.76" dur="0.5s"
+               begin="10.27s" fill="freeze"/>
+    </rect>
+<rect x="443.78" y="2044.76" width="11.06"
+          height="18.24" fill="#262640">
+      <animate attributeName="height" from="0" to="18.24" dur="0.5s"
+               begin="10.28s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2044.76" dur="0.5s"
+               begin="10.28s" fill="freeze"/>
+    </rect>
+<rect x="455.83" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.30s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.30s" fill="freeze"/>
+    </rect>
+<rect x="467.89" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.31s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.31s" fill="freeze"/>
+    </rect>
+<rect x="479.94" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.32s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.32s" fill="freeze"/>
+    </rect>
+<rect x="492.00" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.33s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.33s" fill="freeze"/>
+    </rect>
+<rect x="504.06" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.34s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.34s" fill="freeze"/>
+    </rect>
+<rect x="516.11" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.36s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.36s" fill="freeze"/>
+    </rect>
+<rect x="528.17" y="2037.92" width="11.06"
+          height="25.08" fill="#262640">
+      <animate attributeName="height" from="0" to="25.08" dur="0.5s"
+               begin="10.37s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2037.92" dur="0.5s"
+               begin="10.37s" fill="freeze"/>
+    </rect>
+<rect x="540.22" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.38s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.38s" fill="freeze"/>
+    </rect>
+<rect x="552.28" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.39s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.39s" fill="freeze"/>
+    </rect>
+<rect x="564.33" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.40s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.40s" fill="freeze"/>
+    </rect>
+<rect x="576.39" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.42s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.42s" fill="freeze"/>
+    </rect>
+<rect x="588.44" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.43s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.43s" fill="freeze"/>
+    </rect>
+<rect x="600.50" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.44s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.44s" fill="freeze"/>
+    </rect>
+<rect x="612.56" y="2037.92" width="11.06"
+          height="25.08" fill="#262640">
+      <animate attributeName="height" from="0" to="25.08" dur="0.5s"
+               begin="10.45s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2037.92" dur="0.5s"
+               begin="10.45s" fill="freeze"/>
+    </rect>
+<rect x="624.61" y="2037.92" width="11.06"
+          height="25.08" fill="#262640">
+      <animate attributeName="height" from="0" to="25.08" dur="0.5s"
+               begin="10.46s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2037.92" dur="0.5s"
+               begin="10.46s" fill="freeze"/>
+    </rect>
+<rect x="636.67" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.48s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.48s" fill="freeze"/>
+    </rect>
+<rect x="648.72" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.49s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.49s" fill="freeze"/>
+    </rect>
+<rect x="660.78" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.50s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.50s" fill="freeze"/>
+    </rect>
+<rect x="672.83" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.51s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.51s" fill="freeze"/>
+    </rect>
+<rect x="684.89" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.52s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.52s" fill="freeze"/>
+    </rect>
+<rect x="696.94" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.54s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.54s" fill="freeze"/>
+    </rect>
+<rect x="709.00" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.55s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.55s" fill="freeze"/>
+    </rect>
+<rect x="721.06" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.56s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.56s" fill="freeze"/>
+    </rect>
+<rect x="733.11" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.57s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.57s" fill="freeze"/>
+    </rect>
+<rect x="745.17" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.58s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.58s" fill="freeze"/>
+    </rect>
+<rect x="757.22" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.60s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.60s" fill="freeze"/>
+    </rect>
+<rect x="769.28" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.61s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.61s" fill="freeze"/>
+    </rect>
+<rect x="781.33" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.62s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.62s" fill="freeze"/>
+    </rect>
+<rect x="793.39" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.63s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.63s" fill="freeze"/>
+    </rect>
+<rect x="805.44" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.64s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.64s" fill="freeze"/>
+    </rect>
+<rect x="817.50" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.66s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.66s" fill="freeze"/>
+    </rect>
+<rect x="829.56" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.67s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.67s" fill="freeze"/>
+    </rect>
+<rect x="841.61" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.68s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.68s" fill="freeze"/>
+    </rect>
+<rect x="853.67" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.69s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.69s" fill="freeze"/>
+    </rect>
+<rect x="865.72" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.70s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.70s" fill="freeze"/>
+    </rect>
+<rect x="877.78" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.72s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.72s" fill="freeze"/>
+    </rect>
+<rect x="889.83" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.73s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.73s" fill="freeze"/>
+    </rect>
+<rect x="901.89" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.74s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.74s" fill="freeze"/>
+    </rect>
+<rect x="913.94" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.75s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.75s" fill="freeze"/>
+    </rect>
+<rect x="926.00" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.76s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.76s" fill="freeze"/>
+    </rect>
+<rect x="938.06" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.78s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.78s" fill="freeze"/>
+    </rect>
+<rect x="950.11" y="2044.76" width="11.06"
+          height="18.24" fill="#262640">
+      <animate attributeName="height" from="0" to="18.24" dur="0.5s"
+               begin="10.79s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2044.76" dur="0.5s"
+               begin="10.79s" fill="freeze"/>
+    </rect>
+<rect x="962.17" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.80s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.80s" fill="freeze"/>
+    </rect>
+<rect x="974.22" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.81s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.81s" fill="freeze"/>
+    </rect>
+<rect x="986.28" y="2044.76" width="11.06"
+          height="18.24" fill="#262640">
+      <animate attributeName="height" from="0" to="18.24" dur="0.5s"
+               begin="10.82s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2044.76" dur="0.5s"
+               begin="10.82s" fill="freeze"/>
+    </rect>
+<rect x="998.33" y="2009.04" width="11.06"
+          height="53.96" fill="#262640">
+      <animate attributeName="height" from="0" to="53.96" dur="0.5s"
+               begin="10.84s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2009.04" dur="0.5s"
+               begin="10.84s" fill="freeze"/>
+    </rect>
+<rect x="1010.39" y="2000.68" width="11.06"
+          height="62.32" fill="#262640">
+      <animate attributeName="height" from="0" to="62.32" dur="0.5s"
+               begin="10.85s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2000.68" dur="0.5s"
+               begin="10.85s" fill="freeze"/>
+    </rect>
+<rect x="1022.44" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.86s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.86s" fill="freeze"/>
+    </rect>
+<rect x="1034.50" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.87s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.87s" fill="freeze"/>
+    </rect>
+<rect x="1046.56" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.88s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.88s" fill="freeze"/>
+    </rect>
+<rect x="1058.61" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.90s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.90s" fill="freeze"/>
+    </rect>
+<rect x="1070.67" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.91s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.91s" fill="freeze"/>
+    </rect>
+<rect x="1082.72" y="2059.20" width="11.06"
+          height="3.80" fill="#262640">
+      <animate attributeName="height" from="0" to="3.80" dur="0.5s"
+               begin="10.92s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2059.20" dur="0.5s"
+               begin="10.92s" fill="freeze"/>
+    </rect>
+<rect x="1094.78" y="2037.92" width="11.06"
+          height="25.08" fill="#ff7a2f">
+      <animate attributeName="height" from="0" to="25.08" dur="0.5s"
+               begin="10.93s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2037.92" dur="0.5s"
+               begin="10.93s" fill="freeze"/>
+    </rect>
+<rect x="1106.83" y="2031.84" width="11.06"
+          height="31.16" fill="#ff7a2f">
+      <animate attributeName="height" from="0" to="31.16" dur="0.5s"
+               begin="10.94s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2031.84" dur="0.5s"
+               begin="10.94s" fill="freeze"/>
+    </rect>
+<rect x="1118.89" y="2037.92" width="11.06"
+          height="25.08" fill="#ff7a2f">
+      <animate attributeName="height" from="0" to="25.08" dur="0.5s"
+               begin="10.96s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="2037.92" dur="0.5s"
+               begin="10.96s" fill="freeze"/>
+    </rect>
+<rect x="1130.94" y="1987.00" width="11.06"
+          height="76.00" fill="#ff7a2f">
+      <animate attributeName="height" from="0" to="76.00" dur="0.5s"
+               begin="10.97s" fill="freeze"/>
+      <animate attributeName="y" from="2063" to="1987.00" dur="0.5s"
+               begin="10.97s" fill="freeze"/>
+    </rect>
+<text x="58" y="2085" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#7a7490"
+        letter-spacing="1.3">◂ 90 DAYS AGO</text>
+    <text x="600" y="2085" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#ff7a2f"
+          text-anchor="middle" letter-spacing="1.3">ACTIVE STREAK ▸ 04 DAYS</text>
+    <text x="1142" y="2085" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#7a7490"
+          text-anchor="end" letter-spacing="1.3">TODAY ▸</text>
+</g>
+<g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="10.2s" fill="freeze"/>
+    <rect x="34" y="2099" width="52" height="56" fill="#ff7a2f"/>
+    <text x="60" y="2134" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="21" font-weight="800"
+          fill="#050509" text-anchor="middle" letter-spacing="1">06</text>
+    <rect x="86" y="2099" width="343" height="56" fill="#13131f"
+          stroke="#2e2e4a" stroke-width="1"/>
+    <text x="104" y="2138" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="28" font-weight="800"
+          fill="#ff7a2f">&gt;_</text>
+    <text x="154" y="2139" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="34" font-weight="800"
+          fill="#e9e6f5" letter-spacing="2.5">SIGNAL FEED</text>
+    <line x1="445" y1="2127" x2="999.9"
+          y2="2127" stroke="#23233a" stroke-width="1"/>
+    <text x="1166" y="2132" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#7a7490"
+          text-anchor="end" letter-spacing="1.5">// live from github</text>
+  </g>
+<g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="10.3s" fill="freeze"/>
+    <path d="M48,2175 H1152 L1166,2189 V2373 L1152,2387 H48 L34,2373 V2189 Z" fill="#0b0b14" stroke="#23233a" stroke-width="1"/>
+    <path d="M39,2194 V2180 H53" fill="none" stroke="#ff7a2f" stroke-width="2"/><path d="M1147,2382 H1161 V2368" fill="none" stroke="#ff7a2f" stroke-width="2"/>
+<path d="M70,2201 H579 L591,2213 V2349 L579,2361 H70 L58,2349 V2213 Z" fill="#0d0d1a" stroke="#2e2e4a"/>
+    <text x="78" y="2231" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="15" font-weight="800"
+          fill="#ff7a2f" letter-spacing="2.5">GITHUB STATS</text>
+<text x="78" y="2263" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="15" fill="#7a7490">STARS EARNED</text>
+      <text x="571" y="2263" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="15" font-weight="800"
+            fill="#e9e6f5" text-anchor="end">3</text>
+<text x="78" y="2289" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="15" fill="#7a7490">COMMITS (1Y)</text>
+      <text x="571" y="2289" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="15" font-weight="800"
+            fill="#e9e6f5" text-anchor="end">771</text>
+<text x="78" y="2315" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="15" fill="#7a7490">PULL REQUESTS</text>
+      <text x="571" y="2315" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="15" font-weight="800"
+            fill="#e9e6f5" text-anchor="end">7</text>
+<text x="78" y="2341" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="15" fill="#7a7490">ISSUES</text>
+      <text x="571" y="2341" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="15" font-weight="800"
+            fill="#e9e6f5" text-anchor="end">0</text>
+<path d="M621,2201 H1130 L1142,2213 V2349 L1130,2361 H621 L609,2349 V2213 Z" fill="#0d0d1a" stroke="#2e2e4a"/>
+    <text x="629" y="2231" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="15" font-weight="800"
+          fill="#c9a3ff" letter-spacing="2.5">MOST USED LANGUAGES</text>
+<rect x="629.00" y="2247" width="259.78" height="11"
+          fill="#3178c6"/>
+<rect x="890.78" y="2247" width="151.32" height="11"
+          fill="#e34c26"/>
+<rect x="1044.11" y="2247" width="41.88" height="11"
+          fill="#f1e05a"/>
+<rect x="1087.98" y="2247" width="30.05" height="11"
+          fill="#663399"/>
+<rect x="1120.03" y="2247" width="1.00" height="11"
+          fill="#3572A5"/>
+<rect x="1121.01" y="2247" width="1.00" height="11"
+          fill="#89e051"/>
+<rect x="629" y="2278" width="9" height="9" fill="#3178c6"/>
+      <text x="646" y="2287" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" fill="#e9e6f5">TypeScript</text>
+      <text x="851.5" y="2287" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13.5" fill="#7a7490"
+            text-anchor="end">53.1%</text>
+<rect x="875.5" y="2278" width="9" height="9" fill="#e34c26"/>
+      <text x="892.5" y="2287" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" fill="#e9e6f5">HTML</text>
+      <text x="1098" y="2287" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13.5" fill="#7a7490"
+            text-anchor="end">31.1%</text>
+<rect x="629" y="2304" width="9" height="9" fill="#f1e05a"/>
+      <text x="646" y="2313" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" fill="#e9e6f5">JavaScript</text>
+      <text x="851.5" y="2313" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13.5" fill="#7a7490"
+            text-anchor="end">8.9%</text>
+<rect x="875.5" y="2304" width="9" height="9" fill="#663399"/>
+      <text x="892.5" y="2313" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" fill="#e9e6f5">CSS</text>
+      <text x="1098" y="2313" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13.5" fill="#7a7490"
+            text-anchor="end">6.5%</text>
+<rect x="629" y="2330" width="9" height="9" fill="#3572A5"/>
+      <text x="646" y="2339" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" fill="#e9e6f5">Python</text>
+      <text x="851.5" y="2339" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13.5" fill="#7a7490"
+            text-anchor="end">0.2%</text>
+<rect x="875.5" y="2330" width="9" height="9" fill="#89e051"/>
+      <text x="892.5" y="2339" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" fill="#e9e6f5">Shell</text>
+      <text x="1098" y="2339" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13.5" fill="#7a7490"
+            text-anchor="end">0.1%</text>
+</g>
+<g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="11s" fill="freeze"/>
+    <rect x="34" y="2405" width="52" height="56" fill="#a06bff"/>
+    <text x="60" y="2440" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="21" font-weight="800"
+          fill="#050509" text-anchor="middle" letter-spacing="1">07</text>
+    <rect x="86" y="2405" width="366" height="56" fill="#13131f"
+          stroke="#2e2e4a" stroke-width="1"/>
+    <text x="104" y="2444" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="28" font-weight="800"
+          fill="#a06bff">&gt;_</text>
+    <text x="154" y="2445" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="34" font-weight="800"
+          fill="#e9e6f5" letter-spacing="2.5">AGENT ROSTER</text>
+    <line x1="468" y1="2433" x2="873.5"
+          y2="2433" stroke="#23233a" stroke-width="1"/>
+    <text x="1166" y="2438" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#7a7490"
+          text-anchor="end" letter-spacing="1.5">// a little chaotic, mostly helpful</text>
+  </g>
+<g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="11.1s" fill="freeze"/>
+    <path d="M48,2481 H1152 L1166,2495 V2707 L1152,2721 H48 L34,2707 V2495 Z" fill="#0b0b14" stroke="#23233a" stroke-width="1"/>
+    <path d="M39,2500 V2486 H53" fill="none" stroke="#a06bff" stroke-width="2"/><path d="M1147,2716 H1161 V2702" fill="none" stroke="#a06bff" stroke-width="2"/>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+          begin="11.40s" fill="freeze"/>
+      <text x="58" y="2529" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">01</text>
+      <text x="96" y="2529" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="17.5" font-weight="800"
+            fill="#c9a3ff" letter-spacing="1.6">RATCHET</text>
+      <text x="244" y="2529" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16.5" fill="#7a7490"
+            font-style="italic">"I built the whole thing."</text>
+      <text x="1142" y="2529" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12.5" fill="#5d5775"
+            text-anchor="end" letter-spacing="1.6">EXECUTION</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+          begin="11.52s" fill="freeze"/>
+      <text x="58" y="2569" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">02</text>
+      <text x="96" y="2569" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="17.5" font-weight="800"
+            fill="#c9a3ff" letter-spacing="1.6">GUSTAVE</text>
+      <text x="244" y="2569" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16.5" fill="#7a7490"
+            font-style="italic">"The direction was mine."</text>
+      <text x="1142" y="2569" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12.5" fill="#5d5775"
+            text-anchor="end" letter-spacing="1.6">DIRECTION</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+          begin="11.64s" fill="freeze"/>
+      <text x="58" y="2609" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">03</text>
+      <text x="96" y="2609" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="17.5" font-weight="800"
+            fill="#c9a3ff" letter-spacing="1.6">SIX</text>
+      <text x="244" y="2609" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16.5" fill="#7a7490"
+            font-style="italic">"I told her it wasn't good enough."</text>
+      <text x="1142" y="2609" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12.5" fill="#5d5775"
+            text-anchor="end" letter-spacing="1.6">JUDGMENT</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+          begin="11.76s" fill="freeze"/>
+      <text x="58" y="2649" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">04</text>
+      <text x="96" y="2649" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="17.5" font-weight="800"
+            fill="#c9a3ff" letter-spacing="1.6">ALOY</text>
+      <text x="244" y="2649" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16.5" fill="#7a7490"
+            font-style="italic">"I mapped every pattern first."</text>
+      <text x="1142" y="2649" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12.5" fill="#5d5775"
+            text-anchor="end" letter-spacing="1.6">INTEL</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s"
+          begin="11.88s" fill="freeze"/>
+      <text x="58" y="2689" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#4b4660">05</text>
+      <text x="96" y="2689" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="17.5" font-weight="800"
+            fill="#c9a3ff" letter-spacing="1.6">HAZEL</text>
+      <text x="244" y="2689" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16.5" fill="#7a7490"
+            font-style="italic">"Every word, in her voice."</text>
+      <text x="1142" y="2689" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12.5" fill="#5d5775"
+            text-anchor="end" letter-spacing="1.6">VOICE</text></g>
+</g>
+<g>
+    <rect x="0" y="2743" width="1200" height="38" fill="#a06bff"/>
+    <clipPath id="mq2743"><rect x="0" y="2743" width="1200" height="38"/></clipPath>
+    <g clip-path="url(#mq2743)">
+      <g>
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="-788.4,0"
+                          dur="22s" repeatCount="indefinite"/>
+        <text x="0" y="2768" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16"
+                font-weight="800" fill="#0a0612" letter-spacing="5" xml:space="preserve">  BUILD   ◆   MEASURE   ◆   LEARN   ◆   SHIP AGAIN   ◆</text><text x="788.4" y="2768" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16"
+                font-weight="800" fill="#0a0612" letter-spacing="5" xml:space="preserve">  BUILD   ◆   MEASURE   ◆   LEARN   ◆   SHIP AGAIN   ◆</text><text x="1576.8" y="2768" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16"
+                font-weight="800" fill="#0a0612" letter-spacing="5" xml:space="preserve">  BUILD   ◆   MEASURE   ◆   LEARN   ◆   SHIP AGAIN   ◆</text><text x="2365.2" y="2768" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="16"
+                font-weight="800" fill="#0a0612" letter-spacing="5" xml:space="preserve">  BUILD   ◆   MEASURE   ◆   LEARN   ◆   SHIP AGAIN   ◆</text>
+      </g>
+    </g>
+  </g>
+
+<rect x="0" y="0" width="1200" height="2781" fill="url(#scan)" opacity="0.5"/>
+<rect x="0" y="0" width="1200" height="70" fill="url(#sweep)" opacity="0.5">
+  <animate attributeName="y" from="-70" to="2781" dur="7s" begin="3.2s" repeatCount="indefinite"/>
+</rect>
+<g>
+  <rect x="0" y="0" width="1200" height="2781" fill="#050509">
+    <animate attributeName="opacity" from="1" to="0" dur="0.6s" begin="2.6s" fill="freeze"/>
+  </rect>
+  <g opacity="1">
+    <animate attributeName="opacity" from="1" to="0" dur="0.5s" begin="2.6s" fill="freeze"/>
+    <text x="600" y="1336.5" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="15" fill="#a06bff"
+          text-anchor="middle" letter-spacing="5">INITIALISING PROFILE</text>
+    <rect x="380" y="1362.5" width="440" height="12" fill="none" stroke="#2e2e4a"/>
+    <rect x="382" y="1364.5" width="0" height="8" fill="#ff7a2f">
+      <animate attributeName="width" values="0;92;180;300;436" keyTimes="0;0.25;0.5;0.78;1"
+               dur="2.3000000000000003s" fill="freeze"/>
+    </rect>
+    <text x="600" y="1406.5" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#7a7490"
+          text-anchor="middle" letter-spacing="3">
+      <tspan opacity="0">LOADING MODULES<animate attributeName="opacity" values="0;1;0" dur="0.8s" begin="0s" fill="remove"/></tspan>
+    </text>
+    <text x="600" y="1406.5" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#7a7490"
+          text-anchor="middle" letter-spacing="3">
+      <tspan opacity="0">MOUNTING TELEMETRY<animate attributeName="opacity" values="0;1;0" dur="0.8s" begin="0.8s" fill="remove"/></tspan>
+    </text>
+    <text x="600" y="1406.5" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#ff7a2f"
+          text-anchor="middle" letter-spacing="3">
+      <tspan opacity="0">READY<animate attributeName="opacity" values="0;1;1" dur="0.9s" begin="1.6s" fill="freeze"/></tspan>
+    </text>
+  </g>
+</g>
+</svg>

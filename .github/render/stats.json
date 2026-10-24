@@ -1,27 +1,84 @@
 {
   "current": 4,
-  "longest": 14,
+  "longest": 13,
   "repos": 26,
-  "stars": 50,
+  "stars": 3,
+  "followers": 1,
+  "prs": 7,
+  "issues": 0,
+  "commitsYear": 771,
+  "languages": [
+    {
+      "name": "TypeScript",
+      "color": "#3178c6",
+      "pct": 53.1
+    },
+    {
+      "name": "HTML",
+      "color": "#e34c26",
+      "pct": 31.1
+    },
+    {
+      "name": "JavaScript",
+      "color": "#f1e05a",
+      "pct": 8.9
+    },
+    {
+      "name": "CSS",
+      "color": "#663399",
+      "pct": 6.5
+    },
+    {
+      "name": "Python",
+      "color": "#3572A5",
+      "pct": 0.2
+    },
+    {
+      "name": "Shell",
+      "color": "#89e051",
+      "pct": 0.1
+    }
+  ],
+  "waveformDays": 90,
   "waveform": [
     {
-      "height": 6,
+      "height": 33,
       "on": false
     },
     {
-      "height": 6,
+      "height": 53,
       "on": false
     },
     {
-      "height": 6,
+      "height": 33,
       "on": false
     },
     {
-      "height": 6,
+      "height": 71,
       "on": false
     },
     {
-      "height": 6,
+      "height": 71,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 53,
+      "on": false
+    },
+    {
+      "height": 47,
+      "on": false
+    },
+    {
+      "height": 53,
+      "on": false
+    },
+    {
+      "height": 33,
       "on": false
     },
     {
@@ -29,11 +86,19 @@
       "on": false
     },
     {
-      "height": 6,
+      "height": 24,
       "on": false
     },
     {
-      "height": 6,
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
       "on": false
     },
     {
@@ -41,47 +106,295 @@
       "on": false
     },
     {
-      "height": 73,
+      "height": 5,
       "on": false
     },
     {
-      "height": 84,
+      "height": 5,
       "on": false
     },
     {
-      "height": 6,
+      "height": 5,
       "on": false
     },
     {
-      "height": 6,
+      "height": 5,
       "on": false
     },
     {
-      "height": 6,
+      "height": 5,
       "on": false
     },
     {
-      "height": 6,
+      "height": 88,
       "on": false
     },
     {
-      "height": 6,
+      "height": 58,
       "on": false
     },
     {
-      "height": 6,
+      "height": 5,
       "on": false
     },
     {
-      "height": 34,
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 85,
+      "on": false
+    },
+    {
+      "height": 33,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 67,
+      "on": false
+    },
+    {
+      "height": 24,
+      "on": false
+    },
+    {
+      "height": 24,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 33,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 33,
+      "on": false
+    },
+    {
+      "height": 33,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 24,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 24,
+      "on": false
+    },
+    {
+      "height": 71,
+      "on": false
+    },
+    {
+      "height": 82,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 5,
+      "on": false
+    },
+    {
+      "height": 33,
       "on": true
     },
     {
-      "height": 42,
+      "height": 41,
       "on": true
     },
     {
-      "height": 34,
+      "height": 33,
       "on": true
     },
     {
