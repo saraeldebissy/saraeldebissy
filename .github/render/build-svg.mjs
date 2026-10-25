@@ -82,6 +82,10 @@ const fade = (delay, dur = 0.45) =>
         preserveAspectRatio="xMidYMid meet"
         href="data:image/jpeg;base64,${sceneB64}"/>`);
 
+  // Accent rule across the very top edge, same gradient as the rule under
+  // the nameplate — bookends the page with the same mark top and bottom.
+  push(`<rect x="0" y="0" width="${W}" height="3" fill="url(#rule)"/>`);
+
   // The setting sun over the skyline, measured at x 870-964, y 140-212.
   // Pulsing its core and ringing it with a slow-breathing halo sells motion
   // without touching the skyline itself.
@@ -181,8 +185,8 @@ const fade = (delay, dur = 0.45) =>
   //   - xml:space="preserve" turns the newlines between generated <tspan>
   //     tags into real spaces, inflating the name from 422px to 881px. So the
   //     tspans are joined with no separator and the space is a hard &#160;.
-  const NAME = 'SARA KHALIL';
-  const ORANGE_FROM = 5; // "KHALIL" picks up the sunset colour
+  const NAME = 'HI, I AM SARA';
+  const ORANGE_FROM = 9; // "SARA" picks up the sunset colour
   const NAME_PX = 62;
   const NAME_TRACK = 1;
   const nameW = NAME.length * adv(NAME_PX, NAME_TRACK);
@@ -223,7 +227,7 @@ const fade = (delay, dur = 0.45) =>
     ['BASED', 'DUBAI / UAE', C.ink],
     ['DOMAINS', 'RETAIL · FIN · SAAS', C.ink],
     ['MODE', 'EMBEDDED', C.purpleHi],
-    ['HANDOFF', 'DISABLED', C.orange],
+    ['HANDOFF', 'DISABLED', C.faint],
     ['STATUS', 'SHIPPING', C.orange],
   ];
   const rowW = Math.max(
@@ -251,8 +255,8 @@ const fade = (delay, dur = 0.45) =>
   y = top + h;
 }
 
-// Divider marquee: carries the one-line pitch and separates art from content.
-{
+/** Marquee strip: the scrolling one-line pitch. Used once, at the bottom. */
+function marquee() {
   const h = 36;
   const text = '  BUILD   ◆   MEASURE   ◆   LEARN   ◆   SHIP AGAIN   ◆';
   const unit = text.length * 14.6;
@@ -268,8 +272,12 @@ const fade = (delay, dur = 0.45) =>
         )
         .join('')}
     </g></g>`);
-  y += h + 40;
+  y += h;
 }
+
+// Nameplate sits flush against the content below — no divider band here
+// anymore; the marquee now runs at the bottom of the page instead.
+y += 40;
 
 /** Section header: index chip and title in one solid plate, stamped. */
 function header(idx, title, note, accent = C.orange, delay = 0) {
@@ -360,9 +368,41 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
   y = top + h + 34;
 }
 
-// ═══════════════════════════ 4. BUILDS ═══════════════════════════
+// ═══════════════════════════ 4. STACK ═══════════════════════════
 {
-  header('02', 'BUILDS', '// things I made and shipped', C.orange, 2.6);
+  header('02', 'STACK', '// what I work in', C.purple, 2.6);
+  const groups = [
+    ['DESIGN', ['Figma', 'Framer', 'Design Systems', 'Research', 'CRO']],
+    ['BUILD', ['React', 'Next.js', 'TypeScript', 'Expo', 'Supabase', 'Vercel']],
+    ['AI', ['Claude Code', 'Codex', 'MCP', 'n8n', 'v0']],
+  ];
+  const h = 30 + groups.length * 56;
+  const top = y;
+  push(`<g opacity="0">${fade(2.7, 0.5)}
+    <path d="${chamfer(PAD, top, W - PAD * 2, h)}" fill="${C.panel}" stroke="${C.line}"/>
+    ${bracket(PAD + 5, top + 5, 'tl', C.purple)}${bracket(W - PAD - 5, top + h - 5, 'br', C.purple)}`);
+  groups.forEach(([label, items], gi) => {
+    const ry = top + 52 + gi * 56;
+    push(`<text x="${PAD + 24}" y="${ry}" font-family="${MONO}" font-size="13.5" font-weight="800"
+          fill="${C.purple}" letter-spacing="2.5">${label}</text>`);
+    let tx = PAD + 126;
+    items.forEach((it, ii) => {
+      const tw = it.length * 9.9 + 26;
+      push(`<g opacity="0">${fade((3.0 + gi * 0.16 + ii * 0.05).toFixed(2), 0.3)}
+        <path d="M${tx + 7},${ry - 21} H${tx + tw} V${ry + 5} L${tx + tw - 7},${ry + 12} H${tx} V${ry - 14} Z"
+              fill="#120f23" stroke="${C.line2}"/>
+        <text x="${tx + tw / 2}" y="${ry}" font-family="${MONO}" font-size="15.5" fill="${C.ink}"
+              text-anchor="middle">${esc(it)}</text></g>`);
+      tx += tw + 10;
+    });
+  });
+  push(`</g>`);
+  y = top + h + 36;
+}
+
+// ═══════════════════════════ 5. BUILDS ═══════════════════════════
+{
+  header('03', 'BUILDS', '// things I made and shipped', C.orange, 3.5);
   const tools = [
     ['UX Research Skills', 'Reusable Claude skills for responsible UX research.', 'repo'],
     ['Vibe Generator', 'Prompt generator for people who build by vibe.', 'live'],
@@ -377,13 +417,13 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
   const leftW = 752;
   const top = y;
 
-  push(`<g opacity="0">${fade(1.6, 0.5)}
+  push(`<g opacity="0">${fade(3.6, 0.5)}
     <path d="${chamfer(PAD, top, leftW, h)}" fill="${C.panel}" stroke="${C.line}"/>
     ${bracket(PAD + 5, top + 5, 'tl', C.orange)}${bracket(PAD + leftW - 5, top + h - 5, 'br', C.orange)}`);
   tools.forEach(([name, desc, kind], i) => {
     const ry = top + 48 + i * rowH;
     if (i) push(`<line x1="${PAD + 22}" y1="${ry - 27}" x2="${PAD + leftW - 22}" y2="${ry - 27}" stroke="${C.line}"/>`);
-    push(`<g opacity="0">${fade((1.9 + i * 0.1).toFixed(2), 0.35)}
+    push(`<g opacity="0">${fade((3.9 + i * 0.1).toFixed(2), 0.35)}
       <text x="${PAD + 24}" y="${ry}" font-family="${MONO}" font-size="13.5" font-weight="800"
             fill="${C.purple}">${pad2(i + 1)}</text>
       <text x="${PAD + 64}" y="${ry}" font-family="${MONO}" font-size="19" font-weight="700" fill="${C.ink}">${esc(name)}</text>
@@ -404,7 +444,7 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
 
   const rx = PAD + leftW + 16;
   const rw = W - PAD - rx;
-  push(`<g opacity="0">${fade(1.9, 0.5)}
+  push(`<g opacity="0">${fade(3.9, 0.5)}
     <path d="${chamfer(rx, top, rw, h)}" fill="${C.panel2}" stroke="${C.line}"/>
     ${bracket(rx + rw - 5, top + 5, 'tr', C.purple)}${bracket(rx + 5, top + h - 5, 'bl', C.purple)}
     <text x="${rx + 22}" y="${top + 40}" font-family="${MONO}" font-size="18" font-weight="800"
@@ -416,38 +456,6 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
   });
   push(`<text x="${rx + 22}" y="${top + h - 24}" font-family="${MONO}" font-size="12.5" fill="${C.faint}"
         letter-spacing="1.4">${stats.repos} REPOS INDEXED</text></g>`);
-  y = top + h + 36;
-}
-
-// ═══════════════════════════ 5. STACK ═══════════════════════════
-{
-  header('03', 'STACK', '// what I work in', C.purple, 3.5);
-  const groups = [
-    ['DESIGN', ['Figma', 'Framer', 'Design Systems', 'Research', 'CRO']],
-    ['BUILD', ['React', 'Next.js', 'TypeScript', 'Expo', 'Supabase', 'Vercel']],
-    ['AI', ['Claude Code', 'Codex', 'MCP', 'n8n', 'v0']],
-  ];
-  const h = 30 + groups.length * 56;
-  const top = y;
-  push(`<g opacity="0">${fade(3.6, 0.5)}
-    <path d="${chamfer(PAD, top, W - PAD * 2, h)}" fill="${C.panel}" stroke="${C.line}"/>
-    ${bracket(PAD + 5, top + 5, 'tl', C.purple)}${bracket(W - PAD - 5, top + h - 5, 'br', C.purple)}`);
-  groups.forEach(([label, items], gi) => {
-    const ry = top + 52 + gi * 56;
-    push(`<text x="${PAD + 24}" y="${ry}" font-family="${MONO}" font-size="13.5" font-weight="800"
-          fill="${C.purple}" letter-spacing="2.5">${label}</text>`);
-    let tx = PAD + 126;
-    items.forEach((it, ii) => {
-      const tw = it.length * 9.9 + 26;
-      push(`<g opacity="0">${fade((3.9 + gi * 0.16 + ii * 0.05).toFixed(2), 0.3)}
-        <path d="M${tx + 7},${ry - 21} H${tx + tw} V${ry + 5} L${tx + tw - 7},${ry + 12} H${tx} V${ry - 14} Z"
-              fill="#120f23" stroke="${C.line2}"/>
-        <text x="${tx + tw / 2}" y="${ry}" font-family="${MONO}" font-size="15.5" fill="${C.ink}"
-              text-anchor="middle">${esc(it)}</text></g>`);
-      tx += tw + 10;
-    });
-  });
-  push(`</g>`);
   y = top + h + 36;
 }
 
@@ -463,22 +471,28 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
     ['HAZEL', 'Every word, in her voice.', 'voice'],
   ];
 
-  // Image panel sized to its own aspect ratio (900×698) rather than forced
-  // into a fixed box, so the mascot squad never stretches or crops oddly.
+  // One container, not two. The image is sized to its own aspect ratio
+  // (900×698) rather than forced into a fixed box, so the mascot squad never
+  // stretches or crops. The image dictates the container height; the list
+  // is centred within it (not top-anchored) so the leftover space the image
+  // forces is split evenly above and below instead of dumped under HAZEL.
   const AGENTS_IMG_W = 900, AGENTS_IMG_H = 698;
-  const imgW = 320;
+  const imgW = 240;
   const imgH = Math.round((imgW * AGENTS_IMG_H) / AGENTS_IMG_W);
-  const rowH = 42;
-  const listH = 36 + agents.length * rowH;
-  const h = Math.max(listH, imgH + 24);
-  const leftW = W - PAD * 2 - 16 - imgW;
+  const rowH = 38;
+  const listH = agents.length * rowH;
+  const pad = 16;
+  const h = Math.max(listH + pad * 2, imgH + pad * 2);
+  const leftW = W - PAD * 2 - imgW - 2;
   const top = y;
 
   push(`<g opacity="0">${fade(5.1, 0.5)}
-    <path d="${chamfer(PAD, top, leftW, h)}" fill="${C.panel}" stroke="${C.line}"/>
-    ${bracket(PAD + 5, top + 5, 'tl', C.purple)}${bracket(PAD + leftW - 5, top + h - 5, 'br', C.purple)}`);
+    <path d="${chamfer(PAD, top, W - PAD * 2, h)}" fill="${C.panel}" stroke="${C.line}"/>
+    ${bracket(PAD + 5, top + 5, 'tl', C.purple)}${bracket(W - PAD - 5, top + h - 5, 'br', C.purple)}
+    <line x1="${PAD + leftW}" y1="${top + 14}" x2="${PAD + leftW}" y2="${top + h - 14}" stroke="${C.line2}"/>`);
+  const listTop = top + (h - listH) / 2;
   agents.forEach(([name, quote, role], i) => {
-    const ry = top + 46 + i * rowH;
+    const ry = listTop + i * rowH + rowH * 0.68;
     push(`<g opacity="0">${fade((5.4 + i * 0.12).toFixed(2), 0.3)}
       <text x="${PAD + 24}" y="${ry}" font-family="${MONO}" font-size="13" fill="${C.faint}">${pad2(i + 1)}</text>
       <text x="${PAD + 62}" y="${ry}" font-family="${MONO}" font-size="17" font-weight="800"
@@ -488,16 +502,14 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
   });
   push(`</g>`);
 
-  // Image sits flush in its own panel to the right, vertically centred
-  // against the taller of the two columns.
-  const ix = PAD + leftW + 16;
+  // Image sits flush against the divider, vertically centred in the shared
+  // container.
+  const ix = PAD + leftW + 2;
   const iw = W - PAD - ix;
   const scale = iw / imgW;
   const drawH = Math.round(imgH * scale);
   const iy = top + Math.round((h - drawH) / 2);
   push(`<g opacity="0">${fade(5.2, 0.6)}
-    <path d="${chamfer(ix, top, iw, h, 12)}" fill="${C.panel2}" stroke="${C.line}"/>
-    ${bracket(ix + iw - 5, top + 5, 'tr', C.purple)}${bracket(ix + 5, top + h - 5, 'bl', C.purple)}
     <image x="${ix}" y="${iy}" width="${iw}" height="${drawH}"
            preserveAspectRatio="xMidYMid meet"
            href="data:image/png;base64,${agentsB64}"/>
@@ -505,6 +517,10 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
 
   y = top + h + 36;
 }
+
+// Closing marquee: bookends the opening art, now at the bottom of the page
+// instead of splitting the nameplate from the content.
+marquee();
 
 // ═══════════════════════════ 7. FOOTER ═══════════════════════════
 {

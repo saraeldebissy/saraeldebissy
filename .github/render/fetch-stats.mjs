@@ -145,14 +145,15 @@ const stats = {
   issues: meta.user.issues.totalCount,
   commitsYear,
   languages,
-  // Each bar: height relative to the busiest day, lit if it is part of the
-  // active streak tail. Square-rooted because raw counts are long-tailed —
-  // one heavy day would otherwise flatten every other bar to a stub. Empty
-  // days stay at a visible floor so the baseline reads as a track.
+  // Each bar: height relative to the busiest day, lit whenever that day had
+  // any contribution at all (not just the current streak tail). Square-rooted
+  // because raw counts are long-tailed — one heavy day would otherwise
+  // flatten every other bar to a stub. Empty days stay at a visible floor so
+  // the baseline reads as a track.
   waveformDays: WINDOW_DAYS,
-  waveform: window.map((d, i) => ({
+  waveform: window.map((d) => ({
     height: d.count === 0 ? 5 : Math.max(16, Math.round(Math.sqrt(d.count / peak) * 100)),
-    on: i >= window.length - current,
+    on: d.count > 0,
   })),
   generated: today.toISOString().slice(0, 10),
 };
