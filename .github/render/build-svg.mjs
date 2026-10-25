@@ -476,7 +476,9 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
 }
 
 // ═══════════════════════════ 5. BUILDS ═══════════════════════════
-{
+// Hidden for now — set to true to bring it back.
+const SHOW_BUILDS = false;
+if (SHOW_BUILDS) {
   header('03', 'BUILDS', '// things I made and shipped', C.orange, 3.5);
   const tools = [
     ['UX Research Skills', 'Reusable Claude skills for responsible UX research.', 'repo'],
@@ -537,7 +539,7 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
 // ═══════════════════════════ 6. AGENT ROSTER ═══════════════════════════
 // The agent squad that actually builds this page, named and in character.
 {
-  header('04', 'AGENT ROSTER', '// a little chaotic, mostly helpful', C.purple, 5.0);
+  header(SHOW_BUILDS ? '04' : '03', 'AGENT ROSTER', '// a little chaotic, mostly helpful', C.purple, SHOW_BUILDS ? 5.0 : 3.5);
   // Described in third person, what each one does — not a quote in their
   // voice. Quotes read as a bit much for a roster that's meant to be a quick
   // scan, not a cast of characters speaking for themselves.
