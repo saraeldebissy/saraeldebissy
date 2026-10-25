@@ -138,6 +138,32 @@ const fade = (delay, dur = 0.45) =>
     <animate attributeName="opacity" values="0.1;0.3;0.1" dur="1.9s" repeatCount="indefinite"/>
   </ellipse>`);
 
+  // Question-mark block on the shelf, measured x 203-246, y 232-277. Pulses
+  // like it's waiting to be hit, coin-pop orange rather than the laptop's cool
+  // violet so it reads as a distinct, playful beat in the scene.
+  push(`<rect x="203" y="232" width="43" height="45" fill="${C.orange}" opacity="0.1">
+    <animate attributeName="opacity" values="0.08;0.3;0.08" dur="2.2s" repeatCount="indefinite"/>
+  </rect>`);
+
+  // The left retro game screen, measured x 14-178, y 168-294. A brief bright
+  // flicker every few seconds, like an old CRT losing sync for a frame.
+  push(`<rect x="14" y="168" width="164" height="126" fill="#eaf6ff" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.22;0.04;0;0" dur="4.2s" repeatCount="indefinite"/>
+  </rect>`);
+
+  // Scattered building-window lights across the skyline, each on its own
+  // random-feeling blink cycle so the city reads as alive, not a static print.
+  const winks = [
+    [862, 128, 2.6, 0], [884, 150, 3.1, 0.8], [940, 118, 2.3, 1.6],
+    [980, 160, 3.4, 0.3], [1012, 134, 2.8, 2.1], [1048, 170, 2.5, 1.1],
+    [846, 172, 3.0, 2.6], [1070, 140, 2.2, 0.6],
+  ];
+  winks.forEach(([wx, wy, dur, delay]) => {
+    push(`<rect x="${wx}" y="${wy}" width="3" height="4" fill="#ffe9b8" opacity="0.2">
+      <animate attributeName="opacity" values="0.15;0.75;0.15" dur="${dur}s" begin="${delay}s" repeatCount="indefinite"/>
+    </rect>`);
+  });
+
   // Sparkle motes drifting over the skyline, extending the art's own glow.
   const star = (x, yy, r, dur, delay) =>
     `<path d="M${x},${yy - r} L${x + r * 0.3},${yy - r * 0.3} L${x + r},${yy}
@@ -191,12 +217,44 @@ const fade = (delay, dur = 0.45) =>
 // product designer & design engineer", which both contradicted the eyebrow
 // and ate the vertical space this section needed.
 {
-  const h = 248;
+  // Extra breathing room below the hero art before the terminal starts, plus
+  // a matching margin below it — "more space" was specifically about this gap.
+  const OFFSET = 34;
+  const PANEL_H = 186;
+  const BELOW_MARGIN = 34;
+  const h = OFFSET + PANEL_H + BELOW_MARGIN;
   const top = y;
   push(`<rect x="0" y="${top}" width="${W}" height="${h}" fill="${C.void}"/>`);
   push(`<rect x="0" y="${top}" width="${W}" height="2" fill="url(#rule)"/>`);
 
-  const x = PAD;
+  const panelTop = top + OFFSET;
+
+  // Right-side readout sized first, so the left terminal panel knows how
+  // much width it has left to work with.
+  const readout = [
+    ['BASED', 'DUBAI / UAE', C.ink],
+    ['DOMAINS', 'RETAIL · FIN · SAAS', C.ink],
+    ['MODE', 'EMBEDDED', C.purpleHi],
+    ['HANDOFF', 'DISABLED', C.faint],
+    ['STATUS', 'SHIPPING', C.orange],
+  ];
+  const rowW = Math.max(
+    ...readout.map(([k, v]) => k.length * adv(13, 1.2) + 24 + v.length * adv(13, 0.8))
+  );
+  const rw = Math.ceil(rowW + 36);
+  const readoutH = readout.length * 27 + 36;
+  const rx = W - PAD - rw;
+  const ry0 = panelTop + (PANEL_H - readoutH) / 2;
+
+  // Left terminal panel: greeting, whoami prompt, and bio lines all live
+  // inside one bracket-cornered box, so the nameplate reads as an actual
+  // terminal window instead of text floating on the void.
+  const leftX = PAD;
+  const leftW = rx - 16 - leftX;
+  push(`<rect x="${leftX}" y="${panelTop}" width="${leftW}" height="${PANEL_H}" fill="${C.panel}" stroke="${C.line}"/>
+    ${brackets4(leftX, panelTop, leftW, PANEL_H, C.orange)}`);
+
+  const x = leftX + 22;
 
   // Name types character by character, smaller than before — it now reads as
   // a greeting line, not the whole hero. The title moves below it instead of
@@ -221,7 +279,7 @@ const fade = (delay, dur = 0.45) =>
       return `<tspan${fill} opacity="0">${glyph}<animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="${(0.5 + i * 0.075).toFixed(2)}s" fill="freeze"/></tspan>`;
     })
     .join('');
-  push(`<text x="${x}" y="${top + 54}" font-family="${MONO}" font-size="${NAME_PX}" font-weight="800"
+  push(`<text x="${x}" y="${panelTop + 46}" font-family="${MONO}" font-size="${NAME_PX}" font-weight="800"
         fill="${C.ink}" letter-spacing="${NAME_TRACK}">${tspans}</text>`);
 
   // Cursor walks along with the text as each glyph lands, then blinks a few
@@ -232,7 +290,7 @@ const fade = (delay, dur = 0.45) =>
   const walk = NAME.split('')
     .map((_, i) => `<animate attributeName="x" to="${(x + (i + 1) * step).toFixed(1)}" dur="0.01s" begin="${(0.5 + i * 0.075).toFixed(2)}s" fill="freeze"/>`)
     .join('');
-  push(`<rect x="${x}" y="${top + 22}" width="14" height="34" fill="${C.orange}" opacity="0">
+  push(`<rect x="${x}" y="${panelTop + 14}" width="14" height="34" fill="${C.orange}" opacity="0">
     ${walk}
     <animate attributeName="opacity" values="0;1" dur="0.01s" begin="0.5s" fill="freeze"/>
     <animate attributeName="opacity" values="1;1;0;0;1" dur="0.95s" begin="${typedFor.toFixed(2)}s" repeatCount="3"/>
@@ -241,38 +299,25 @@ const fade = (delay, dur = 0.45) =>
 
   // Terminal-style "whoami" block below the greeting: a prompt line, then a
   // few lines about Sara typing in one at a time, like a real shell session.
-  push(`<text x="${x}" y="${top + 92}" font-family="${MONO}" font-size="14" font-weight="700"
+  push(`<text x="${x}" y="${panelTop + 84}" font-family="${MONO}" font-size="14" font-weight="700"
         fill="${C.purpleHi}" opacity="0">${fade(typedFor + 0.15, 0.4)}<tspan fill="${C.orange}">sara@terminal</tspan>:~$ whoami</text>`);
 
   const bio = [
-    'forward-deployed designer — i design it, build it, and ship it myself',
+    'forward-deployed designer: i design it, build it, and ship it myself',
     'no handoff. the interface is the deliverable, not the file',
     'based in Dubai, working across retail, fintech, and SaaS',
   ];
   bio.forEach((line, i) => {
-    push(`<text x="${x}" y="${top + 118 + i * 24}" font-family="${MONO}" font-size="14.5" fill="${C.dim}"
-          opacity="0">${fade((typedFor + 0.45 + i * 0.3).toFixed(2), 0.4)}${esc(line)}</text>`);
+    push(`<text x="${x}" y="${panelTop + 110 + i * 26}" font-family="${MONO}" font-size="14.5" fill="${C.dim}"
+          opacity="0">${fade((typedFor + 0.45 + i * 0.3).toFixed(2), 0.4)}<tspan fill="${C.orange}" font-weight="700">&gt;_&#160;</tspan>${esc(line)}</text>`);
   });
 
-  // Right-side readout. Width is derived from the widest key/value pair so
-  // the longest row can never overflow the box. HANDOFF sits back in here
-  // alongside the other status fields rather than as a standalone line.
-  const readout = [
-    ['BASED', 'DUBAI / UAE', C.ink],
-    ['DOMAINS', 'RETAIL · FIN · SAAS', C.ink],
-    ['MODE', 'EMBEDDED', C.purpleHi],
-    ['HANDOFF', 'DISABLED', C.faint],
-    ['STATUS', 'SHIPPING', C.orange],
-  ];
-  const rowW = Math.max(
-    ...readout.map(([k, v]) => k.length * adv(13, 1.2) + 24 + v.length * adv(13, 0.8))
-  );
-  const rw = Math.ceil(rowW + 36);
-  const readoutH = readout.length * 27 + 36;
-  const rx = W - PAD - rw;
-  const ry0 = top + (h - readoutH) / 2;
+  // Readout panel. Width is derived from the widest key/value pair so the
+  // longest row can never overflow the box. HANDOFF sits here alongside the
+  // other status fields rather than as a standalone line.
   push(`<g opacity="0">${fade(typedFor + 0.35, 0.55)}
-    <rect x="${rx}" y="${ry0}" width="${rw}" height="${readoutH}" fill="${C.panel}" stroke="${C.line}"/>`);
+    <rect x="${rx}" y="${ry0}" width="${rw}" height="${readoutH}" fill="${C.panel}" stroke="${C.line}"/>
+    ${brackets4(rx, ry0, rw, readoutH, C.purple)}`);
   readout.forEach(([k, v, col], i) => {
     const ry = ry0 + 36 + i * 27;
     push(`<text x="${rx + 18}" y="${ry}" font-family="${MONO}" font-size="13" fill="${C.dim}"
@@ -283,8 +328,8 @@ const fade = (delay, dur = 0.45) =>
   push(`</g>`);
 
   // The name must never run under the readout panel.
-  if (x + nameW + 26 > rx) {
-    throw new Error(`Name overruns readout: ends at ${(x + nameW).toFixed(0)}, panel starts at ${rx}`);
+  if (x + nameW + 26 > leftX + leftW) {
+    throw new Error(`Name overruns readout: ends at ${(x + nameW).toFixed(0)}, panel starts at ${leftX + leftW}`);
   }
   y = top + h;
 }
@@ -292,7 +337,7 @@ const fade = (delay, dur = 0.45) =>
 /** Marquee strip: the scrolling one-line pitch. Used once, at the bottom. */
 function marquee() {
   const h = 36;
-  const text = '  BUILD   ◆   MEASURE   ◆   LEARN   ◆   SHIP AGAIN   ◆';
+  const text = '  DESIGN   ◆   BUILD   ◆   AUTOMATE   ◆   MEASURE   ◆   LEARN   ◆   SHIP AGAIN   ◆';
   const unit = text.length * 14.6;
   push(`<rect x="0" y="${y}" width="${W}" height="${h}" fill="${C.orange}"/>
     <clipPath id="mq"><rect x="0" y="${y}" width="${W}" height="${h}"/></clipPath>
@@ -313,28 +358,27 @@ function marquee() {
 // anymore; the marquee now runs at the bottom of the page instead.
 y += 40;
 
-/** Section header: index chip and title in one solid plate, stamped. */
-function header(idx, title, note, accent = C.orange, delay = 0) {
+/** Section header: ">_" chip and title in one solid plate, stamped. No index
+ * numbers or counts — the chip itself is the prompt mark, not a tally. */
+function header(title, note, accent = C.orange, delay = 0) {
   const H = 54;
   const idxW = 50;
   const PX = 30;
   const TRACK = 2.5;
-  // Plate holds: left padding, the ">_" prefix, the title, right padding.
+  // Plate holds: left padding, the title, right padding.
   // +10 safety margin: the pixel font's measured advance (22.2px) runs
   // slightly wider than the monospace formula (21.5px) this estimate is
   // built on, so the plate needs a little slack rather than a hairline fit.
-  const titleW = 64 + title.length * adv(PX, TRACK) + 34;
+  const titleW = 40 + title.length * adv(PX, TRACK) + 34;
   const noteW = note.length * adv(13, 1.5);
   const top = y;
   push(`<g opacity="0">${fade(delay)}
     <rect x="${PAD}" y="${top}" width="${idxW}" height="${H}" fill="${accent}"/>
-    <text x="${PAD + idxW / 2}" y="${top + H / 2 + 7}" font-family="${MONO}" font-size="20" font-weight="800"
-          fill="${C.void}" text-anchor="middle" letter-spacing="1">${idx}</text>
+    <text x="${PAD + idxW / 2}" y="${top + H / 2 + 9}" font-family="${MONO}" font-size="26" font-weight="800"
+          fill="${C.void}" text-anchor="middle">&gt;_</text>
     <rect x="${PAD + idxW}" y="${top}" width="${titleW}" height="${H}" fill="${C.panel2}"
           stroke="${C.line2}" stroke-width="1"/>
-    <text x="${PAD + idxW + 17}" y="${top + H / 2 + 10}" font-family="${MONO}" font-size="26" font-weight="800"
-          fill="${accent}">&gt;_</text>
-    <text x="${PAD + idxW + 64}" y="${top + H / 2 + 10}" font-family="${PIXEL}" font-size="${PX}" font-weight="800"
+    <text x="${PAD + idxW + 20}" y="${top + H / 2 + 10}" font-family="${PIXEL}" font-size="${PX}" font-weight="800"
           fill="${C.ink}" letter-spacing="${TRACK}">${esc(title)}</text>
     <line x1="${PAD + idxW + titleW + 16}" y1="${top + H / 2}" x2="${(W - PAD - 14 - noteW).toFixed(1)}"
           y2="${top + H / 2}" stroke="${C.line}" stroke-width="1"/>
@@ -349,7 +393,7 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
 // Leads the content sections — proof the page is alive comes before the list
 // of things that were built with it.
 {
-  header('01', 'PULSE', '// refreshed daily from github', C.orange, 1.5);
+  header('MY ACTIVITIES', '// refreshed daily from github', C.orange, 1.5);
   const h = 258;
   const top = y;
   push(`<g opacity="0">${fade(1.6, 0.5)}
@@ -388,7 +432,7 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
     const bh = Math.max(2, (b.height / 100) * wh);
     const bx = wx + i * (bw + gap);
     push(`<rect x="${bx.toFixed(2)}" y="${(wy + wh - bh).toFixed(2)}" width="${bw.toFixed(2)}"
-          height="${bh.toFixed(2)}" fill="${b.on ? C.orange : '#2a2446'}">
+          height="${bh.toFixed(2)}" fill="${C.orange}" opacity="${b.on ? 1 : 0.32}">
       <animate attributeName="height" from="0" to="${bh.toFixed(2)}" dur="0.5s"
                begin="${(2.3 + i * 0.01).toFixed(2)}s" fill="freeze"/>
       <animate attributeName="y" from="${wy + wh}" to="${(wy + wh - bh).toFixed(2)}" dur="0.5s"
@@ -414,13 +458,14 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
 // memory risks a visibly wrong Figma or React glyph, which reads worse than
 // no logo at all. The colour is the recognisable part; the letters are a label.
 {
-  header('02', 'STACK', '// what I work in, together', C.purple, 2.6);
+  header('MY STACK', '// what I work in, together', C.purple, 2.6);
   const tools = [
-    ['Figma', 'FG', '#F24E1E'],
     ['Framer', 'FR', '#0055FF'],
     ['React', 'RX', '#61DAFB'],
     ['Next.js', 'N', '#ffffff'],
     ['TypeScript', 'TS', '#3178C6'],
+    ['HTML', 'H5', '#E34F26'],
+    ['CSS', 'C3', '#1572B6'],
     ['Expo', 'EX', '#4630EB'],
     ['Supabase', 'SB', '#3ECF8E'],
     ['Vercel', 'V', '#ffffff'],
@@ -434,9 +479,9 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
     ['Replit', 'RP', '#F26207'],
     ['Perplexity', 'PX', '#1FB8CD'],
     ['Obsidian', 'OB', '#A074C4'],
-    ['MCP', 'MC', C.purpleHi],
     ['n8n', 'N8', '#EA4B71'],
     ['v0', 'V0', '#ffffff'],
+    ['Figma', 'FG', '#F24E1E'],
   ];
 
   // Flow left-to-right, wrapping to a new row when a chip won't fit — the
@@ -486,7 +531,7 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
 // Hidden for now — set to true to bring it back.
 const SHOW_BUILDS = false;
 if (SHOW_BUILDS) {
-  header('03', 'BUILDS', '// things I made and shipped', C.orange, 3.5);
+  header('BUILDS', '// things I made and shipped', C.orange, 3.5);
   const tools = [
     ['UX Research Skills', 'Reusable Claude skills for responsible UX research.', 'repo'],
     ['Vibe Generator', 'Prompt generator for people who build by vibe.', 'live'],
@@ -546,23 +591,23 @@ if (SHOW_BUILDS) {
 // ═══════════════════════════ 6. AGENT ROSTER ═══════════════════════════
 // The agent squad that actually builds this page, named and in character.
 {
-  header(SHOW_BUILDS ? '04' : '03', 'AGENT ROSTER', '// a little chaotic, mostly helpful', C.purple, SHOW_BUILDS ? 5.0 : 3.5);
+  header('MY AGENT SQUAD', '// a little chaotic, mostly helpful', C.purple, SHOW_BUILDS ? 5.0 : 3.5);
   // Described in third person, what each one does — not a quote in their
   // voice. Quotes read as a bit much for a roster that's meant to be a quick
   // scan, not a cast of characters speaking for themselves.
   const agents = [
-    ['RATCHET', 'Execution — builds the page end to end.', 'execution'],
-    ['GUSTAVE', 'Direction — sets the plan before anything ships.', 'direction'],
-    ['SIX', 'Judgment — stress-tests the work before it goes live.', 'judgment'],
-    ['ALOY', 'Intel — researches patterns and precedent first.', 'intel'],
-    ['HAZEL', 'Voice — writes copy that sounds like Sara, not a template.', 'voice'],
+    ['RATCHET', 'Execution: builds the page end to end.', 'execution'],
+    ['GUSTAVE', 'Direction: sets the plan before anything ships.', 'direction'],
+    ['SIX', 'Judgment: stress-tests the work before it goes live.', 'judgment'],
+    ['ALOY', 'Intel: researches patterns and precedent first.', 'intel'],
+    ['HAZEL', 'Voice: writes copy that sounds like Sara, not a template.', 'voice'],
   ];
 
   // One container, no internal divider — the image sits inside the same
   // panel as the list rather than being walled off from it. Sized to its own
   // aspect ratio (900×698) so the mascot squad never stretches or crops.
   const AGENTS_IMG_W = 900, AGENTS_IMG_H = 698;
-  const imgW = 240;
+  const imgW = 300;
   const imgH = Math.round((imgW * AGENTS_IMG_H) / AGENTS_IMG_W);
   const rowH = 38;
   const listH = agents.length * rowH;
