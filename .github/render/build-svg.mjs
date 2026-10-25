@@ -358,26 +358,14 @@ function logo(name, x, yy, size, color, mono) {
   push(`<text x="${x}" y="${contentTop + PROMPT_BASE}" font-family="${MONO}" font-size="14" font-weight="700"
         fill="${C.purpleHi}" opacity="0">${fade(typedFor + 0.15, 0.4)}<tspan fill="${C.orange}">sara@terminal</tspan>:~$ whoami</text>`);
 
-  // First bio statement wraps across two physical lines under one ">_"
-  // prefix (it ran too wide for one line); the continuation lines up under
-  // the text, not the prefix, so it still reads as a single statement.
   const bio = [
-    ['forward-deployed designer:', 'i design it, build it, and ship it myself.'],
-    ['no handoff. the interface is the deliverable, not the file'],
+    'forward-deployed designer',
+    'i design it, build it, and ship it myself',
+    'no handoff. the interface is the deliverable, not the file',
   ];
-  let bioY = contentTop + BIO_BASE;
-  bio.forEach((linesGroup) => {
-    linesGroup.forEach((line, j) => {
-      const delay = (typedFor + 0.45 + (bioY - (contentTop + BIO_BASE)) / BIO_STEP * 0.3).toFixed(2);
-      if (j === 0) {
-        push(`<text x="${x}" y="${bioY}" font-family="${MONO}" font-size="14.5" fill="${C.dim}"
-              opacity="0">${fade(delay, 0.4)}<tspan fill="${C.orange}" font-weight="700">&gt;_&#160;</tspan>${esc(line)}</text>`);
-      } else {
-        push(`<text x="${x + adv(14.5, 0) * 3}" y="${bioY}" font-family="${MONO}" font-size="14.5" fill="${C.dim}"
-              opacity="0">${fade(delay, 0.4)}${esc(line)}</text>`);
-      }
-      bioY += BIO_STEP;
-    });
+  bio.forEach((line, i) => {
+    push(`<text x="${x}" y="${contentTop + BIO_BASE + i * BIO_STEP}" font-family="${MONO}" font-size="14.5" fill="${C.dim}"
+          opacity="0">${fade((typedFor + 0.45 + i * 0.3).toFixed(2), 0.4)}<tspan fill="${C.orange}" font-weight="700">&gt;_&#160;</tspan>${esc(line)}</text>`);
   });
 
   push(`<g opacity="0">${fade(typedFor + 0.35, 0.55)}

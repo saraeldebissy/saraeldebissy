@@ -134,11 +134,11 @@
 <text x="58" y="587" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14" font-weight="700"
         fill="#c4abff" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="2.3s" fill="freeze"/><tspan fill="#ff8a4c">sara@terminal</tspan>:~$ whoami</text>
 <text x="58" y="621" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14.5" fill="#857da3"
-              opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="2.60s" fill="freeze"/><tspan fill="#ff8a4c" font-weight="700">&gt;_&#160;</tspan>forward-deployed designer:</text>
-<text x="84.1" y="649" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14.5" fill="#857da3"
-              opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="2.90s" fill="freeze"/>i design it, build it, and ship it myself.</text>
+          opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="2.60s" fill="freeze"/><tspan fill="#ff8a4c" font-weight="700">&gt;_&#160;</tspan>forward-deployed designer</text>
+<text x="58" y="649" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14.5" fill="#857da3"
+          opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="2.90s" fill="freeze"/><tspan fill="#ff8a4c" font-weight="700">&gt;_&#160;</tspan>i design it, build it, and ship it myself</text>
 <text x="58" y="677" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="14.5" fill="#857da3"
-              opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="3.20s" fill="freeze"/><tspan fill="#ff8a4c" font-weight="700">&gt;_&#160;</tspan>no handoff. the interface is the deliverable, not the file</text>
+          opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="3.20s" fill="freeze"/><tspan fill="#ff8a4c" font-weight="700">&gt;_&#160;</tspan>no handoff. the interface is the deliverable, not the file</text>
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.55s" begin="2.5s" fill="freeze"/>
     <rect x="821" y="523.5" width="321" height="175" fill="#110e21" stroke="#332a52"/>
     <path d="M826,541.5 V528.5 H839" fill="none" stroke="#9b7bf0" stroke-width="2"/><path d="M1124,528.5 H1137 V541.5" fill="none" stroke="#9b7bf0" stroke-width="2"/><path d="M826,680.5 V693.5 H839" fill="none" stroke="#9b7bf0" stroke-width="2"/><path d="M1124,693.5 H1137 V680.5" fill="none" stroke="#9b7bf0" stroke-width="2"/>
