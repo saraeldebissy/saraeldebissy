@@ -173,13 +173,6 @@ function logo(name, x, yy, size, color, mono) {
     <animate attributeName="opacity" values="0;0;0.22;0.04;0;0" dur="4.2s" repeatCount="indefinite"/>
   </rect>`);
 
-  // The right monitor's code editor, measured x 270-390, y 170-280. A hard,
-  // fast on/off blink like a real text-cursor, not a soft glow — distinct
-  // from every other light source in the scene, which all breathe slowly.
-  push(`<rect x="300" y="208" width="6" height="12" fill="#ffffff" opacity="0">
-    <animate attributeName="opacity" values="1;1;0;0" dur="1s" repeatCount="indefinite"/>
-  </rect>`);
-
   // Scattered building-window lights across the skyline, each on its own
   // random-feeling blink cycle so the city reads as alive, not a static print.
   const winks = [
@@ -258,7 +251,6 @@ function logo(name, x, yy, size, color, mono) {
   // Readout, nested inside the window on the right. Values are arrays so a
   // long field wraps across lines instead of forcing the box page-wide.
   const readout = [
-    ['BASED', ['DUBAI / UAE'], C.ink],
     ['DOMAINS', ['AI · PERSONALIZATION', 'DATA · RECOMMENDATION', 'INTELLIGENT EXPERIENCES'], C.ink],
     ['MODE', ['EMBEDDED'], C.purpleHi],
     ['HANDOFF', ['DISABLED'], C.faint],
@@ -303,7 +295,7 @@ function logo(name, x, yy, size, color, mono) {
   const barMid = panelTop + TITLEBAR / 2;
   push(`<rect x="${winX + 1}" y="${panelTop + 1}" width="${winW - 2}" height="${TITLEBAR - 1}" fill="${C.panel2}"/>
     <line x1="${winX}" y1="${panelTop + TITLEBAR}" x2="${winX + winW}" y2="${panelTop + TITLEBAR}" stroke="${C.line}"/>`);
-  [['#ff5f57', 0], ['#febc2e', 1], ['#28c840', 2]].forEach(([col, i]) => {
+  [[C.orange, 0], [C.purpleHi, 1], [C.faint, 2]].forEach(([col, i]) => {
     push(`<circle cx="${winX + 22 + i * 21}" cy="${barMid}" r="6.5" fill="${col}"/>`);
   });
   push(`<text x="${winX + winW / 2}" y="${barMid + 4.5}" font-family="${MONO}" font-size="12"
@@ -327,8 +319,8 @@ function logo(name, x, yy, size, color, mono) {
   //     are joined with no separator and the space is a hard &#160;.
   const NAME = 'WELCOME TO MY TERMINAL';
   const ORANGE_FROM = 14; // "TERMINAL" picks up the sunset colour
-  const NAME_PX = 30;
-  const NAME_TRACK = 2.5;
+  const NAME_PX = 32;
+  const NAME_TRACK = 1;
   const nameW = NAME.length * adv(NAME_PX, NAME_TRACK);
 
   const tspans = NAME.split('')
@@ -338,7 +330,7 @@ function logo(name, x, yy, size, color, mono) {
       return `<tspan${fill} opacity="0">${glyph}<animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="${(0.5 + i * 0.075).toFixed(2)}s" fill="freeze"/></tspan>`;
     })
     .join('');
-  push(`<text x="${x}" y="${contentTop + NAME_BASE}" font-family="${PIXEL}" font-size="${NAME_PX}" font-weight="800"
+  push(`<text x="${x}" y="${contentTop + NAME_BASE}" font-family="${MONO}" font-size="${NAME_PX}" font-weight="800"
         fill="${C.ink}" letter-spacing="${NAME_TRACK}">${tspans}</text>`);
 
   // Cursor walks along with the text as each glyph lands, then blinks a few
@@ -366,7 +358,6 @@ function logo(name, x, yy, size, color, mono) {
   const bio = [
     'forward-deployed designer: i design it, build it, and ship it myself',
     'no handoff. the interface is the deliverable, not the file',
-    'i prototype in code, so the thing you review is the thing that ships',
   ];
   bio.forEach((line, i) => {
     push(`<text x="${x}" y="${contentTop + BIO_BASE + i * BIO_STEP}" font-family="${MONO}" font-size="14.5" fill="${C.dim}"
