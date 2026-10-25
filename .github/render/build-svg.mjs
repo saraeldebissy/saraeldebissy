@@ -279,7 +279,7 @@ function logo(name, x, yy, size, color, mono) {
   const PROMPT_BASE = 104;
   const BIO_BASE = 138;
   const BIO_STEP = 28;
-  const bodyH = Math.max(BIO_BASE + BIO_STEP * 2 + 34, readoutH + 44);
+  const bodyH = Math.max(BIO_BASE + BIO_STEP * 3 + 34, readoutH + 44);
   const PANEL_H = TITLEBAR + bodyH;
   const h = OFFSET + PANEL_H + BELOW_MARGIN;
   const top = y;
@@ -317,10 +317,13 @@ function logo(name, x, yy, size, color, mono) {
   //   - xml:space="preserve" turns the newlines between generated <tspan>
   //     tags into real spaces, inflating the measured width. So the tspans
   //     are joined with no separator and the space is a hard &#160;.
+  // Same pixel face, size, and tracking as the section headers (PULSE,
+  // STACK, etc.) so the greeting reads as the same display voice as the rest
+  // of the page rather than a second, unrelated typeface.
   const NAME = 'WELCOME TO MY TERMINAL';
   const ORANGE_FROM = 14; // "TERMINAL" picks up the sunset colour
-  const NAME_PX = 32;
-  const NAME_TRACK = 1;
+  const NAME_PX = 30;
+  const NAME_TRACK = 2.5;
   const nameW = NAME.length * adv(NAME_PX, NAME_TRACK);
 
   const tspans = NAME.split('')
@@ -330,7 +333,7 @@ function logo(name, x, yy, size, color, mono) {
       return `<tspan${fill} opacity="0">${glyph}<animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="${(0.5 + i * 0.075).toFixed(2)}s" fill="freeze"/></tspan>`;
     })
     .join('');
-  push(`<text x="${x}" y="${contentTop + NAME_BASE}" font-family="${MONO}" font-size="${NAME_PX}" font-weight="800"
+  push(`<text x="${x}" y="${contentTop + NAME_BASE}" font-family="${PIXEL}" font-size="${NAME_PX}" font-weight="800"
         fill="${C.ink}" letter-spacing="${NAME_TRACK}">${tspans}</text>`);
 
   // Cursor walks along with the text as each glyph lands, then blinks a few
@@ -355,13 +358,26 @@ function logo(name, x, yy, size, color, mono) {
   push(`<text x="${x}" y="${contentTop + PROMPT_BASE}" font-family="${MONO}" font-size="14" font-weight="700"
         fill="${C.purpleHi}" opacity="0">${fade(typedFor + 0.15, 0.4)}<tspan fill="${C.orange}">sara@terminal</tspan>:~$ whoami</text>`);
 
+  // First bio statement wraps across two physical lines under one ">_"
+  // prefix (it ran too wide for one line); the continuation lines up under
+  // the text, not the prefix, so it still reads as a single statement.
   const bio = [
-    'forward-deployed designer: i design it, build it, and ship it myself',
-    'no handoff. the interface is the deliverable, not the file',
+    ['forward-deployed designer:', 'i design it, build it, and ship it myself.'],
+    ['no handoff. the interface is the deliverable, not the file'],
   ];
-  bio.forEach((line, i) => {
-    push(`<text x="${x}" y="${contentTop + BIO_BASE + i * BIO_STEP}" font-family="${MONO}" font-size="14.5" fill="${C.dim}"
-          opacity="0">${fade((typedFor + 0.45 + i * 0.3).toFixed(2), 0.4)}<tspan fill="${C.orange}" font-weight="700">&gt;_&#160;</tspan>${esc(line)}</text>`);
+  let bioY = contentTop + BIO_BASE;
+  bio.forEach((linesGroup) => {
+    linesGroup.forEach((line, j) => {
+      const delay = (typedFor + 0.45 + (bioY - (contentTop + BIO_BASE)) / BIO_STEP * 0.3).toFixed(2);
+      if (j === 0) {
+        push(`<text x="${x}" y="${bioY}" font-family="${MONO}" font-size="14.5" fill="${C.dim}"
+              opacity="0">${fade(delay, 0.4)}<tspan fill="${C.orange}" font-weight="700">&gt;_&#160;</tspan>${esc(line)}</text>`);
+      } else {
+        push(`<text x="${x + adv(14.5, 0) * 3}" y="${bioY}" font-family="${MONO}" font-size="14.5" fill="${C.dim}"
+              opacity="0">${fade(delay, 0.4)}${esc(line)}</text>`);
+      }
+      bioY += BIO_STEP;
+    });
   });
 
   push(`<g opacity="0">${fade(typedFor + 0.35, 0.55)}
@@ -496,13 +512,13 @@ function header(title, note, accent = C.orange, delay = 0) {
           text-anchor="middle" letter-spacing="1.3">DAILY CONTRIBUTIONS</text>
     <text x="${W - PAD - 24}" y="${wy + wh + 26}" font-family="${MONO}" font-size="12.5" fill="${C.orange}"
           text-anchor="end" letter-spacing="1.3">TODAY ▸</text></g>`);
-  y = top + h + 34;
+  y = top + h + 40;
 }
 
 // ═══════════════════════════ 4. AGENT SQUAD ═══════════════════════════
 // The agent squad that actually builds this page, named and in character.
 {
-  header('MY AGENT SQUAD', '// a little chaotic, mostly helpful', C.purple, SHOW_BUILDS ? 5.0 : 3.5);
+  header('MY AGENT SQUAD', '// a little chaotic, mostly helpful', C.orange, SHOW_BUILDS ? 5.0 : 3.5);
   // Described in third person, what each one does — not a quote in their
   // voice. Quotes read as a bit much for a roster that's meant to be a quick
   // scan, not a cast of characters speaking for themselves.
@@ -555,7 +571,7 @@ function header(title, note, accent = C.orange, delay = 0) {
            href="data:image/png;base64,${agentsB64}"/>
   </g>`);
 
-  y = top + h + 36;
+  y = top + h + 40;
 }
 
 // ═══════════════════════════ 5. STACK ═══════════════════════════
@@ -568,7 +584,7 @@ function header(title, note, accent = C.orange, delay = 0) {
 // logos in twenty-two unrelated brand colours read as a sticker sheet, not a
 // designed row. Orange and violet alternate so the grid stays legible.
 {
-  header('MY STACK', '// what I work in, together', C.purple, 2.6);
+  header('MY STACK', '// what I work in, together', C.orange, 2.6);
   const tools = [
     ['Framer', 'FR'],
     ['React', 'RX'],
@@ -633,7 +649,7 @@ function header(title, note, accent = C.orange, delay = 0) {
     </g>`);
   });
   push(`</g>`);
-  y = top + h + 36;
+  y = top + h + 40;
 }
 
 // ═══════════════════════════ 6. BUILDS ═══════════════════════════
@@ -693,7 +709,7 @@ if (SHOW_BUILDS) {
   });
   push(`<text x="${rx + 22}" y="${top + h - 24}" font-family="${MONO}" font-size="12.5" fill="${C.faint}"
         letter-spacing="1.4">${stats.repos} REPOS INDEXED</text></g>`);
-  y = top + h + 36;
+  y = top + h + 40;
 }
 
 // ═══════════════════════════ 7. LINKS ═══════════════════════════
