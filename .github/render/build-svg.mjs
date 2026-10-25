@@ -299,9 +299,70 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
   y += H + 20;
 }
 
-// ═══════════════════════════ 3. BUILDS ═══════════════════════════
+// ═══════════════════════════ 3. PULSE ═══════════════════════════
+// Every number here comes from stats.json, refreshed daily by the workflow.
+// Leads the content sections — proof the page is alive comes before the list
+// of things that were built with it.
 {
-  header('01', 'BUILDS', '// things I made and shipped', C.orange, 1.5);
+  header('01', 'PULSE', '// refreshed daily from github', C.orange, 1.5);
+  const h = 258;
+  const top = y;
+  push(`<g opacity="0">${fade(1.6, 0.5)}
+    <path d="${chamfer(PAD, top, W - PAD * 2, h)}" fill="${C.panel}" stroke="${C.line}"/>
+    ${bracket(PAD + 5, top + 5, 'tl', C.orange)}${bracket(W - PAD - 5, top + 5, 'tr', C.orange)}
+    ${bracket(PAD + 5, top + h - 5, 'bl', C.orange)}${bracket(W - PAD - 5, top + h - 5, 'br', C.orange)}`);
+
+  // Four counters across the top, equal weight — no hero metric.
+  const inner = W - PAD * 2 - 48;
+  const cells = [
+    ['CURRENT STREAK', pad2(stats.current), 'days', C.orange],
+    ['LONGEST STREAK', pad2(stats.longest), 'record', C.purpleHi],
+    ['COMMITS', String(stats.commitsYear), 'past year', C.ink],
+    ['REPOS', String(stats.repos), 'public', C.ink],
+  ];
+  const cw = (inner - 3 * 14) / 4;
+  cells.forEach(([k, v, u, col], i) => {
+    const cx = PAD + 24 + i * (cw + 14);
+    push(`<path d="${chamfer(cx, top + 28, cw, 104, 11)}" fill="#120f23" stroke="${C.line2}"/>
+      <text x="${cx + 16}" y="${top + 52}" font-family="${MONO}" font-size="12" fill="${C.dim}"
+            letter-spacing="1.8">${k}</text>
+      <text x="${cx + 16}" y="${top + 104}" font-family="${MONO}" font-size="44" font-weight="800"
+            fill="${col}" opacity="0">${v}${fade((2.0 + i * 0.12).toFixed(2), 0.4)}</text>
+      <text x="${cx + cw - 16}" y="${top + 104}" font-family="${MONO}" font-size="12" fill="${C.faint}"
+            text-anchor="end" letter-spacing="1.5">${u.toUpperCase()}</text>`);
+  });
+
+  // Contribution waveform across the full width.
+  const wx = PAD + 24;
+  const ww = inner;
+  const wh = 62;
+  const wy = top + 156;
+  const n = stats.waveform.length;
+  const gap = 1;
+  const bw = (ww - (n - 1) * gap) / n;
+  stats.waveform.forEach((b, i) => {
+    const bh = Math.max(2, (b.height / 100) * wh);
+    const bx = wx + i * (bw + gap);
+    push(`<rect x="${bx.toFixed(2)}" y="${(wy + wh - bh).toFixed(2)}" width="${bw.toFixed(2)}"
+          height="${bh.toFixed(2)}" fill="${b.on ? C.orange : '#2a2446'}">
+      <animate attributeName="height" from="0" to="${bh.toFixed(2)}" dur="0.5s"
+               begin="${(2.3 + i * 0.01).toFixed(2)}s" fill="freeze"/>
+      <animate attributeName="y" from="${wy + wh}" to="${(wy + wh - bh).toFixed(2)}" dur="0.5s"
+               begin="${(2.3 + i * 0.01).toFixed(2)}s" fill="freeze"/></rect>`);
+  });
+  // Axis labels sit above the panel floor so they clear the corner brackets.
+  push(`<text x="${wx}" y="${wy + wh + 26}" font-family="${MONO}" font-size="12.5" fill="${C.dim}"
+        letter-spacing="1.3">◂ ${stats.waveformDays} DAYS AGO</text>
+    <text x="${W / 2}" y="${wy + wh + 26}" font-family="${MONO}" font-size="12.5" fill="${C.faint}"
+          text-anchor="middle" letter-spacing="1.3">DAILY CONTRIBUTIONS</text>
+    <text x="${W - PAD - 24}" y="${wy + wh + 26}" font-family="${MONO}" font-size="12.5" fill="${C.orange}"
+          text-anchor="end" letter-spacing="1.3">TODAY ▸</text></g>`);
+  y = top + h + 34;
+}
+
+// ═══════════════════════════ 4. BUILDS ═══════════════════════════
+{
+  header('02', 'BUILDS', '// things I made and shipped', C.orange, 2.6);
   const tools = [
     ['UX Research Skills', 'Reusable Claude skills for responsible UX research.', 'repo'],
     ['Vibe Generator', 'Prompt generator for people who build by vibe.', 'live'],
@@ -358,9 +419,9 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
   y = top + h + 36;
 }
 
-// ═══════════════════════════ 4. STACK ═══════════════════════════
+// ═══════════════════════════ 5. STACK ═══════════════════════════
 {
-  header('02', 'STACK', '// what I work in', C.purple, 2.4);
+  header('03', 'STACK', '// what I work in', C.purple, 3.5);
   const groups = [
     ['DESIGN', ['Figma', 'Framer', 'Design Systems', 'Research', 'CRO']],
     ['BUILD', ['React', 'Next.js', 'TypeScript', 'Expo', 'Supabase', 'Vercel']],
@@ -368,7 +429,7 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
   ];
   const h = 30 + groups.length * 56;
   const top = y;
-  push(`<g opacity="0">${fade(2.5, 0.5)}
+  push(`<g opacity="0">${fade(3.6, 0.5)}
     <path d="${chamfer(PAD, top, W - PAD * 2, h)}" fill="${C.panel}" stroke="${C.line}"/>
     ${bracket(PAD + 5, top + 5, 'tl', C.purple)}${bracket(W - PAD - 5, top + h - 5, 'br', C.purple)}`);
   groups.forEach(([label, items], gi) => {
@@ -378,7 +439,7 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
     let tx = PAD + 126;
     items.forEach((it, ii) => {
       const tw = it.length * 9.9 + 26;
-      push(`<g opacity="0">${fade((2.8 + gi * 0.16 + ii * 0.05).toFixed(2), 0.3)}
+      push(`<g opacity="0">${fade((3.9 + gi * 0.16 + ii * 0.05).toFixed(2), 0.3)}
         <path d="M${tx + 7},${ry - 21} H${tx + tw} V${ry + 5} L${tx + tw - 7},${ry + 12} H${tx} V${ry - 14} Z"
               fill="#120f23" stroke="${C.line2}"/>
         <text x="${tx + tw / 2}" y="${ry}" font-family="${MONO}" font-size="15.5" fill="${C.ink}"
@@ -390,69 +451,10 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
   y = top + h + 36;
 }
 
-// ═══════════════════════════ 5. TELEMETRY ═══════════════════════════
-// Every number here comes from stats.json, refreshed daily by the workflow.
-{
-  header('03', 'TELEMETRY', '// refreshed daily from github', C.orange, 3.2);
-  const h = 258;
-  const top = y;
-  push(`<g opacity="0">${fade(3.3, 0.5)}
-    <path d="${chamfer(PAD, top, W - PAD * 2, h)}" fill="${C.panel}" stroke="${C.line}"/>
-    ${bracket(PAD + 5, top + 5, 'tl', C.orange)}${bracket(W - PAD - 5, top + 5, 'tr', C.orange)}
-    ${bracket(PAD + 5, top + h - 5, 'bl', C.orange)}${bracket(W - PAD - 5, top + h - 5, 'br', C.orange)}`);
-
-  // Four counters across the top, equal weight — no hero metric.
-  const inner = W - PAD * 2 - 48;
-  const cells = [
-    ['CURRENT STREAK', pad2(stats.current), 'days', C.orange],
-    ['LONGEST STREAK', pad2(stats.longest), 'record', C.purpleHi],
-    ['COMMITS', String(stats.commitsYear), 'past year', C.ink],
-    ['REPOS', String(stats.repos), 'public', C.ink],
-  ];
-  const cw = (inner - 3 * 14) / 4;
-  cells.forEach(([k, v, u, col], i) => {
-    const cx = PAD + 24 + i * (cw + 14);
-    push(`<path d="${chamfer(cx, top + 28, cw, 104, 11)}" fill="#120f23" stroke="${C.line2}"/>
-      <text x="${cx + 16}" y="${top + 52}" font-family="${MONO}" font-size="12" fill="${C.dim}"
-            letter-spacing="1.8">${k}</text>
-      <text x="${cx + 16}" y="${top + 104}" font-family="${MONO}" font-size="44" font-weight="800"
-            fill="${col}" opacity="0">${v}${fade((3.7 + i * 0.12).toFixed(2), 0.4)}</text>
-      <text x="${cx + cw - 16}" y="${top + 104}" font-family="${MONO}" font-size="12" fill="${C.faint}"
-            text-anchor="end" letter-spacing="1.5">${u.toUpperCase()}</text>`);
-  });
-
-  // Contribution waveform across the full width.
-  const wx = PAD + 24;
-  const ww = inner;
-  const wh = 62;
-  const wy = top + 156;
-  const n = stats.waveform.length;
-  const gap = 1;
-  const bw = (ww - (n - 1) * gap) / n;
-  stats.waveform.forEach((b, i) => {
-    const bh = Math.max(2, (b.height / 100) * wh);
-    const bx = wx + i * (bw + gap);
-    push(`<rect x="${bx.toFixed(2)}" y="${(wy + wh - bh).toFixed(2)}" width="${bw.toFixed(2)}"
-          height="${bh.toFixed(2)}" fill="${b.on ? C.orange : '#2a2446'}">
-      <animate attributeName="height" from="0" to="${bh.toFixed(2)}" dur="0.5s"
-               begin="${(4.0 + i * 0.01).toFixed(2)}s" fill="freeze"/>
-      <animate attributeName="y" from="${wy + wh}" to="${(wy + wh - bh).toFixed(2)}" dur="0.5s"
-               begin="${(4.0 + i * 0.01).toFixed(2)}s" fill="freeze"/></rect>`);
-  });
-  // Axis labels sit above the panel floor so they clear the corner brackets.
-  push(`<text x="${wx}" y="${wy + wh + 26}" font-family="${MONO}" font-size="12.5" fill="${C.dim}"
-        letter-spacing="1.3">◂ ${stats.waveformDays} DAYS AGO</text>
-    <text x="${W / 2}" y="${wy + wh + 26}" font-family="${MONO}" font-size="12.5" fill="${C.faint}"
-          text-anchor="middle" letter-spacing="1.3">DAILY CONTRIBUTIONS</text>
-    <text x="${W - PAD - 24}" y="${wy + wh + 26}" font-family="${MONO}" font-size="12.5" fill="${C.orange}"
-          text-anchor="end" letter-spacing="1.3">TODAY ▸</text></g>`);
-  y = top + h + 34;
-}
-
 // ═══════════════════════════ 6. AGENT ROSTER ═══════════════════════════
 // The agent squad that actually builds this page, named and in character.
 {
-  header('04', 'AGENT ROSTER', '// a little chaotic, mostly helpful', C.purple, 4.1);
+  header('04', 'AGENT ROSTER', '// a little chaotic, mostly helpful', C.purple, 5.0);
   const agents = [
     ['RATCHET', 'I built the whole thing.', 'execution'],
     ['GUSTAVE', 'The direction was mine.', 'direction'],
@@ -472,12 +474,12 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
   const leftW = W - PAD * 2 - 16 - imgW;
   const top = y;
 
-  push(`<g opacity="0">${fade(4.2, 0.5)}
+  push(`<g opacity="0">${fade(5.1, 0.5)}
     <path d="${chamfer(PAD, top, leftW, h)}" fill="${C.panel}" stroke="${C.line}"/>
     ${bracket(PAD + 5, top + 5, 'tl', C.purple)}${bracket(PAD + leftW - 5, top + h - 5, 'br', C.purple)}`);
   agents.forEach(([name, quote, role], i) => {
     const ry = top + 46 + i * rowH;
-    push(`<g opacity="0">${fade((4.5 + i * 0.12).toFixed(2), 0.3)}
+    push(`<g opacity="0">${fade((5.4 + i * 0.12).toFixed(2), 0.3)}
       <text x="${PAD + 24}" y="${ry}" font-family="${MONO}" font-size="13" fill="${C.faint}">${pad2(i + 1)}</text>
       <text x="${PAD + 62}" y="${ry}" font-family="${MONO}" font-size="17" font-weight="800"
             fill="${C.purpleHi}" letter-spacing="1.6">${esc(name)}</text>
@@ -493,7 +495,7 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
   const scale = iw / imgW;
   const drawH = Math.round(imgH * scale);
   const iy = top + Math.round((h - drawH) / 2);
-  push(`<g opacity="0">${fade(4.3, 0.6)}
+  push(`<g opacity="0">${fade(5.2, 0.6)}
     <path d="${chamfer(ix, top, iw, h, 12)}" fill="${C.panel2}" stroke="${C.line}"/>
     ${bracket(ix + iw - 5, top + 5, 'tr', C.purple)}${bracket(ix + 5, top + h - 5, 'bl', C.purple)}
     <image x="${ix}" y="${iy}" width="${iw}" height="${drawH}"
@@ -509,7 +511,7 @@ function header(idx, title, note, accent = C.orange, delay = 0) {
   const h = 64;
   const top = y;
   push(`<rect x="0" y="${top}" width="${W}" height="2" fill="url(#rule)"/>`);
-  push(`<g opacity="0">${fade(5.4, 0.5)}
+  push(`<g opacity="0">${fade(6.2, 0.5)}
     <text x="${PAD}" y="${top + 40}" font-family="${MONO}" font-size="15" fill="${C.dim}"
           letter-spacing="1.4">Say hi ▸ I like talking about design that ships.</text>
     <text x="${W - PAD}" y="${top + 40}" font-family="${MONO}" font-size="12.5" fill="${C.faint}"
