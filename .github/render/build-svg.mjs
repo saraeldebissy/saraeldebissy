@@ -191,7 +191,7 @@ const fade = (delay, dur = 0.45) =>
 // product designer & design engineer", which both contradicted the eyebrow
 // and ate the vertical space this section needed.
 {
-  const h = 180;
+  const h = 248;
   const top = y;
   push(`<rect x="0" y="${top}" width="${W}" height="${h}" fill="${C.void}"/>`);
   push(`<rect x="0" y="${top}" width="${W}" height="2" fill="url(#rule)"/>`);
@@ -208,9 +208,9 @@ const fade = (delay, dur = 0.45) =>
   //   - xml:space="preserve" turns the newlines between generated <tspan>
   //     tags into real spaces, inflating the measured width. So the tspans
   //     are joined with no separator and the space is a hard &#160;.
-  const NAME = 'HI, I AM SARA';
-  const ORANGE_FROM = 9; // "SARA" picks up the sunset colour
-  const NAME_PX = 42;
+  const NAME = 'WELCOME TO MY TERMINAL';
+  const ORANGE_FROM = 14; // "TERMINAL" picks up the sunset colour
+  const NAME_PX = 32;
   const NAME_TRACK = 1;
   const nameW = NAME.length * adv(NAME_PX, NAME_TRACK);
 
@@ -239,13 +239,20 @@ const fade = (delay, dur = 0.45) =>
     <animate attributeName="opacity" from="1" to="0" dur="0.3s" begin="${(typedFor + 2.85).toFixed(2)}s" fill="freeze"/>
   </rect>`);
 
-  // Title now sits below the name as its own line, in character.
+  // Terminal-style "whoami" block below the greeting: a prompt line, then a
+  // few lines about Sara typing in one at a time, like a real shell session.
   push(`<text x="${x}" y="${top + 92}" font-family="${MONO}" font-size="14" font-weight="700"
-        fill="${C.purple}" letter-spacing="4" opacity="0">${fade(typedFor + 0.15, 0.5)}◆ FORWARD-DEPLOYED DESIGNER</text>`);
+        fill="${C.purpleHi}" opacity="0">${fade(typedFor + 0.15, 0.4)}<tspan fill="${C.orange}">sara@terminal</tspan>:~$ whoami</text>`);
 
-  push(`<g opacity="0">${fade(typedFor + 0.3, 0.55)}
-    <text x="${x}" y="${top + 128}" font-family="${MONO}" font-size="17.5" fill="${C.dim}">I design it, build it, and ship it myself. No handoff.</text>
-  </g>`);
+  const bio = [
+    'forward-deployed designer — i design it, build it, and ship it myself',
+    'no handoff. the interface is the deliverable, not the file',
+    'based in Dubai, working across retail, fintech, and SaaS',
+  ];
+  bio.forEach((line, i) => {
+    push(`<text x="${x}" y="${top + 118 + i * 24}" font-family="${MONO}" font-size="14.5" fill="${C.dim}"
+          opacity="0">${fade((typedFor + 0.45 + i * 0.3).toFixed(2), 0.4)}${esc(line)}</text>`);
+  });
 
   // Right-side readout. Width is derived from the widest key/value pair so
   // the longest row can never overflow the box. HANDOFF sits back in here
@@ -599,12 +606,54 @@ if (SHOW_BUILDS) {
 // instead of splitting the nameplate from the content.
 marquee();
 
-// ═══════════════════════════ 7. FOOTER ═══════════════════════════
+// ═══════════════════════════ 7. LINKS ═══════════════════════════
+// Baked into the dark canvas instead of a markdown badge row below the image:
+// GitHub's sanitizer strips any background-color on the <p> wrapping shields.io
+// badges, so that row always shows a white (or theme) gap around it that can't
+// be styled away from markdown alone. Drawing it here means it's the same
+// void-colored pixels as the rest of the page, with no seam. Trade-off: these
+// are no longer real <a> links, since an SVG loaded via <img> can't be
+// interactive — the handles/URLs live in the footer line and the real
+// clickable links stay in the README badge row beneath the image.
+{
+  const links = [
+    ['in', 'LINKEDIN', '#0A66C2'],
+    ['x', 'X', C.ink],
+    ['fg', 'FIGMA', '#F24E1E'],
+    ['vc', 'PORTFOLIO', '#ffffff'],
+    ['ss', 'SUBSTACK', '#FF6719'],
+  ];
+  const chipH = 40;
+  const gap = 14;
+  const widths = links.map(([, label]) => 34 + label.length * 9.3 + 16);
+  const rowW = widths.reduce((a, b) => a + b, 0) + gap * (links.length - 1);
+  const h = chipH + 44;
+  const top = y;
+  push(`<rect x="0" y="${top}" width="${W}" height="2" fill="url(#rule)"/>`);
+  push(`<g opacity="0">${fade(6.2, 0.5)}`);
+  let lx = (W - rowW) / 2;
+  const cy = top + (h - chipH) / 2 + 6;
+  links.forEach(([mono, label, color], i) => {
+    const tw = widths[i];
+    push(`<path d="M${lx + 7},${cy} H${lx + tw} V${cy + chipH - 7} L${lx + tw - 7},${cy + chipH} H${lx} V${cy + 7} Z"
+          fill="${C.panel}" stroke="${C.line2}"/>
+      <rect x="${lx + 8}" y="${cy + 8}" width="24" height="24" rx="4" fill="${color}"/>
+      <text x="${lx + 20}" y="${cy + 25}" font-family="${MONO}" font-size="10" font-weight="800"
+            fill="${C.void}" text-anchor="middle" letter-spacing="0.5">${esc(mono)}</text>
+      <text x="${lx + 40}" y="${cy + 25}" font-family="${MONO}" font-size="13" font-weight="700"
+            fill="${C.ink}" letter-spacing="1.2">${esc(label)}</text>`);
+    lx += tw + gap;
+  });
+  push(`</g>`);
+  y = top + h;
+}
+
+// ═══════════════════════════ 8. FOOTER ═══════════════════════════
 {
   const h = 64;
   const top = y;
   push(`<rect x="0" y="${top}" width="${W}" height="2" fill="url(#rule)"/>`);
-  push(`<g opacity="0">${fade(6.2, 0.5)}
+  push(`<g opacity="0">${fade(6.4, 0.5)}
     <text x="${PAD}" y="${top + 40}" font-family="${MONO}" font-size="15" fill="${C.dim}"
           letter-spacing="1.4">Say hi ▸ I like talking about design that ships.</text>
     <text x="${W - PAD}" y="${top + 40}" font-family="${MONO}" font-size="12.5" fill="${C.faint}"
