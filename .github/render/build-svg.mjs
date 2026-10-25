@@ -15,6 +15,10 @@ const stats = JSON.parse(await readFile(here('./stats.json'), 'utf8'));
 const sceneB64 = (await readFile(here('../../assets/scene.jpg'))).toString('base64');
 const agentsB64 = (await readFile(here('../../assets/agents.png'))).toString('base64');
 const geistB64 = (await readFile(here('../../assets/geist-pixel.woff2'))).toString('base64');
+// Real brand marks, pulled from simple-icons (CC0) and cached in the repo so
+// the build never depends on a network fetch. Each value is a single SVG path
+// drawn in a 24x24 viewBox. Monogram letters were a stand-in for these.
+const LOGOS = JSON.parse(await readFile(here('./logos.json'), 'utf8'));
 
 const W = 1200;
 const PAD = 34;
@@ -61,6 +65,11 @@ let y = 0;
 const out = [];
 const push = (s) => out.push(s);
 
+// Hidden for now — set to true to bring BUILDS back. Declared up top since
+// AGENT SQUAD (which reads this to pick its header delay) now renders before
+// the BUILDS section itself.
+const SHOW_BUILDS = false;
+
 /** Chamfered panel path — the corner cut that makes a box read as machined. */
 const chamfer = (x, yy, w, h, c = 14) =>
   `M${x + c},${yy} H${x + w - c} L${x + w},${yy + c} V${yy + h - c} L${x + w - c},${yy + h} H${x + c} L${x},${yy + h - c} V${yy + c} Z`;
@@ -91,6 +100,19 @@ function brackets4(x, top, w, h, color) {
 /** Fade-in wrapper. Everything enters the same way, just at different times. */
 const fade = (delay, dur = 0.45) =>
   `<animate attributeName="opacity" from="0" to="1" dur="${dur}s" begin="${delay}s" fill="freeze"/>`;
+
+/** A real brand mark, scaled from its native 24x24 box to `size` at (x, y).
+ * Falls back to a monogram when simple-icons has no mark for that tool. */
+function logo(name, x, yy, size, color, mono) {
+  const d = LOGOS[name];
+  if (!d) {
+    return `<text x="${x + size / 2}" y="${yy + size * 0.72}" font-family="${MONO}"
+            font-size="${(size * 0.52).toFixed(1)}" font-weight="800" fill="${color}"
+            text-anchor="middle" letter-spacing="0.3">${esc(mono || name.slice(0, 2).toUpperCase())}</text>`;
+  }
+  const s = size / 24;
+  return `<g transform="translate(${x},${yy}) scale(${s.toFixed(4)})"><path d="${d}" fill="${color}"/></g>`;
+}
 
 // ═══════════════════════════ 1. THE SCENE ═══════════════════════════
 // The artwork is the first impression, so it opens the page at full bleed
@@ -149,6 +171,13 @@ const fade = (delay, dur = 0.45) =>
   // flicker every few seconds, like an old CRT losing sync for a frame.
   push(`<rect x="14" y="168" width="164" height="126" fill="#eaf6ff" opacity="0">
     <animate attributeName="opacity" values="0;0;0.22;0.04;0;0" dur="4.2s" repeatCount="indefinite"/>
+  </rect>`);
+
+  // The right monitor's code editor, measured x 270-390, y 170-280. A hard,
+  // fast on/off blink like a real text-cursor, not a soft glow — distinct
+  // from every other light source in the scene, which all breathe slowly.
+  push(`<rect x="300" y="208" width="6" height="12" fill="#ffffff" opacity="0">
+    <animate attributeName="opacity" values="1;1;0;0" dur="1s" repeatCount="indefinite"/>
   </rect>`);
 
   // Scattered building-window lights across the skyline, each on its own
@@ -217,59 +246,89 @@ const fade = (delay, dur = 0.45) =>
 // product designer & design engineer", which both contradicted the eyebrow
 // and ate the vertical space this section needed.
 {
-  // Extra breathing room below the hero art before the terminal starts, plus
-  // a matching margin below it — "more space" was specifically about this gap.
-  const OFFSET = 34;
-  const PANEL_H = 186;
-  const BELOW_MARGIN = 34;
+  // Everything lives in ONE terminal window: title bar with macOS lights, the
+  // greeting, the whoami output, and the status readout nested inside as a
+  // sub-panel. Previously the readout floated outside as a separate box.
+  const OFFSET = 44;
+  const TITLEBAR = 38;
+  const BELOW_MARGIN = 44;
+  const winX = PAD;
+  const winW = W - PAD * 2;
+
+  // Readout, nested inside the window on the right. Values are arrays so a
+  // long field wraps across lines instead of forcing the box page-wide.
+  const readout = [
+    ['BASED', ['DUBAI / UAE'], C.ink],
+    ['DOMAINS', ['AI · PERSONALIZATION', 'DATA · RECOMMENDATION', 'INTELLIGENT EXPERIENCES'], C.ink],
+    ['MODE', ['EMBEDDED'], C.purpleHi],
+    ['HANDOFF', ['DISABLED'], C.faint],
+    ['STATUS', ['SHIPPING'], C.orange],
+  ];
+  const LINE_STEP = 19;
+  const rowW = Math.max(
+    ...readout.map(
+      ([k, vals]) =>
+        k.length * adv(13, 1.2) + 24 + Math.max(...vals.map((v) => v.length)) * adv(13, 0.8)
+    )
+  );
+  const rw = Math.ceil(rowW + 36);
+  // Row tops accumulate: a multi-line value pushes everything below it down.
+  const rowTops = [];
+  let acc = 0;
+  for (const [, vals] of readout) {
+    rowTops.push(acc);
+    acc += 27 + (vals.length - 1) * LINE_STEP;
+  }
+  const lastVals = readout[readout.length - 1][1];
+  const readoutH = 34 + rowTops[rowTops.length - 1] + (lastVals.length - 1) * LINE_STEP + 22;
+
+  // Content baselines, relative to the bottom of the title bar.
+  const NAME_BASE = 58;
+  const PROMPT_BASE = 104;
+  const BIO_BASE = 138;
+  const BIO_STEP = 28;
+  const bodyH = Math.max(BIO_BASE + BIO_STEP * 2 + 34, readoutH + 44);
+  const PANEL_H = TITLEBAR + bodyH;
   const h = OFFSET + PANEL_H + BELOW_MARGIN;
   const top = y;
   push(`<rect x="0" y="${top}" width="${W}" height="${h}" fill="${C.void}"/>`);
   push(`<rect x="0" y="${top}" width="${W}" height="2" fill="url(#rule)"/>`);
 
   const panelTop = top + OFFSET;
+  push(`<rect x="${winX}" y="${panelTop}" width="${winW}" height="${PANEL_H}" fill="${C.panel}" stroke="${C.line}"/>
+    ${brackets4(winX, panelTop, winW, PANEL_H, C.orange)}`);
 
-  // Right-side readout sized first, so the left terminal panel knows how
-  // much width it has left to work with.
-  const readout = [
-    ['BASED', 'DUBAI / UAE', C.ink],
-    ['DOMAINS', 'RETAIL · FIN · SAAS', C.ink],
-    ['MODE', 'EMBEDDED', C.purpleHi],
-    ['HANDOFF', 'DISABLED', C.faint],
-    ['STATUS', 'SHIPPING', C.orange],
-  ];
-  const rowW = Math.max(
-    ...readout.map(([k, v]) => k.length * adv(13, 1.2) + 24 + v.length * adv(13, 0.8))
-  );
-  const rw = Math.ceil(rowW + 36);
-  const readoutH = readout.length * 27 + 36;
-  const rx = W - PAD - rw;
-  const ry0 = panelTop + (PANEL_H - readoutH) / 2;
+  // macOS-style title bar: close / minimise / zoom lights, then the session
+  // name on its own slightly-lighter strip with a hairline under it.
+  const barMid = panelTop + TITLEBAR / 2;
+  push(`<rect x="${winX + 1}" y="${panelTop + 1}" width="${winW - 2}" height="${TITLEBAR - 1}" fill="${C.panel2}"/>
+    <line x1="${winX}" y1="${panelTop + TITLEBAR}" x2="${winX + winW}" y2="${panelTop + TITLEBAR}" stroke="${C.line}"/>`);
+  [['#ff5f57', 0], ['#febc2e', 1], ['#28c840', 2]].forEach(([col, i]) => {
+    push(`<circle cx="${winX + 22 + i * 21}" cy="${barMid}" r="6.5" fill="${col}"/>`);
+  });
+  push(`<text x="${winX + winW / 2}" y="${barMid + 4.5}" font-family="${MONO}" font-size="12"
+        fill="${C.faint}" text-anchor="middle" letter-spacing="1.4">sara@terminal — zsh</text>`);
 
-  // Left terminal panel: greeting, whoami prompt, and bio lines all live
-  // inside one bracket-cornered box, so the nameplate reads as an actual
-  // terminal window instead of text floating on the void.
-  const leftX = PAD;
-  const leftW = rx - 16 - leftX;
-  push(`<rect x="${leftX}" y="${panelTop}" width="${leftW}" height="${PANEL_H}" fill="${C.panel}" stroke="${C.line}"/>
-    ${brackets4(leftX, panelTop, leftW, PANEL_H, C.orange)}`);
+  const contentTop = panelTop + TITLEBAR;
+  const x = winX + 24;
 
-  const x = leftX + 22;
+  // Readout sub-panel, nested on the right inside the window body.
+  const rx = winX + winW - 24 - rw;
+  const ry0 = contentTop + (bodyH - readoutH) / 2;
 
-  // Name types character by character, smaller than before — it now reads as
-  // a greeting line, not the whole hero. The title moves below it instead of
-  // sitting above as an eyebrow tag.
+  // Greeting types in character by character, in the same pixel face the
+  // section headers use so the page has one display voice, not two.
   //
   // Two traps here, both of which produced visibly wrong output previously:
   //   - textLength redistributes the advance and swallows the space between
-  //     words, rendering "HI,IAMSARA".
+  //     words, rendering "WELCOMETOMYTERMINAL".
   //   - xml:space="preserve" turns the newlines between generated <tspan>
   //     tags into real spaces, inflating the measured width. So the tspans
   //     are joined with no separator and the space is a hard &#160;.
   const NAME = 'WELCOME TO MY TERMINAL';
   const ORANGE_FROM = 14; // "TERMINAL" picks up the sunset colour
-  const NAME_PX = 32;
-  const NAME_TRACK = 1;
+  const NAME_PX = 30;
+  const NAME_TRACK = 2.5;
   const nameW = NAME.length * adv(NAME_PX, NAME_TRACK);
 
   const tspans = NAME.split('')
@@ -279,7 +338,7 @@ const fade = (delay, dur = 0.45) =>
       return `<tspan${fill} opacity="0">${glyph}<animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="${(0.5 + i * 0.075).toFixed(2)}s" fill="freeze"/></tspan>`;
     })
     .join('');
-  push(`<text x="${x}" y="${panelTop + 46}" font-family="${MONO}" font-size="${NAME_PX}" font-weight="800"
+  push(`<text x="${x}" y="${contentTop + NAME_BASE}" font-family="${PIXEL}" font-size="${NAME_PX}" font-weight="800"
         fill="${C.ink}" letter-spacing="${NAME_TRACK}">${tspans}</text>`);
 
   // Cursor walks along with the text as each glyph lands, then blinks a few
@@ -290,46 +349,47 @@ const fade = (delay, dur = 0.45) =>
   const walk = NAME.split('')
     .map((_, i) => `<animate attributeName="x" to="${(x + (i + 1) * step).toFixed(1)}" dur="0.01s" begin="${(0.5 + i * 0.075).toFixed(2)}s" fill="freeze"/>`)
     .join('');
-  push(`<rect x="${x}" y="${panelTop + 14}" width="14" height="34" fill="${C.orange}" opacity="0">
+  push(`<rect x="${x}" y="${contentTop + NAME_BASE - 26}" width="13" height="30" fill="${C.orange}" opacity="0">
     ${walk}
     <animate attributeName="opacity" values="0;1" dur="0.01s" begin="0.5s" fill="freeze"/>
     <animate attributeName="opacity" values="1;1;0;0;1" dur="0.95s" begin="${typedFor.toFixed(2)}s" repeatCount="3"/>
     <animate attributeName="opacity" from="1" to="0" dur="0.3s" begin="${(typedFor + 2.85).toFixed(2)}s" fill="freeze"/>
   </rect>`);
 
-  // Terminal-style "whoami" block below the greeting: a prompt line, then a
-  // few lines about Sara typing in one at a time, like a real shell session.
-  push(`<text x="${x}" y="${panelTop + 84}" font-family="${MONO}" font-size="14" font-weight="700"
+  // "whoami" prompt, then the answer lines. The bio no longer repeats the
+  // title or the city: both already appear elsewhere on the page (the title
+  // in the first line, Dubai in the readout and the hero tag), so repeating
+  // them here just burned three lines saying the same thing twice.
+  push(`<text x="${x}" y="${contentTop + PROMPT_BASE}" font-family="${MONO}" font-size="14" font-weight="700"
         fill="${C.purpleHi}" opacity="0">${fade(typedFor + 0.15, 0.4)}<tspan fill="${C.orange}">sara@terminal</tspan>:~$ whoami</text>`);
 
   const bio = [
     'forward-deployed designer: i design it, build it, and ship it myself',
     'no handoff. the interface is the deliverable, not the file',
-    'based in Dubai, working across retail, fintech, and SaaS',
+    'i prototype in code, so the thing you review is the thing that ships',
   ];
   bio.forEach((line, i) => {
-    push(`<text x="${x}" y="${panelTop + 110 + i * 26}" font-family="${MONO}" font-size="14.5" fill="${C.dim}"
+    push(`<text x="${x}" y="${contentTop + BIO_BASE + i * BIO_STEP}" font-family="${MONO}" font-size="14.5" fill="${C.dim}"
           opacity="0">${fade((typedFor + 0.45 + i * 0.3).toFixed(2), 0.4)}<tspan fill="${C.orange}" font-weight="700">&gt;_&#160;</tspan>${esc(line)}</text>`);
   });
 
-  // Readout panel. Width is derived from the widest key/value pair so the
-  // longest row can never overflow the box. HANDOFF sits here alongside the
-  // other status fields rather than as a standalone line.
   push(`<g opacity="0">${fade(typedFor + 0.35, 0.55)}
-    <rect x="${rx}" y="${ry0}" width="${rw}" height="${readoutH}" fill="${C.panel}" stroke="${C.line}"/>
+    <rect x="${rx}" y="${ry0}" width="${rw}" height="${readoutH}" fill="${C.panel2}" stroke="${C.line2}"/>
     ${brackets4(rx, ry0, rw, readoutH, C.purple)}`);
-  readout.forEach(([k, v, col], i) => {
-    const ry = ry0 + 36 + i * 27;
+  readout.forEach(([k, vals, col], i) => {
+    const ry = ry0 + 34 + rowTops[i];
     push(`<text x="${rx + 18}" y="${ry}" font-family="${MONO}" font-size="13" fill="${C.dim}"
-          letter-spacing="1.2">${k}</text>
-      <text x="${rx + rw - 18}" y="${ry}" font-family="${MONO}" font-size="13" font-weight="700"
+          letter-spacing="1.2">${k}</text>`);
+    vals.forEach((v, j) => {
+      push(`<text x="${rx + rw - 18}" y="${ry + j * LINE_STEP}" font-family="${MONO}" font-size="13" font-weight="700"
             fill="${col}" text-anchor="end" letter-spacing="0.8">${esc(v)}</text>`);
+    });
   });
   push(`</g>`);
 
-  // The name must never run under the readout panel.
-  if (x + nameW + 26 > leftX + leftW) {
-    throw new Error(`Name overruns readout: ends at ${(x + nameW).toFixed(0)}, panel starts at ${leftX + leftW}`);
+  // The greeting must never run under the nested readout panel.
+  if (x + nameW + 26 > rx) {
+    throw new Error(`Name overruns readout: ends at ${(x + nameW).toFixed(0)}, panel starts at ${rx}`);
   }
   y = top + h;
 }
@@ -375,7 +435,7 @@ function header(title, note, accent = C.orange, delay = 0) {
   push(`<g opacity="0">${fade(delay)}
     <rect x="${PAD}" y="${top}" width="${idxW}" height="${H}" fill="${accent}"/>
     <text x="${PAD + idxW / 2}" y="${top + H / 2 + 9}" font-family="${MONO}" font-size="26" font-weight="800"
-          fill="${C.void}" text-anchor="middle">&gt;_</text>
+          fill="${C.void}" text-anchor="middle">&gt;<tspan>_<animate attributeName="opacity" values="1;1;0;0;1" dur="1.1s" begin="${delay}s" repeatCount="indefinite"/></tspan></text>
     <rect x="${PAD + idxW}" y="${top}" width="${titleW}" height="${H}" fill="${C.panel2}"
           stroke="${C.line2}" stroke-width="1"/>
     <text x="${PAD + idxW + 20}" y="${top + H / 2 + 10}" font-family="${PIXEL}" font-size="${PX}" font-weight="800"
@@ -432,7 +492,7 @@ function header(title, note, accent = C.orange, delay = 0) {
     const bh = Math.max(2, (b.height / 100) * wh);
     const bx = wx + i * (bw + gap);
     push(`<rect x="${bx.toFixed(2)}" y="${(wy + wh - bh).toFixed(2)}" width="${bw.toFixed(2)}"
-          height="${bh.toFixed(2)}" fill="${C.orange}" opacity="${b.on ? 1 : 0.32}">
+          height="${bh.toFixed(2)}" fill="${C.orange}">
       <animate attributeName="height" from="0" to="${bh.toFixed(2)}" dur="0.5s"
                begin="${(2.3 + i * 0.01).toFixed(2)}s" fill="freeze"/>
       <animate attributeName="y" from="${wy + wh}" to="${(wy + wh - bh).toFixed(2)}" dur="0.5s"
@@ -448,147 +508,7 @@ function header(title, note, accent = C.orange, delay = 0) {
   y = top + h + 34;
 }
 
-// ═══════════════════════════ 4. STACK ═══════════════════════════
-// One flowing grid, not three category rows — design/build/AI tools are used
-// together on the same projects, so splitting them implied a separation that
-// doesn't reflect how the work actually happens.
-//
-// Each chip carries a monogram swatch in the tool's real brand colour rather
-// than a reproduced logo mark: hand-drawing ~20 trademarked logo shapes from
-// memory risks a visibly wrong Figma or React glyph, which reads worse than
-// no logo at all. The colour is the recognisable part; the letters are a label.
-{
-  header('MY STACK', '// what I work in, together', C.purple, 2.6);
-  const tools = [
-    ['Framer', 'FR', '#0055FF'],
-    ['React', 'RX', '#61DAFB'],
-    ['Next.js', 'N', '#ffffff'],
-    ['TypeScript', 'TS', '#3178C6'],
-    ['HTML', 'H5', '#E34F26'],
-    ['CSS', 'C3', '#1572B6'],
-    ['Expo', 'EX', '#4630EB'],
-    ['Supabase', 'SB', '#3ECF8E'],
-    ['Vercel', 'V', '#ffffff'],
-    ['Convex', 'CX', '#EE342F'],
-    ['Claude Code', 'CC', '#D97757'],
-    ['Codex', 'OX', '#ffffff'],
-    ['Cursor', 'CU', '#ffffff'],
-    ['Devin', 'DV', '#6E56CF'],
-    ['Windsurf', 'WS', '#58E5C7'],
-    ['Copilot', 'CP', '#ffffff'],
-    ['Replit', 'RP', '#F26207'],
-    ['Perplexity', 'PX', '#1FB8CD'],
-    ['Obsidian', 'OB', '#A074C4'],
-    ['n8n', 'N8', '#EA4B71'],
-    ['v0', 'V0', '#ffffff'],
-    ['Figma', 'FG', '#F24E1E'],
-  ];
-
-  // Flow left-to-right, wrapping to a new row when a chip won't fit — the
-  // grid's own height falls out of how many rows that takes, rather than a
-  // fixed row count baked in ahead of time.
-  const innerW = W - PAD * 2 - 48;
-  const rowGap = 14;
-  const chipH = 40;
-  const positions = [];
-  {
-    let tx = 0, ty = 0, rowMaxH = chipH;
-    tools.forEach(([name]) => {
-      const tw = 34 + name.length * 9.3 + 16;
-      if (tx + tw > innerW && tx > 0) {
-        tx = 0;
-        ty += chipH + rowGap;
-      }
-      positions.push({ x: tx, y: ty, w: tw });
-      tx += tw + 10;
-    });
-    rowMaxH = ty + chipH;
-    positions.rowsHeight = rowMaxH;
-  }
-  const h = 48 + positions.rowsHeight;
-  const top = y;
-  push(`<g opacity="0">${fade(2.7, 0.5)}
-    <path d="${chamfer(PAD, top, W - PAD * 2, h)}" fill="${C.panel}" stroke="${C.line}"/>
-    ${brackets4(PAD, top, W - PAD * 2, h, C.purple)}`);
-  tools.forEach(([name, mono, color], i) => {
-    const { x: px, y: py, w: tw } = positions[i];
-    const cx = PAD + 24 + px;
-    const cy = top + 24 + py;
-    push(`<g opacity="0">${fade((3.0 + i * 0.04).toFixed(2), 0.3)}
-      <path d="M${cx + 7},${cy} H${cx + tw} V${cy + chipH - 7} L${cx + tw - 7},${cy + chipH} H${cx} V${cy + 7} Z"
-            fill="#120f23" stroke="${C.line2}"/>
-      <rect x="${cx + 8}" y="${cy + 8}" width="24" height="24" rx="4" fill="${color}"/>
-      <text x="${cx + 20}" y="${cy + 25}" font-family="${MONO}" font-size="10" font-weight="800"
-            fill="${C.void}" text-anchor="middle" letter-spacing="0.5">${esc(mono)}</text>
-      <text x="${cx + 40}" y="${cy + 25}" font-family="${MONO}" font-size="14.5" fill="${C.ink}">${esc(name)}</text>
-    </g>`);
-  });
-  push(`</g>`);
-  y = top + h + 36;
-}
-
-// ═══════════════════════════ 5. BUILDS ═══════════════════════════
-// Hidden for now — set to true to bring it back.
-const SHOW_BUILDS = false;
-if (SHOW_BUILDS) {
-  header('BUILDS', '// things I made and shipped', C.orange, 3.5);
-  const tools = [
-    ['UX Research Skills', 'Reusable Claude skills for responsible UX research.', 'repo'],
-    ['Vibe Generator', 'Prompt generator for people who build by vibe.', 'live'],
-    ['Skill Atlas', 'Mapping the full surface of product design capability.', 'live'],
-    ['NPS Insight Agent', 'Groups comments into themes, tracks weekly trends.', 'work'],
-    ['Research Repo', 'A searchable home for studies, insights and evidence.', 'work'],
-  ];
-  const more = ['Git Advisor', 'Mobbin MCP', 'Design Skills', 'Build Bouncer', 'Bug Platform'];
-
-  const rowH = 58;
-  const h = 40 + tools.length * rowH;
-  const leftW = 752;
-  const top = y;
-
-  push(`<g opacity="0">${fade(3.6, 0.5)}
-    <path d="${chamfer(PAD, top, leftW, h)}" fill="${C.panel}" stroke="${C.line}"/>
-    ${brackets4(PAD, top, leftW, h, C.orange)}`);
-  tools.forEach(([name, desc, kind], i) => {
-    const ry = top + 48 + i * rowH;
-    if (i) push(`<line x1="${PAD + 22}" y1="${ry - 27}" x2="${PAD + leftW - 22}" y2="${ry - 27}" stroke="${C.line}"/>`);
-    push(`<g opacity="0">${fade((3.9 + i * 0.1).toFixed(2), 0.35)}
-      <text x="${PAD + 24}" y="${ry}" font-family="${MONO}" font-size="13.5" font-weight="800"
-            fill="${C.purple}">${pad2(i + 1)}</text>
-      <text x="${PAD + 64}" y="${ry}" font-family="${MONO}" font-size="19" font-weight="700" fill="${C.ink}">${esc(name)}</text>
-      <text x="${PAD + 64}" y="${ry + 23}" font-family="${MONO}" font-size="15" fill="${C.dim}">${esc(desc)}</text>`);
-    const col = kind === 'live' ? C.orange : kind === 'repo' ? C.purpleHi : C.faint;
-    const bc = kind === 'live' ? C.orange : kind === 'repo' ? '#4b3a78' : '#2b2546';
-    const tw = kind.length * 10 + 22;
-    push(`<rect x="${PAD + leftW - 24 - tw}" y="${ry - 16}" width="${tw}" height="26" fill="none" stroke="${bc}"/>
-      <text x="${PAD + leftW - 24 - tw / 2}" y="${ry + 2}" font-family="${MONO}" font-size="12.5" font-weight="800"
-            fill="${col}" text-anchor="middle" letter-spacing="1.6">${kind.toUpperCase()}</text>`);
-    if (kind === 'live') {
-      push(`<rect x="${PAD + leftW - 24 - tw}" y="${ry - 16}" width="${tw}" height="26" fill="${C.orange}" opacity="0.12">
-        <animate attributeName="opacity" values="0.04;0.2;0.04" dur="2.4s" repeatCount="indefinite"/></rect>`);
-    }
-    push(`</g>`);
-  });
-  push(`</g>`);
-
-  const rx = PAD + leftW + 16;
-  const rw = W - PAD - rx;
-  push(`<g opacity="0">${fade(3.9, 0.5)}
-    <path d="${chamfer(rx, top, rw, h)}" fill="${C.panel2}" stroke="${C.line}"/>
-    ${brackets4(rx, top, rw, h, C.purple)}
-    <text x="${rx + 22}" y="${top + 40}" font-family="${MONO}" font-size="18" font-weight="800"
-          fill="${C.purpleHi}" letter-spacing="2">ALSO BUILT</text>`);
-  more.forEach((name, i) => {
-    const ry = top + 80 + i * 32;
-    push(`<text x="${rx + 22}" y="${ry}" font-family="${MONO}" font-size="12.5" fill="${C.faint}">${pad2(i + 6)}</text>
-      <text x="${rx + 56}" y="${ry}" font-family="${MONO}" font-size="16" fill="${C.ink}">${esc(name)}</text>`);
-  });
-  push(`<text x="${rx + 22}" y="${top + h - 24}" font-family="${MONO}" font-size="12.5" fill="${C.faint}"
-        letter-spacing="1.4">${stats.repos} REPOS INDEXED</text></g>`);
-  y = top + h + 36;
-}
-
-// ═══════════════════════════ 6. AGENT ROSTER ═══════════════════════════
+// ═══════════════════════════ 4. AGENT SQUAD ═══════════════════════════
 // The agent squad that actually builds this page, named and in character.
 {
   header('MY AGENT SQUAD', '// a little chaotic, mostly helpful', C.purple, SHOW_BUILDS ? 5.0 : 3.5);
@@ -647,9 +567,143 @@ if (SHOW_BUILDS) {
   y = top + h + 36;
 }
 
-// Closing marquee: bookends the opening art, now at the bottom of the page
-// instead of splitting the nameplate from the content.
-marquee();
+// ═══════════════════════════ 5. STACK ═══════════════════════════
+// One flowing grid, not three category rows — design/build/AI tools are used
+// together on the same projects, so splitting them implied a separation that
+// doesn't reflect how the work actually happens.
+//
+// Each chip carries the tool's real brand mark (simple-icons, CC0), tinted to
+// the page's own palette rather than its native brand colour: twenty-two
+// logos in twenty-two unrelated brand colours read as a sticker sheet, not a
+// designed row. Orange and violet alternate so the grid stays legible.
+{
+  header('MY STACK', '// what I work in, together', C.purple, 2.6);
+  const tools = [
+    ['Framer', 'FR'],
+    ['React', 'RX'],
+    ['Next.js', 'N'],
+    ['TypeScript', 'TS'],
+    ['HTML', 'H5'],
+    ['CSS', 'C3'],
+    ['Expo', 'EX'],
+    ['Supabase', 'SB'],
+    ['Vercel', 'V'],
+    ['Convex', 'CX'],
+    ['Claude Code', 'CC'],
+    ['Codex', 'OX'],
+    ['Cursor', 'CU'],
+    ['Devin', 'DV'],
+    ['Windsurf', 'WS'],
+    ['Copilot', 'CP'],
+    ['Replit', 'RP'],
+    ['Perplexity', 'PX'],
+    ['Obsidian', 'OB'],
+    ['n8n', 'N8'],
+    ['v0', 'V0'],
+    ['Figma', 'FG'],
+  ];
+
+  // Flow left-to-right, wrapping to a new row when a chip won't fit — the
+  // grid's own height falls out of how many rows that takes, rather than a
+  // fixed row count baked in ahead of time.
+  const innerW = W - PAD * 2 - 48;
+  const rowGap = 14;
+  const chipH = 40;
+  const positions = [];
+  {
+    let tx = 0, ty = 0, rowMaxH = chipH;
+    tools.forEach(([name]) => {
+      const tw = 34 + name.length * 9.3 + 16;
+      if (tx + tw > innerW && tx > 0) {
+        tx = 0;
+        ty += chipH + rowGap;
+      }
+      positions.push({ x: tx, y: ty, w: tw });
+      tx += tw + 10;
+    });
+    rowMaxH = ty + chipH;
+    positions.rowsHeight = rowMaxH;
+  }
+  const h = 48 + positions.rowsHeight;
+  const top = y;
+  push(`<g opacity="0">${fade(2.7, 0.5)}
+    <path d="${chamfer(PAD, top, W - PAD * 2, h)}" fill="${C.panel}" stroke="${C.line}"/>
+    ${brackets4(PAD, top, W - PAD * 2, h, C.purple)}`);
+  tools.forEach(([name, mono], i) => {
+    const { x: px, y: py, w: tw } = positions[i];
+    const cx = PAD + 24 + px;
+    const cy = top + 24 + py;
+    const color = i % 2 ? C.purpleHi : C.orangeHi;
+    push(`<g opacity="0">${fade((3.0 + i * 0.04).toFixed(2), 0.3)}
+      <path d="M${cx + 7},${cy} H${cx + tw} V${cy + chipH - 7} L${cx + tw - 7},${cy + chipH} H${cx} V${cy + 7} Z"
+            fill="#120f23" stroke="${C.line2}"/>
+      ${logo(name, cx + 11, cy + 11, 18, color, mono)}
+      <text x="${cx + 40}" y="${cy + 25}" font-family="${MONO}" font-size="14.5" fill="${C.ink}">${esc(name)}</text>
+    </g>`);
+  });
+  push(`</g>`);
+  y = top + h + 36;
+}
+
+// ═══════════════════════════ 6. BUILDS ═══════════════════════════
+// Hidden for now — set to true to bring it back.
+if (SHOW_BUILDS) {
+  header('BUILDS', '// things I made and shipped', C.orange, 3.5);
+  const tools = [
+    ['UX Research Skills', 'Reusable Claude skills for responsible UX research.', 'repo'],
+    ['Vibe Generator', 'Prompt generator for people who build by vibe.', 'live'],
+    ['Skill Atlas', 'Mapping the full surface of product design capability.', 'live'],
+    ['NPS Insight Agent', 'Groups comments into themes, tracks weekly trends.', 'work'],
+    ['Research Repo', 'A searchable home for studies, insights and evidence.', 'work'],
+  ];
+  const more = ['Git Advisor', 'Mobbin MCP', 'Design Skills', 'Build Bouncer', 'Bug Platform'];
+
+  const rowH = 58;
+  const h = 40 + tools.length * rowH;
+  const leftW = 752;
+  const top = y;
+
+  push(`<g opacity="0">${fade(3.6, 0.5)}
+    <path d="${chamfer(PAD, top, leftW, h)}" fill="${C.panel}" stroke="${C.line}"/>
+    ${brackets4(PAD, top, leftW, h, C.orange)}`);
+  tools.forEach(([name, desc, kind], i) => {
+    const ry = top + 48 + i * rowH;
+    if (i) push(`<line x1="${PAD + 22}" y1="${ry - 27}" x2="${PAD + leftW - 22}" y2="${ry - 27}" stroke="${C.line}"/>`);
+    push(`<g opacity="0">${fade((3.9 + i * 0.1).toFixed(2), 0.35)}
+      <text x="${PAD + 24}" y="${ry}" font-family="${MONO}" font-size="13.5" font-weight="800"
+            fill="${C.purple}">${pad2(i + 1)}</text>
+      <text x="${PAD + 64}" y="${ry}" font-family="${MONO}" font-size="19" font-weight="700" fill="${C.ink}">${esc(name)}</text>
+      <text x="${PAD + 64}" y="${ry + 23}" font-family="${MONO}" font-size="15" fill="${C.dim}">${esc(desc)}</text>`);
+    const col = kind === 'live' ? C.orange : kind === 'repo' ? C.purpleHi : C.faint;
+    const bc = kind === 'live' ? C.orange : kind === 'repo' ? '#4b3a78' : '#2b2546';
+    const tw = kind.length * 10 + 22;
+    push(`<rect x="${PAD + leftW - 24 - tw}" y="${ry - 16}" width="${tw}" height="26" fill="none" stroke="${bc}"/>
+      <text x="${PAD + leftW - 24 - tw / 2}" y="${ry + 2}" font-family="${MONO}" font-size="12.5" font-weight="800"
+            fill="${col}" text-anchor="middle" letter-spacing="1.6">${kind.toUpperCase()}</text>`);
+    if (kind === 'live') {
+      push(`<rect x="${PAD + leftW - 24 - tw}" y="${ry - 16}" width="${tw}" height="26" fill="${C.orange}" opacity="0.12">
+        <animate attributeName="opacity" values="0.04;0.2;0.04" dur="2.4s" repeatCount="indefinite"/></rect>`);
+    }
+    push(`</g>`);
+  });
+  push(`</g>`);
+
+  const rx = PAD + leftW + 16;
+  const rw = W - PAD - rx;
+  push(`<g opacity="0">${fade(3.9, 0.5)}
+    <path d="${chamfer(rx, top, rw, h)}" fill="${C.panel2}" stroke="${C.line}"/>
+    ${brackets4(rx, top, rw, h, C.purple)}
+    <text x="${rx + 22}" y="${top + 40}" font-family="${MONO}" font-size="18" font-weight="800"
+          fill="${C.purpleHi}" letter-spacing="2">ALSO BUILT</text>`);
+  more.forEach((name, i) => {
+    const ry = top + 80 + i * 32;
+    push(`<text x="${rx + 22}" y="${ry}" font-family="${MONO}" font-size="12.5" fill="${C.faint}">${pad2(i + 6)}</text>
+      <text x="${rx + 56}" y="${ry}" font-family="${MONO}" font-size="16" fill="${C.ink}">${esc(name)}</text>`);
+  });
+  push(`<text x="${rx + 22}" y="${top + h - 24}" font-family="${MONO}" font-size="12.5" fill="${C.faint}"
+        letter-spacing="1.4">${stats.repos} REPOS INDEXED</text></g>`);
+  y = top + h + 36;
+}
 
 // ═══════════════════════════ 7. LINKS ═══════════════════════════
 // Baked into the dark canvas instead of a markdown badge row below the image:
@@ -660,32 +714,46 @@ marquee();
 // are no longer real <a> links, since an SVG loaded via <img> can't be
 // interactive — the handles/URLs live in the footer line and the real
 // clickable links stay in the README badge row beneath the image.
+// Order at the end of the page: "say hi" invitation, then the links it refers
+// to, then the marquee as the final band. The invitation has to come before
+// the links or it's pointing at something the reader has already scrolled past.
 {
-  const links = [
-    ['in', 'LINKEDIN', '#0A66C2'],
-    ['x', 'X', C.ink],
-    ['fg', 'FIGMA', '#F24E1E'],
-    ['vc', 'PORTFOLIO', '#ffffff'],
-    ['ss', 'SUBSTACK', '#FF6719'],
-  ];
-  const chipH = 40;
-  const gap = 14;
-  const widths = links.map(([, label]) => 34 + label.length * 9.3 + 16);
-  const rowW = widths.reduce((a, b) => a + b, 0) + gap * (links.length - 1);
-  const h = chipH + 44;
+  const h = 62;
   const top = y;
   push(`<rect x="0" y="${top}" width="${W}" height="2" fill="url(#rule)"/>`);
-  push(`<g opacity="0">${fade(6.2, 0.5)}`);
+  push(`<g opacity="0">${fade(6.2, 0.5)}
+    <text x="${W / 2}" y="${top + 42}" font-family="${MONO}" font-size="15" fill="${C.dim}"
+          text-anchor="middle" letter-spacing="1.4">Say hi ▸ I like talking about design that ships.</text>
+  </g>`);
+  y = top + h;
+}
+
+{
+  // Real brand marks in the page's own accent colours, alternating orange and
+  // violet. The true brand colours (LinkedIn blue, Substack orange, etc.) made
+  // this row read as five unrelated logos pasted together.
+  const links = [
+    ['LINKEDIN', C.orange],
+    ['X', C.purpleHi],
+    ['FIGMA', C.orange],
+    ['PORTFOLIO', C.purpleHi],
+    ['SUBSTACK', C.orange],
+  ];
+  const chipH = 42;
+  const gap = 14;
+  const widths = links.map(([label]) => 38 + label.length * 9.3 + 18);
+  const rowW = widths.reduce((a, b) => a + b, 0) + gap * (links.length - 1);
+  const h = chipH + 40;
+  const top = y;
+  push(`<g opacity="0">${fade(6.35, 0.5)}`);
   let lx = (W - rowW) / 2;
-  const cy = top + (h - chipH) / 2 + 6;
-  links.forEach(([mono, label, color], i) => {
+  const cy = top + (h - chipH) / 2;
+  links.forEach(([label, color], i) => {
     const tw = widths[i];
     push(`<path d="M${lx + 7},${cy} H${lx + tw} V${cy + chipH - 7} L${lx + tw - 7},${cy + chipH} H${lx} V${cy + 7} Z"
           fill="${C.panel}" stroke="${C.line2}"/>
-      <rect x="${lx + 8}" y="${cy + 8}" width="24" height="24" rx="4" fill="${color}"/>
-      <text x="${lx + 20}" y="${cy + 25}" font-family="${MONO}" font-size="10" font-weight="800"
-            fill="${C.void}" text-anchor="middle" letter-spacing="0.5">${esc(mono)}</text>
-      <text x="${lx + 40}" y="${cy + 25}" font-family="${MONO}" font-size="13" font-weight="700"
+      ${logo(label, lx + 13, cy + 12, 18, color)}
+      <text x="${lx + 40}" y="${cy + 26}" font-family="${MONO}" font-size="13" font-weight="700"
             fill="${C.ink}" letter-spacing="1.2">${esc(label)}</text>`);
     lx += tw + gap;
   });
@@ -695,17 +763,17 @@ marquee();
 
 // ═══════════════════════════ 8. FOOTER ═══════════════════════════
 {
-  const h = 64;
+  const h = 34;
   const top = y;
-  push(`<rect x="0" y="${top}" width="${W}" height="2" fill="url(#rule)"/>`);
-  push(`<g opacity="0">${fade(6.4, 0.5)}
-    <text x="${PAD}" y="${top + 40}" font-family="${MONO}" font-size="15" fill="${C.dim}"
-          letter-spacing="1.4">Say hi ▸ I like talking about design that ships.</text>
-    <text x="${W - PAD}" y="${top + 40}" font-family="${MONO}" font-size="12.5" fill="${C.faint}"
-          text-anchor="end" letter-spacing="1.6">LAST SYNC ${stats.generated}</text>
+  push(`<g opacity="0">${fade(6.5, 0.5)}
+    <text x="${W / 2}" y="${top + 20}" font-family="${MONO}" font-size="12.5" fill="${C.faint}"
+          text-anchor="middle" letter-spacing="1.6">LAST SYNC ${stats.generated}</text>
   </g>`);
   y = top + h;
 }
+
+// Closing marquee: the very last band on the page, bookending the opening art.
+marquee();
 
 const H = y;
 
