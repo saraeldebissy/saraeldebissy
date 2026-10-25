@@ -124,7 +124,7 @@ for (let i = series.length - 1; i >= 0; i--) {
   else if (!isToday) break;
 }
 
-const WINDOW_DAYS = 90;
+const WINDOW_DAYS = 120;
 const window = series.slice(-WINDOW_DAYS);
 const peak = Math.max(1, ...window.map((d) => d.count));
 
