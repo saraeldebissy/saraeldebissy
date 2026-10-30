@@ -183,7 +183,7 @@
       <text x="74" y="949" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12" fill="#857da3"
             letter-spacing="1.8">CURRENT STREAK</text>
       <text x="74" y="1001" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="44" font-weight="800"
-            fill="#ff8a4c" opacity="0">01<animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="2.00s" fill="freeze"/></text>
+            fill="#ff8a4c" opacity="0">00<animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="2.00s" fill="freeze"/></text>
       <text x="302.5" y="1001" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12" fill="#574f73"
             text-anchor="end" letter-spacing="1.5">DAYS</text>
 <path d="M343.5,925 H582 L593,936 V1018 L582,1029 H343.5 L332.5,1018 V936 Z" fill="#120f23" stroke="#332a52"/>
@@ -207,47 +207,47 @@
             fill="#ece7f8" opacity="0">26<animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="2.36s" fill="freeze"/></text>
       <text x="1126" y="1001" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12" fill="#574f73"
             text-anchor="end" letter-spacing="1.5">PUBLIC</text>
-<rect x="58.00" y="1111.90" width="8.04"
-          height="3.10" fill="#ff8a4c">
-      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
-               begin="2.30s" fill="freeze"/>
-      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
-               begin="2.30s" fill="freeze"/></rect>
-<rect x="67.04" y="1095.16" width="8.04"
+<rect x="58.00" y="1095.16" width="8.04"
           height="19.84" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="19.84" dur="0.5s"
-               begin="2.31s" fill="freeze"/>
+               begin="2.30s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1095.16" dur="0.5s"
-               begin="2.31s" fill="freeze"/></rect>
-<rect x="76.08" y="1090.82" width="8.04"
+               begin="2.30s" fill="freeze"/></rect>
+<rect x="67.04" y="1090.82" width="8.04"
           height="24.18" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="24.18" dur="0.5s"
-               begin="2.32s" fill="freeze"/>
+               begin="2.31s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1090.82" dur="0.5s"
-               begin="2.32s" fill="freeze"/></rect>
-<rect x="85.13" y="1087.10" width="8.04"
+               begin="2.31s" fill="freeze"/></rect>
+<rect x="76.08" y="1087.10" width="8.04"
           height="27.90" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="27.90" dur="0.5s"
-               begin="2.33s" fill="freeze"/>
+               begin="2.32s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1087.10" dur="0.5s"
-               begin="2.33s" fill="freeze"/></rect>
-<rect x="94.17" y="1080.90" width="8.04"
+               begin="2.32s" fill="freeze"/></rect>
+<rect x="85.13" y="1080.90" width="8.04"
           height="34.10" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="34.10" dur="0.5s"
-               begin="2.34s" fill="freeze"/>
+               begin="2.33s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1080.90" dur="0.5s"
-               begin="2.34s" fill="freeze"/></rect>
-<rect x="103.21" y="1087.10" width="8.04"
+               begin="2.33s" fill="freeze"/></rect>
+<rect x="94.17" y="1087.10" width="8.04"
           height="27.90" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="27.90" dur="0.5s"
-               begin="2.35s" fill="freeze"/>
+               begin="2.34s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1087.10" dur="0.5s"
-               begin="2.35s" fill="freeze"/></rect>
-<rect x="112.25" y="1095.16" width="8.04"
+               begin="2.34s" fill="freeze"/></rect>
+<rect x="103.21" y="1095.16" width="8.04"
           height="19.84" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="19.84" dur="0.5s"
-               begin="2.36s" fill="freeze"/>
+               begin="2.35s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1095.16" dur="0.5s"
+               begin="2.35s" fill="freeze"/></rect>
+<rect x="112.25" y="1111.90" width="8.04"
+          height="3.10" fill="#ff8a4c">
+      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
+               begin="2.36s" fill="freeze"/>
+      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="2.36s" fill="freeze"/></rect>
 <rect x="121.29" y="1111.90" width="8.04"
           height="3.10" fill="#ff8a4c">
@@ -255,23 +255,23 @@
                begin="2.37s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="2.37s" fill="freeze"/></rect>
-<rect x="130.33" y="1111.90" width="8.04"
-          height="3.10" fill="#ff8a4c">
-      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
-               begin="2.38s" fill="freeze"/>
-      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
-               begin="2.38s" fill="freeze"/></rect>
-<rect x="139.38" y="1095.16" width="8.04"
+<rect x="130.33" y="1095.16" width="8.04"
           height="19.84" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="19.84" dur="0.5s"
-               begin="2.39s" fill="freeze"/>
+               begin="2.38s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1095.16" dur="0.5s"
-               begin="2.39s" fill="freeze"/></rect>
-<rect x="148.42" y="1101.36" width="8.04"
+               begin="2.38s" fill="freeze"/></rect>
+<rect x="139.38" y="1101.36" width="8.04"
           height="13.64" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="13.64" dur="0.5s"
-               begin="2.40s" fill="freeze"/>
+               begin="2.39s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1101.36" dur="0.5s"
+               begin="2.39s" fill="freeze"/></rect>
+<rect x="148.42" y="1111.90" width="8.04"
+          height="3.10" fill="#ff8a4c">
+      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
+               begin="2.40s" fill="freeze"/>
+      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="2.40s" fill="freeze"/></rect>
 <rect x="157.46" y="1111.90" width="8.04"
           height="3.10" fill="#ff8a4c">
@@ -309,23 +309,23 @@
                begin="2.46s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="2.46s" fill="freeze"/></rect>
-<rect x="211.71" y="1111.90" width="8.04"
-          height="3.10" fill="#ff8a4c">
-      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
-               begin="2.47s" fill="freeze"/>
-      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
-               begin="2.47s" fill="freeze"/></rect>
-<rect x="220.75" y="1090.82" width="8.04"
+<rect x="211.71" y="1090.82" width="8.04"
           height="24.18" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="24.18" dur="0.5s"
-               begin="2.48s" fill="freeze"/>
+               begin="2.47s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1090.82" dur="0.5s"
-               begin="2.48s" fill="freeze"/></rect>
-<rect x="229.79" y="1101.36" width="8.04"
+               begin="2.47s" fill="freeze"/></rect>
+<rect x="220.75" y="1101.36" width="8.04"
           height="13.64" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="13.64" dur="0.5s"
-               begin="2.49s" fill="freeze"/>
+               begin="2.48s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1101.36" dur="0.5s"
+               begin="2.48s" fill="freeze"/></rect>
+<rect x="229.79" y="1095.16" width="8.04"
+          height="19.84" fill="#ff8a4c">
+      <animate attributeName="height" from="0" to="19.84" dur="0.5s"
+               begin="2.49s" fill="freeze"/>
+      <animate attributeName="y" from="1115" to="1095.16" dur="0.5s"
                begin="2.49s" fill="freeze"/></rect>
 <rect x="238.83" y="1095.16" width="8.04"
           height="19.84" fill="#ff8a4c">
@@ -333,47 +333,47 @@
                begin="2.50s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1095.16" dur="0.5s"
                begin="2.50s" fill="freeze"/></rect>
-<rect x="247.88" y="1095.16" width="8.04"
-          height="19.84" fill="#ff8a4c">
-      <animate attributeName="height" from="0" to="19.84" dur="0.5s"
-               begin="2.51s" fill="freeze"/>
-      <animate attributeName="y" from="1115" to="1095.16" dur="0.5s"
-               begin="2.51s" fill="freeze"/></rect>
-<rect x="256.92" y="1111.90" width="8.04"
+<rect x="247.88" y="1111.90" width="8.04"
           height="3.10" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="3.10" dur="0.5s"
-               begin="2.52s" fill="freeze"/>
+               begin="2.51s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
-               begin="2.52s" fill="freeze"/></rect>
-<rect x="265.96" y="1080.90" width="8.04"
+               begin="2.51s" fill="freeze"/></rect>
+<rect x="256.92" y="1080.90" width="8.04"
           height="34.10" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="34.10" dur="0.5s"
-               begin="2.53s" fill="freeze"/>
+               begin="2.52s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1080.90" dur="0.5s"
-               begin="2.53s" fill="freeze"/></rect>
-<rect x="275.00" y="1111.90" width="8.04"
+               begin="2.52s" fill="freeze"/></rect>
+<rect x="265.96" y="1111.90" width="8.04"
           height="3.10" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="3.10" dur="0.5s"
-               begin="2.54s" fill="freeze"/>
+               begin="2.53s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
-               begin="2.54s" fill="freeze"/></rect>
-<rect x="284.04" y="1095.16" width="8.04"
+               begin="2.53s" fill="freeze"/></rect>
+<rect x="275.00" y="1095.16" width="8.04"
           height="19.84" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="19.84" dur="0.5s"
-               begin="2.55s" fill="freeze"/>
+               begin="2.54s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1095.16" dur="0.5s"
-               begin="2.55s" fill="freeze"/></rect>
-<rect x="293.08" y="1084.00" width="8.04"
+               begin="2.54s" fill="freeze"/></rect>
+<rect x="284.04" y="1084.00" width="8.04"
           height="31.00" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="31.00" dur="0.5s"
-               begin="2.56s" fill="freeze"/>
+               begin="2.55s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1084.00" dur="0.5s"
-               begin="2.56s" fill="freeze"/></rect>
-<rect x="302.13" y="1095.16" width="8.04"
+               begin="2.55s" fill="freeze"/></rect>
+<rect x="293.08" y="1095.16" width="8.04"
           height="19.84" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="19.84" dur="0.5s"
-               begin="2.57s" fill="freeze"/>
+               begin="2.56s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1095.16" dur="0.5s"
+               begin="2.56s" fill="freeze"/></rect>
+<rect x="302.13" y="1073.46" width="8.04"
+          height="41.54" fill="#ff8a4c">
+      <animate attributeName="height" from="0" to="41.54" dur="0.5s"
+               begin="2.57s" fill="freeze"/>
+      <animate attributeName="y" from="1115" to="1073.46" dur="0.5s"
                begin="2.57s" fill="freeze"/></rect>
 <rect x="311.17" y="1073.46" width="8.04"
           height="41.54" fill="#ff8a4c">
@@ -381,41 +381,41 @@
                begin="2.58s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1073.46" dur="0.5s"
                begin="2.58s" fill="freeze"/></rect>
-<rect x="320.21" y="1073.46" width="8.04"
-          height="41.54" fill="#ff8a4c">
-      <animate attributeName="height" from="0" to="41.54" dur="0.5s"
-               begin="2.59s" fill="freeze"/>
-      <animate attributeName="y" from="1115" to="1073.46" dur="0.5s"
-               begin="2.59s" fill="freeze"/></rect>
-<rect x="329.25" y="1111.90" width="8.04"
+<rect x="320.21" y="1111.90" width="8.04"
           height="3.10" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="3.10" dur="0.5s"
-               begin="2.60s" fill="freeze"/>
+               begin="2.59s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
-               begin="2.60s" fill="freeze"/></rect>
-<rect x="338.29" y="1084.00" width="8.04"
+               begin="2.59s" fill="freeze"/></rect>
+<rect x="329.25" y="1084.00" width="8.04"
           height="31.00" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="31.00" dur="0.5s"
-               begin="2.61s" fill="freeze"/>
+               begin="2.60s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1084.00" dur="0.5s"
-               begin="2.61s" fill="freeze"/></rect>
-<rect x="347.33" y="1087.10" width="8.04"
+               begin="2.60s" fill="freeze"/></rect>
+<rect x="338.29" y="1087.10" width="8.04"
           height="27.90" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="27.90" dur="0.5s"
-               begin="2.62s" fill="freeze"/>
+               begin="2.61s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1087.10" dur="0.5s"
-               begin="2.62s" fill="freeze"/></rect>
-<rect x="356.38" y="1084.00" width="8.04"
+               begin="2.61s" fill="freeze"/></rect>
+<rect x="347.33" y="1084.00" width="8.04"
           height="31.00" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="31.00" dur="0.5s"
-               begin="2.63s" fill="freeze"/>
+               begin="2.62s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1084.00" dur="0.5s"
-               begin="2.63s" fill="freeze"/></rect>
-<rect x="365.42" y="1095.16" width="8.04"
+               begin="2.62s" fill="freeze"/></rect>
+<rect x="356.38" y="1095.16" width="8.04"
           height="19.84" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="19.84" dur="0.5s"
-               begin="2.64s" fill="freeze"/>
+               begin="2.63s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1095.16" dur="0.5s"
+               begin="2.63s" fill="freeze"/></rect>
+<rect x="365.42" y="1101.36" width="8.04"
+          height="13.64" fill="#ff8a4c">
+      <animate attributeName="height" from="0" to="13.64" dur="0.5s"
+               begin="2.64s" fill="freeze"/>
+      <animate attributeName="y" from="1115" to="1101.36" dur="0.5s"
                begin="2.64s" fill="freeze"/></rect>
 <rect x="374.46" y="1101.36" width="8.04"
           height="13.64" fill="#ff8a4c">
@@ -423,11 +423,11 @@
                begin="2.65s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1101.36" dur="0.5s"
                begin="2.65s" fill="freeze"/></rect>
-<rect x="383.50" y="1101.36" width="8.04"
-          height="13.64" fill="#ff8a4c">
-      <animate attributeName="height" from="0" to="13.64" dur="0.5s"
+<rect x="383.50" y="1111.90" width="8.04"
+          height="3.10" fill="#ff8a4c">
+      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
                begin="2.66s" fill="freeze"/>
-      <animate attributeName="y" from="1115" to="1101.36" dur="0.5s"
+      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="2.66s" fill="freeze"/></rect>
 <rect x="392.54" y="1111.90" width="8.04"
           height="3.10" fill="#ff8a4c">
@@ -441,17 +441,17 @@
                begin="2.68s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="2.68s" fill="freeze"/></rect>
-<rect x="410.63" y="1111.90" width="8.04"
-          height="3.10" fill="#ff8a4c">
-      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
-               begin="2.69s" fill="freeze"/>
-      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
-               begin="2.69s" fill="freeze"/></rect>
-<rect x="419.67" y="1101.36" width="8.04"
+<rect x="410.63" y="1101.36" width="8.04"
           height="13.64" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="13.64" dur="0.5s"
-               begin="2.70s" fill="freeze"/>
+               begin="2.69s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1101.36" dur="0.5s"
+               begin="2.69s" fill="freeze"/></rect>
+<rect x="419.67" y="1111.90" width="8.04"
+          height="3.10" fill="#ff8a4c">
+      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
+               begin="2.70s" fill="freeze"/>
+      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="2.70s" fill="freeze"/></rect>
 <rect x="428.71" y="1111.90" width="8.04"
           height="3.10" fill="#ff8a4c">
@@ -477,23 +477,23 @@
                begin="2.74s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="2.74s" fill="freeze"/></rect>
-<rect x="464.88" y="1111.90" width="8.04"
-          height="3.10" fill="#ff8a4c">
-      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
-               begin="2.75s" fill="freeze"/>
-      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
-               begin="2.75s" fill="freeze"/></rect>
-<rect x="473.92" y="1062.92" width="8.04"
+<rect x="464.88" y="1062.92" width="8.04"
           height="52.08" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="52.08" dur="0.5s"
-               begin="2.76s" fill="freeze"/>
+               begin="2.75s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1062.92" dur="0.5s"
-               begin="2.76s" fill="freeze"/></rect>
-<rect x="482.96" y="1080.90" width="8.04"
+               begin="2.75s" fill="freeze"/></rect>
+<rect x="473.92" y="1080.90" width="8.04"
           height="34.10" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="34.10" dur="0.5s"
-               begin="2.77s" fill="freeze"/>
+               begin="2.76s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1080.90" dur="0.5s"
+               begin="2.76s" fill="freeze"/></rect>
+<rect x="482.96" y="1111.90" width="8.04"
+          height="3.10" fill="#ff8a4c">
+      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
+               begin="2.77s" fill="freeze"/>
+      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="2.77s" fill="freeze"/></rect>
 <rect x="492.00" y="1111.90" width="8.04"
           height="3.10" fill="#ff8a4c">
@@ -507,23 +507,23 @@
                begin="2.79s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="2.79s" fill="freeze"/></rect>
-<rect x="510.08" y="1111.90" width="8.04"
-          height="3.10" fill="#ff8a4c">
-      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
-               begin="2.80s" fill="freeze"/>
-      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
-               begin="2.80s" fill="freeze"/></rect>
-<rect x="519.13" y="1064.78" width="8.04"
+<rect x="510.08" y="1064.78" width="8.04"
           height="50.22" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="50.22" dur="0.5s"
-               begin="2.81s" fill="freeze"/>
+               begin="2.80s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1064.78" dur="0.5s"
-               begin="2.81s" fill="freeze"/></rect>
-<rect x="528.17" y="1095.16" width="8.04"
+               begin="2.80s" fill="freeze"/></rect>
+<rect x="519.13" y="1095.16" width="8.04"
           height="19.84" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="19.84" dur="0.5s"
-               begin="2.82s" fill="freeze"/>
+               begin="2.81s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1095.16" dur="0.5s"
+               begin="2.81s" fill="freeze"/></rect>
+<rect x="528.17" y="1111.90" width="8.04"
+          height="3.10" fill="#ff8a4c">
+      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
+               begin="2.82s" fill="freeze"/>
+      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="2.82s" fill="freeze"/></rect>
 <rect x="537.21" y="1111.90" width="8.04"
           height="3.10" fill="#ff8a4c">
@@ -531,17 +531,17 @@
                begin="2.83s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="2.83s" fill="freeze"/></rect>
-<rect x="546.25" y="1111.90" width="8.04"
-          height="3.10" fill="#ff8a4c">
-      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
-               begin="2.84s" fill="freeze"/>
-      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
-               begin="2.84s" fill="freeze"/></rect>
-<rect x="555.29" y="1075.94" width="8.04"
+<rect x="546.25" y="1075.94" width="8.04"
           height="39.06" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="39.06" dur="0.5s"
-               begin="2.85s" fill="freeze"/>
+               begin="2.84s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1075.94" dur="0.5s"
+               begin="2.84s" fill="freeze"/></rect>
+<rect x="555.29" y="1101.36" width="8.04"
+          height="13.64" fill="#ff8a4c">
+      <animate attributeName="height" from="0" to="13.64" dur="0.5s"
+               begin="2.85s" fill="freeze"/>
+      <animate attributeName="y" from="1115" to="1101.36" dur="0.5s"
                begin="2.85s" fill="freeze"/></rect>
 <rect x="564.33" y="1101.36" width="8.04"
           height="13.64" fill="#ff8a4c">
@@ -549,11 +549,11 @@
                begin="2.86s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1101.36" dur="0.5s"
                begin="2.86s" fill="freeze"/></rect>
-<rect x="573.38" y="1101.36" width="8.04"
-          height="13.64" fill="#ff8a4c">
-      <animate attributeName="height" from="0" to="13.64" dur="0.5s"
+<rect x="573.38" y="1111.90" width="8.04"
+          height="3.10" fill="#ff8a4c">
+      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
                begin="2.87s" fill="freeze"/>
-      <animate attributeName="y" from="1115" to="1101.36" dur="0.5s"
+      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="2.87s" fill="freeze"/></rect>
 <rect x="582.42" y="1111.90" width="8.04"
           height="3.10" fill="#ff8a4c">
@@ -585,17 +585,17 @@
                begin="2.92s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="2.92s" fill="freeze"/></rect>
-<rect x="627.63" y="1111.90" width="8.04"
-          height="3.10" fill="#ff8a4c">
-      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
-               begin="2.93s" fill="freeze"/>
-      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
-               begin="2.93s" fill="freeze"/></rect>
-<rect x="636.67" y="1095.16" width="8.04"
+<rect x="627.63" y="1095.16" width="8.04"
           height="19.84" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="19.84" dur="0.5s"
-               begin="2.94s" fill="freeze"/>
+               begin="2.93s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1095.16" dur="0.5s"
+               begin="2.93s" fill="freeze"/></rect>
+<rect x="636.67" y="1111.90" width="8.04"
+          height="3.10" fill="#ff8a4c">
+      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
+               begin="2.94s" fill="freeze"/>
+      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="2.94s" fill="freeze"/></rect>
 <rect x="645.71" y="1111.90" width="8.04"
           height="3.10" fill="#ff8a4c">
@@ -627,11 +627,11 @@
                begin="2.99s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="2.99s" fill="freeze"/></rect>
-<rect x="690.92" y="1111.90" width="8.04"
-          height="3.10" fill="#ff8a4c">
-      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
+<rect x="690.92" y="1095.16" width="8.04"
+          height="19.84" fill="#ff8a4c">
+      <animate attributeName="height" from="0" to="19.84" dur="0.5s"
                begin="3.00s" fill="freeze"/>
-      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
+      <animate attributeName="y" from="1115" to="1095.16" dur="0.5s"
                begin="3.00s" fill="freeze"/></rect>
 <rect x="699.96" y="1095.16" width="8.04"
           height="19.84" fill="#ff8a4c">
@@ -639,11 +639,11 @@
                begin="3.01s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1095.16" dur="0.5s"
                begin="3.01s" fill="freeze"/></rect>
-<rect x="709.00" y="1095.16" width="8.04"
-          height="19.84" fill="#ff8a4c">
-      <animate attributeName="height" from="0" to="19.84" dur="0.5s"
+<rect x="709.00" y="1111.90" width="8.04"
+          height="3.10" fill="#ff8a4c">
+      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
                begin="3.02s" fill="freeze"/>
-      <animate attributeName="y" from="1115" to="1095.16" dur="0.5s"
+      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="3.02s" fill="freeze"/></rect>
 <rect x="718.04" y="1111.90" width="8.04"
           height="3.10" fill="#ff8a4c">
@@ -795,17 +795,17 @@
                begin="3.27s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="3.27s" fill="freeze"/></rect>
-<rect x="944.08" y="1111.90" width="8.04"
-          height="3.10" fill="#ff8a4c">
-      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
-               begin="3.28s" fill="freeze"/>
-      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
-               begin="3.28s" fill="freeze"/></rect>
-<rect x="953.12" y="1101.36" width="8.04"
+<rect x="944.08" y="1101.36" width="8.04"
           height="13.64" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="13.64" dur="0.5s"
-               begin="3.29s" fill="freeze"/>
+               begin="3.28s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1101.36" dur="0.5s"
+               begin="3.28s" fill="freeze"/></rect>
+<rect x="953.12" y="1111.90" width="8.04"
+          height="3.10" fill="#ff8a4c">
+      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
+               begin="3.29s" fill="freeze"/>
+      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="3.29s" fill="freeze"/></rect>
 <rect x="962.17" y="1111.90" width="8.04"
           height="3.10" fill="#ff8a4c">
@@ -813,29 +813,29 @@
                begin="3.30s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="3.30s" fill="freeze"/></rect>
-<rect x="971.21" y="1111.90" width="8.04"
-          height="3.10" fill="#ff8a4c">
-      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
-               begin="3.31s" fill="freeze"/>
-      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
-               begin="3.31s" fill="freeze"/></rect>
-<rect x="980.25" y="1101.36" width="8.04"
+<rect x="971.21" y="1101.36" width="8.04"
           height="13.64" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="13.64" dur="0.5s"
-               begin="3.32s" fill="freeze"/>
+               begin="3.31s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1101.36" dur="0.5s"
-               begin="3.32s" fill="freeze"/></rect>
-<rect x="989.29" y="1073.46" width="8.04"
+               begin="3.31s" fill="freeze"/></rect>
+<rect x="980.25" y="1073.46" width="8.04"
           height="41.54" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="41.54" dur="0.5s"
-               begin="3.33s" fill="freeze"/>
+               begin="3.32s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1073.46" dur="0.5s"
-               begin="3.33s" fill="freeze"/></rect>
-<rect x="998.33" y="1067.26" width="8.04"
+               begin="3.32s" fill="freeze"/></rect>
+<rect x="989.29" y="1067.26" width="8.04"
           height="47.74" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="47.74" dur="0.5s"
-               begin="3.34s" fill="freeze"/>
+               begin="3.33s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1067.26" dur="0.5s"
+               begin="3.33s" fill="freeze"/></rect>
+<rect x="998.33" y="1111.90" width="8.04"
+          height="3.10" fill="#ff8a4c">
+      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
+               begin="3.34s" fill="freeze"/>
+      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="3.34s" fill="freeze"/></rect>
 <rect x="1007.37" y="1111.90" width="8.04"
           height="3.10" fill="#ff8a4c">
@@ -867,59 +867,59 @@
                begin="3.39s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="3.39s" fill="freeze"/></rect>
-<rect x="1052.58" y="1111.90" width="8.04"
-          height="3.10" fill="#ff8a4c">
-      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
-               begin="3.40s" fill="freeze"/>
-      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
-               begin="3.40s" fill="freeze"/></rect>
-<rect x="1061.63" y="1095.16" width="8.04"
+<rect x="1052.58" y="1095.16" width="8.04"
           height="19.84" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="19.84" dur="0.5s"
-               begin="3.41s" fill="freeze"/>
+               begin="3.40s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1095.16" dur="0.5s"
-               begin="3.41s" fill="freeze"/></rect>
-<rect x="1070.67" y="1090.82" width="8.04"
+               begin="3.40s" fill="freeze"/></rect>
+<rect x="1061.63" y="1090.82" width="8.04"
           height="24.18" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="24.18" dur="0.5s"
-               begin="3.42s" fill="freeze"/>
+               begin="3.41s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1090.82" dur="0.5s"
-               begin="3.42s" fill="freeze"/></rect>
-<rect x="1079.71" y="1095.16" width="8.04"
+               begin="3.41s" fill="freeze"/></rect>
+<rect x="1070.67" y="1095.16" width="8.04"
           height="19.84" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="19.84" dur="0.5s"
-               begin="3.43s" fill="freeze"/>
+               begin="3.42s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1095.16" dur="0.5s"
-               begin="3.43s" fill="freeze"/></rect>
-<rect x="1088.75" y="1053.00" width="8.04"
+               begin="3.42s" fill="freeze"/></rect>
+<rect x="1079.71" y="1053.00" width="8.04"
           height="62.00" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="62.00" dur="0.5s"
-               begin="3.44s" fill="freeze"/>
+               begin="3.43s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1053.00" dur="0.5s"
-               begin="3.44s" fill="freeze"/></rect>
-<rect x="1097.79" y="1069.12" width="8.04"
+               begin="3.43s" fill="freeze"/></rect>
+<rect x="1088.75" y="1069.12" width="8.04"
           height="45.88" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="45.88" dur="0.5s"
-               begin="3.45s" fill="freeze"/>
+               begin="3.44s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1069.12" dur="0.5s"
-               begin="3.45s" fill="freeze"/></rect>
-<rect x="1106.83" y="1087.10" width="8.04"
+               begin="3.44s" fill="freeze"/></rect>
+<rect x="1097.79" y="1087.10" width="8.04"
           height="27.90" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="27.90" dur="0.5s"
-               begin="3.46s" fill="freeze"/>
+               begin="3.45s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1087.10" dur="0.5s"
-               begin="3.46s" fill="freeze"/></rect>
-<rect x="1115.88" y="1111.90" width="8.04"
+               begin="3.45s" fill="freeze"/></rect>
+<rect x="1106.83" y="1111.90" width="8.04"
           height="3.10" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="3.10" dur="0.5s"
-               begin="3.47s" fill="freeze"/>
+               begin="3.46s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
-               begin="3.47s" fill="freeze"/></rect>
-<rect x="1124.92" y="1080.90" width="8.04"
+               begin="3.46s" fill="freeze"/></rect>
+<rect x="1115.88" y="1080.90" width="8.04"
           height="34.10" fill="#ff8a4c">
       <animate attributeName="height" from="0" to="34.10" dur="0.5s"
-               begin="3.48s" fill="freeze"/>
+               begin="3.47s" fill="freeze"/>
       <animate attributeName="y" from="1115" to="1080.90" dur="0.5s"
+               begin="3.47s" fill="freeze"/></rect>
+<rect x="1124.92" y="1111.90" width="8.04"
+          height="3.10" fill="#ff8a4c">
+      <animate attributeName="height" from="0" to="3.10" dur="0.5s"
+               begin="3.48s" fill="freeze"/>
+      <animate attributeName="y" from="1115" to="1111.90" dur="0.5s"
                begin="3.48s" fill="freeze"/></rect>
 <rect x="1133.96" y="1111.90" width="8.04"
           height="3.10" fill="#ff8a4c">
@@ -1165,7 +1165,7 @@
 </g>
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="6.5s" fill="freeze"/>
     <text x="600" y="2048" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12.5" fill="#574f73"
-          text-anchor="middle" letter-spacing="1.6">LAST SYNC 2026-10-29</text>
+          text-anchor="middle" letter-spacing="1.6">LAST SYNC 2026-10-30</text>
   </g>
 <rect x="0" y="2062" width="1200" height="36" fill="#ff8a4c"/>
     <clipPath id="mq"><rect x="0" y="2062" width="1200" height="36"/></clipPath>
