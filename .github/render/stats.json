@@ -42,10 +42,6 @@
   "waveformDays": 120,
   "waveform": [
     {
-      "height": 32,
-      "on": true
-    },
-    {
       "height": 39,
       "on": true
     },
@@ -520,7 +516,11 @@
     {
       "height": 5,
       "on": false
+    },
+    {
+      "height": 5,
+      "on": false
     }
   ],
-  "generated": "2026-10-30"
+  "generated": "2026-10-31"
 }
